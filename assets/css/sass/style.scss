@@ -31,5 +31,7 @@ $la-font-path: '/wp-content/themes/starter-theme/assets/fonts/line-awesome';
 @import 'node_modules/animate.css/animate';
 
 // Global
+@import 'global/typography';
+@import 'global/forms';
 
 // Pages

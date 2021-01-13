@@ -19,18 +19,5 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-weight: $font-weight-bold;
-}
-
-.title-border {
-    position: relative;
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 5px;
-        width: 10%;
-        background-color: $primary;
-    }
+    font-weight: bold;
 }
