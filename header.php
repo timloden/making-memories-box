@@ -18,55 +18,68 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <?php wp_head(); 
+    <?php wp_head();
+    $logo = get_field('logo', 'option');
 ?>
 </head>
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-        <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light border-bottom">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <header class="header py-3">
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img class="img-fluid" src="<?php echo esc_url($logo['url']); ?>">
+                    </div>
+                    <div class="d-none d-lg-block ml-lg-5">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">How it works</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                                <a class="nav-link" href="#">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                <a class="nav-link" href="#">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
                             </li>
                         </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="d-none d-md-inline-block btn btn-primary btn-rounded">Sign up Today</a>
+                            <a href="#mobile-menu" class="d-inline-block d-lg-none nav-button ml-3 mb-0 p-2 h4"
+                                data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"
+                                role="button"><i class="las la-bars"></i></a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="collapse" id="mobile-menu">
+                    <div class="d-flex">
+                        <div class="col-12">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">How it works</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">FAQ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </nav>
-        </header>
-    </div>
+            </div>
 
-    <div id="content" class="site-content">
+        </header>
+
+
+        <div id="content" class="site-content">

@@ -21,7 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 // line-awesome
-$la-font-path: '/wp-content/themes/starter-theme/assets/fonts/line-awesome';
+$la-font-path: '/wp-content/themes/making-memories-box/assets/fonts/line-awesome';
 @import 'node_modules/line-awesome/dist/line-awesome/scss/line-awesome';
 
 // tiny-slider
@@ -33,5 +33,7 @@ $la-font-path: '/wp-content/themes/starter-theme/assets/fonts/line-awesome';
 // Global
 @import 'global/typography';
 @import 'global/forms';
+@import 'global/buttons';
+@import 'global/header';
 
 // Pages

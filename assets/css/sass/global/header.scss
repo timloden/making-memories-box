@@ -1,5 +1,15 @@
-.top-bar {
-    font-size: 12px;
+.logo {
+    img {
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo {
+        img {
+            max-width: 300px;
+        }
+    }
 }
 
 .bg-dark-50 {

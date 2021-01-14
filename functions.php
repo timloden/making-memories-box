@@ -86,6 +86,15 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 
 }
 
+//svg support
+
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+   }
+
+   add_filter('upload_mimes', 'cc_mime_types');
+
 // disable comments for posts
 function my_prefix_comments_open( $open, $post_id ) {
 	$post_type = get_post_type( $post_id );
