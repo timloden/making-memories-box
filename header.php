@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package restoration-performance
+ * @package making-memories-box
  */
 
 ?>
@@ -32,7 +32,7 @@
                     <div class="logo">
                         <img class="img-fluid" src="<?php echo esc_url($logo['url']); ?>">
                     </div>
-                    <div class="d-none d-lg-block ml-lg-5">
+                    <div class="d-none d-lg-block ml-lg-auto">
                         <ul class="nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">How it works</a>
@@ -61,9 +61,9 @@
                     <div class="d-flex">
                         <div class="col-12">
                             <ul class="nav flex-column">
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="#">How it works</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">About</a>
                                 </li>
