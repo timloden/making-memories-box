@@ -30,7 +30,8 @@
             <div class="container">
                 <nav class="d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <img class="img-fluid" src="<?php echo esc_url($logo['url']); ?>">
+                        <a href="<?php echo site_url(); ?>"><img class="img-fluid"
+                                src="<?php echo esc_url($logo['url']); ?>"></a>
                     </div>
                     <div class="d-none d-lg-block ml-lg-auto">
                         <ul class="nav">

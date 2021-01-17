@@ -1,10 +1,42 @@
 footer {
-    .cc-logos {
-        width: 200px;
+    background: #f5f9fd;
+    color: #8492a6;
+
+    .footer-links {
+        li {
+            a {
+                color: #8492a6;
+            }
+        }
     }
-    .copyright {
-        p {
-            font-size: 12px;
+
+    .footer-newsletter {
+        display: flex;
+
+        .gform_body {
+            width: 100%;
+        }
+
+        .gfield_label {
+            display: none;
+        }
+
+        .gform_fields {
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: 0;
+            }
+        }
+
+        .gform_footer {
+            margin-left: -3px;
+        }
+    }
+
+    .social-icons {
+        li {
+            padding: 5px 8px;
         }
     }
 }
