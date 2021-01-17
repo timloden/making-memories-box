@@ -3025,6 +3025,16 @@ footer .social-icons li{padding:5px 8px}
 .product .woocommerce-variation-price{padding-bottom:1em}
 .product .first-payment-date{padding-top:1em}
 .product .wp-post-image{max-width:100%}
+.woocommerce-checkout .mailchimp-newsletter{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:0;margin-right:0}
+.woocommerce-checkout .mailchimp-newsletter label{margin-bottom:0;margin-left:.5em}
+.woocommerce-checkout .shipping.recurring-total{display:none}
+.woocommerce-checkout .wc_coupon_message_wrap{display:none}
+.woocommerce-checkout .payment_method_stripe label{width:100%}
+.woocommerce-checkout .payment_method_stripe .stripe-card-group,.woocommerce-checkout .payment_method_stripe .wc-stripe-elements-field{width:100%}
+.woocommerce-checkout .payment_method_stripe #stripe-card-element{margin-top:0;margin-bottom:1rem}
+.woocommerce-checkout .payment_method_stripe #stripe-exp-element{margin-top:0;margin-bottom:1rem}
+.woocommerce-checkout .payment_method_stripe #stripe-cvc-element{margin-top:0;margin-bottom:1rem}
+.woocommerce-checkout #payment ul.payment_methods li .stripe-credit-card-brand{width:20px;margin-top:-15px}
 @media(prefers-reduced-motion:reduce){.form-control,.gform_wrapper input[type='email'],.gform_wrapper input[type='date'],.gform_wrapper input[type='datetime'],.gform_wrapper input[type='datetime-local'],.gform_wrapper input[type='month'],.gform_wrapper input[type='number'],.gform_wrapper input[type='password'],.gform_wrapper input[type='search'],.gform_wrapper input[type='tel'],.gform_wrapper input[type='text'],.gform_wrapper input[type='time'],.gform_wrapper input[type='week'],.gform_wrapper input[type='url'],.gform_wrapper select,.gform_wrapper textarea{-webkit-transition:none;transition:none}
 .btn,.gform_wrapper .button{-webkit-transition:none;transition:none}
 .fade{-webkit-transition:none;transition:none}
