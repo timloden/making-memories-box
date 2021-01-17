@@ -29,14 +29,14 @@ $logo = get_field('logo', 'option');
             <div class="col-6 col-lg-2">
                 <h6 class="text-dark text-center text-lg-left">About</h6>
                 <ul class="nav flex-column footer-links text-center text-lg-left">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">How it works</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Contact</a>
@@ -47,10 +47,8 @@ $logo = get_field('logo', 'option');
                 <h6 class="text-dark text-center text-lg-left">Account</h6>
                 <ul class="nav flex-column footer-links text-center text-lg-left">
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">My Account</a>
+                        <a class="nav-link pl-lg-0"
+                            href="<?php echo site_url(); ?>"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Privacy</a>

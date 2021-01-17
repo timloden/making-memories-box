@@ -1147,7 +1147,7 @@ a.text-light:hover,a.text-light:focus{color:#cbd3da !important}
 a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .text-body{color:#212529 !important}
 .text-muted{color:#6c757d !important}
-.text-black-50{color:rgba(0,0,0,0.5) !important}
+.text-black-50,.product .woocommerce-variation-price{color:rgba(0,0,0,0.5) !important}
 .text-white-50{color:rgba(255,255,255,0.5) !important}
 .text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
 .text-decoration-none{text-decoration:none !important}
@@ -3017,6 +3017,14 @@ footer .footer-newsletter .gform_fields{margin-bottom:0}
 footer .footer-newsletter .gform_fields li{margin-bottom:0}
 footer .footer-newsletter .gform_footer{margin-left:-3px}
 footer .social-icons li{padding:5px 8px}
+.woocommerce-variation-add-to-cart label{display:none}
+.product .flex-control-thumbs{list-style:none;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:1.5em}
+.product .woocommerce-product-gallery__image{text-align:center}
+.product .variations .label{vertical-align:middle}
+.product .variations .label label{margin-bottom:0}
+.product .woocommerce-variation-price{padding-bottom:1em}
+.product .first-payment-date{padding-top:1em}
+.product .wp-post-image{max-width:100%}
 @media(prefers-reduced-motion:reduce){.form-control,.gform_wrapper input[type='email'],.gform_wrapper input[type='date'],.gform_wrapper input[type='datetime'],.gform_wrapper input[type='datetime-local'],.gform_wrapper input[type='month'],.gform_wrapper input[type='number'],.gform_wrapper input[type='password'],.gform_wrapper input[type='search'],.gform_wrapper input[type='tel'],.gform_wrapper input[type='text'],.gform_wrapper input[type='time'],.gform_wrapper input[type='week'],.gform_wrapper input[type='url'],.gform_wrapper select,.gform_wrapper textarea{-webkit-transition:none;transition:none}
 .btn,.gform_wrapper .button{-webkit-transition:none;transition:none}
 .fade{-webkit-transition:none;transition:none}
@@ -3671,6 +3679,7 @@ footer .social-icons li{padding:5px 8px}
 .text-lg-left{text-align:left !important}
 .text-lg-right{text-align:right !important}
 .text-lg-center{text-align:center !important}
+.product .single_add_to_cart_button{width:auto}
 }@media(min-width:1200px){.container,.container-sm,.container-md,.container-lg,.container-xl{max-width:1140px}
 .col-xl{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
 .row-cols-xl-1>*{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}

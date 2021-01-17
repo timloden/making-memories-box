@@ -55,10 +55,10 @@ if ( ! function_exists( 'theme_setup' ) ) :
 		include_once get_template_directory() . '/vendor/class-wp-category-walker.php';
 
 		// woocommerce support
-		//add_theme_support( 'woocommerce' );
+		add_theme_support( 'woocommerce' );
 		//add_theme_support('wc-product-gallery-zoom');
 		//add_theme_support( 'wc-product-gallery-lightbox' );
-		//add_theme_support( 'wc-product-gallery-slider' );
+		add_theme_support( 'wc-product-gallery-slider' );
 
 		// remove emojis
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

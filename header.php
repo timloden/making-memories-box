@@ -35,24 +35,29 @@
                     </div>
                     <div class="d-none d-lg-block ml-lg-auto">
                         <ul class="nav">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">How it works</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link text-dark font-weight-bold" href="#">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link text-dark font-weight-bold" href="#">FAQ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">FAQ</a>
+                                <a class="nav-link text-dark font-weight-bold" href="#">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link text-dark font-weight-bold"
+                                    href="#"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                             </li>
                         </ul>
                     </div>
                     <div class="ml-auto">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="#" class="d-none d-md-inline-block btn btn-primary btn-rounded">Sign up Today</a>
-                            <a href="#mobile-menu" class="d-inline-block d-lg-none nav-button ml-3 mb-0 p-2 h4"
+                            <a href="<?php echo site_url(); ?>/product/making-memories-box-monthly-subscription/"
+                                class="d-none d-md-inline-block btn btn-primary btn-rounded">Sign up Today</a>
+                            <a href="#mobile-menu" class="d-inline-block d-lg-none nav-button ml-3 mb-0 p-2 h3"
                                 data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"
                                 role="button"><i class="las la-bars"></i></a>
                         </div>
@@ -60,19 +65,28 @@
                 </nav>
                 <div class="collapse" id="mobile-menu">
                     <div class="d-flex">
-                        <div class="col-12">
+                        <div class="col-12 px-0">
                             <ul class="nav flex-column">
+
                                 <!-- <li class="nav-item">
                                     <a class="nav-link" href="#">How it works</a>
                                 </li> -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
+                                    <a class="nav-link text-center text-dark font-weight-bold" href="#">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">FAQ</a>
+                                    <a class="nav-link text-center text-dark font-weight-bold" href="#">FAQ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
+                                    <a class="nav-link text-center text-dark font-weight-bold" href="#">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-center text-dark font-weight-bold"
+                                        href="#"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
+                                </li>
+                                <li class="nav-item mt-3">
+                                    <a href="<?php echo site_url(); ?>/product/making-memories-box-monthly-subscription/"
+                                        class="d-block w-100 btn btn-primary btn-rounded">Sign up Today</a>
                                 </li>
                             </ul>
                         </div>

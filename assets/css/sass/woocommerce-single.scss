@@ -1,0 +1,48 @@
+.woocommerce-variation-add-to-cart {
+    label {
+        display: none;
+    }
+}
+
+.product {
+    .flex-control-thumbs {
+        list-style: none;
+        margin-left: 0;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5em;
+    }
+
+    .woocommerce-product-gallery__image {
+        text-align: center;
+    }
+
+    .variations {
+        .label {
+            vertical-align: middle;
+
+            label {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .woocommerce-variation-price {
+        padding-bottom: 1em;
+        @extend .text-black-50;
+    }
+
+    .first-payment-date {
+        padding-top: 1em;
+    }
+
+    .wp-post-image {
+        max-width: 100%;
+    }
+
+    @media (min-width: 992px) {
+        .single_add_to_cart_button {
+            width: auto;
+        }
+    }
+}

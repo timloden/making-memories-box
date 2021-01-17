@@ -13,3 +13,6 @@ function scripts_and_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'scripts_and_styles' );
+
+// remove woo styling
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
