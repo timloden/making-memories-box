@@ -2,16 +2,20 @@ html {
     scroll-behavior: smooth;
 }
 
+.screen-reader-text {
+    @extend .sr-only;
+}
+
 .logo {
     img {
-        max-width: 200px;
+        max-width: 300px;
     }
 }
 
 @media (min-width: 768px) {
     .logo {
         img {
-            max-width: 300px;
+            max-width: 350px;
         }
     }
 }

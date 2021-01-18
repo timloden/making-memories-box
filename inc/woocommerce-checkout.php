@@ -13,10 +13,10 @@ add_filter('woocommerce_form_field_number', 'clean_checkout_fields_class_attribu
 add_filter('woocommerce_form_field_select', 'clean_checkout_fields_class_attribute_values', 20, 4);
 add_filter('woocommerce_form_field_radio', 'clean_checkout_fields_class_attribute_values', 20, 4);
 function clean_checkout_fields_class_attribute_values( $field, $key, $args, $value ){
-    if( is_checkout() ){
+   
         // remove "form-row"
         $field = str_replace( array('<p class="form-row ', '<p class="form-row'), array('<p class="', '<p class="'), $field);
-    }
+    
 
     return $field;
 }
@@ -57,4 +57,8 @@ function move_my_email_fields( $address_fields ) {
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 
 add_action( 'woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form' );
+
+// remove added to cart message
+
+add_filter( 'wc_add_to_cart_message_html', '__return_false' );
  

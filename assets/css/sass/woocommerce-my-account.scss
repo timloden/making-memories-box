@@ -1,0 +1,38 @@
+.woocommerce-MyAccount-navigation-link {
+    &.is-active {
+        @extend .active;
+    }
+}
+
+#add_payment_method {
+    .payment_method_stripe {
+        label {
+            width: 100%;
+        }
+
+        .stripe-card-group,
+        .wc-stripe-elements-field {
+            width: 100%;
+        }
+
+        #stripe-card-element {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        #stripe-exp-element {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        #stripe-cvc-element {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    #payment ul.payment_methods li .stripe-credit-card-brand {
+        width: 20px !important;
+        margin-top: -15px !important;
+    }
+}
