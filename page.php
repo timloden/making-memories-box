@@ -30,8 +30,8 @@ get_header();
         </div>
     </div>
 </section>
-<section class="page-content">
-    <div class="container py-3">
+<section class="page-content pb-5">
+    <div class="container">
         <?php
 		while ( have_posts() ) :
 			the_post();
