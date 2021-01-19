@@ -15,9 +15,12 @@ get_header();
             <div class="col-12 col-lg-5 pb-5 pb-lg-0">
                 <h1 class="text-center text-lg-left"><?php echo esc_attr(the_field('hero_title')); ?></h1>
                 <p class="my-3 text-black-50"><?php echo esc_attr(the_field('hero_description')); ?></p>
-                <p class="font-weight-bolder pt-3 h5 text-center text-lg-left pb-3" style="text-decoration: underline;">
+                <?php if(get_field('hero_offer')) : ?>
+                <p style="font-size: 16px;" class="mb-1 text-primary font-weight-bold pt-3">LIMITED OFFER:</p>
+                <p class="font-weight-bolder h4 text-center text-lg-left pb-3" style="text-decoration: underline;">
                     <?php echo esc_attr(the_field('hero_offer')); ?>
                 </p>
+                <?php endif; ?>
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
                     <a href="<?php echo esc_url(the_field('hero_cta_button_link')); ?>"
                         class="btn btn-primary btn-rounded btn-lg"><?php echo esc_attr(the_field('hero_cta_button_text')); ?></a>
@@ -44,9 +47,8 @@ get_header();
     <div class="container">
         <div class="row pb-5">
             <div class="col-12">
-                <p class="subtitle text-center text-primary mb-0 font-weight-bold mb-1">
-                    <?php echo esc_attr(the_field('how_it_works_subtitle')); ?></p>
                 <h2 class="text-center"><?php echo esc_attr(the_field('how_it_works_title')); ?></h2>
+                <p class="text-center text-black-50"><?php echo esc_attr(the_field('how_it_works_subtitle')); ?></p>
             </div>
         </div>
         <div class="row align-items-center">
@@ -121,8 +123,6 @@ get_header();
     <div class="container">
         <div class="row pb-3">
             <div class="col-12">
-                <p class="subtitle text-center text-primary mb-0 font-weight-bold mb-1">
-                    <?php echo esc_attr(the_field('whats_in_the_box_subtitle')); ?></p>
                 <h2 class="text-center"><?php echo esc_attr(the_field('whats_in_the_box_title')); ?></h2>
                 <p class="text-center text-black-50"><?php echo esc_attr(the_field('whats_in_the_box_description')); ?>
                 </p>

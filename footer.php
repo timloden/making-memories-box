@@ -21,20 +21,24 @@ $logo = get_field('logo', 'option');
                 <div class="footer-logo pr-3">
                     <a class="mb-3 d-block" href="<?php echo site_url(); ?>"><img class="img-fluid"
                             src="<?php echo esc_url($logo['url']); ?>"></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Ut
-                        enim ad
-                        minim veniam.</p>
+                    <?php if(get_field('footer_sub_logo_text', 'option')) : ?>
+                    <p><?php echo esc_attr(get_field('footer_sub_logo_text', 'option')); ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-6 col-lg-2">
                 <h6 class="text-dark text-center text-lg-left">About</h6>
                 <ul class="nav flex-column footer-links text-center text-lg-left">
+                    <li class="nav-item">
+                        <a class="nav-link pl-lg-0"
+                            href="<?php echo site_url(); ?>/product/making-memories-box-monthly-subscription/">Order</a>
+                    </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">How it works</a>
                     </li> -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">FAQ</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">About</a>
                     </li>
@@ -51,10 +55,10 @@ $logo = get_field('logo', 'option');
                             href="<?php echo site_url(); ?>"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Privacy</a>
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/privacy">Privacy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Terms</a>
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/terms">Terms</a>
                     </li>
                 </ul>
             </div>
