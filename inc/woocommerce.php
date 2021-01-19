@@ -13,3 +13,15 @@ function wc_form_field_args($args, $key, $value) {
   $args['input_class'] = array( 'form-control' );
   return $args;
 } 
+
+
+// redirect to home page after logout
+
+add_action('wp_logout','auto_redirect_after_logout');
+
+function auto_redirect_after_logout(){
+
+  wp_redirect( home_url() );
+  exit();
+
+}
