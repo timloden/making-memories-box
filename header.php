@@ -39,17 +39,19 @@
                                 <a class="nav-link" href="#">How it works</a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link text-dark font-weight-bold" href="#">About</a>
+                                <a class="nav-link text-dark font-weight-bold"
+                                    href="<?php echo site_url(); ?>/about">About</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold" href="#">FAQ</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
-                                <a class="nav-link text-dark font-weight-bold" href="#">Contact</a>
+                                <a class="nav-link text-dark font-weight-bold"
+                                    href="<?php echo site_url(); ?>/contact">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold"
-                                    href="#"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
+                                    href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                             </li>
                         </ul>
                     </div>
@@ -67,22 +69,23 @@
                     <div class="d-flex">
                         <div class="col-12 px-0">
                             <ul class="nav flex-column">
-
                                 <!-- <li class="nav-item">
                                     <a class="nav-link" href="#">How it works</a>
                                 </li> -->
                                 <li class="nav-item">
-                                    <a class="nav-link text-center text-dark font-weight-bold" href="#">About</a>
+                                    <a class="nav-link text-center text-dark font-weight-bold"
+                                        href="<?php echo site_url(); ?>/about">About</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link text-center text-dark font-weight-bold" href="#">FAQ</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
-                                    <a class="nav-link text-center text-dark font-weight-bold" href="#">Contact</a>
+                                    <a class="nav-link text-center text-dark font-weight-bold"
+                                        href="<?php echo site_url(); ?>/contact">Contact</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-center text-dark font-weight-bold"
-                                        href="#"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
+                                        href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                                 </li>
                                 <li class="nav-item mt-3">
                                     <a href="<?php echo site_url(); ?>/product/making-memories-box-monthly-subscription/"
