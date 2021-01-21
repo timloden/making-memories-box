@@ -57,8 +57,8 @@
                     </div>
                     <div class="ml-auto">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="<?php echo site_url(); ?>/product/making-memories-box-monthly-subscription/"
-                                class="d-none d-md-inline-block btn btn-primary btn-rounded">Sign up Today</a>
+                            <a href="<?php echo site_url(); ?>/shop"
+                                class="d-none d-md-inline-block btn btn-primary btn-rounded">Get Started!</a>
                             <a href="#mobile-menu" class="d-inline-block d-lg-none nav-button ml-3 mb-0 p-2 h3"
                                 data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"
                                 role="button"><i class="las la-bars"></i></a>
@@ -88,8 +88,8 @@
                                         href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                                 </li>
                                 <li class="nav-item mt-3">
-                                    <a href="<?php echo site_url(); ?>/product/making-memories-box-monthly-subscription/"
-                                        class="d-block w-100 btn btn-primary btn-rounded">Sign up Today</a>
+                                    <a href="<?php echo site_url(); ?>/shop"
+                                        class="d-block w-100 btn btn-primary btn-rounded">Get Started</a>
                                 </li>
                             </ul>
                         </div>

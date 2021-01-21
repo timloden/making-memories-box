@@ -30,8 +30,7 @@ $logo = get_field('logo', 'option');
                 <h6 class="text-dark text-center text-lg-left">About</h6>
                 <ul class="nav flex-column footer-links text-center text-lg-left">
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0"
-                            href="<?php echo site_url(); ?>/product/making-memories-box-monthly-subscription/">Order</a>
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/shop">Order</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">How it works</a>

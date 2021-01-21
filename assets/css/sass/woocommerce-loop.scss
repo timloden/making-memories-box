@@ -1,0 +1,12 @@
+.products {
+    .product {
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+            h2 {
+                color: $black;
+            }
+        }
+    }
+}

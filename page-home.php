@@ -24,9 +24,11 @@ get_header();
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
                     <a href="<?php echo esc_url(the_field('hero_cta_button_link')); ?>"
                         class="btn btn-primary btn-rounded btn-lg"><?php echo esc_attr(the_field('hero_cta_button_text')); ?></a>
+                    <?php if(the_field('hero_secondary_button_text')) : ?>
                     <a class="ml-3"
                         href="<?php echo esc_url(the_field('hero_secondary_button_link')); ?>"><?php echo esc_attr(the_field('hero_secondary_button_text')); ?>
                         <i class="las la-arrow-down"></i></a>
+                    <?php endif; ?>
                 </div>
 
             </div>
