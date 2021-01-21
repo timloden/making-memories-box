@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
                 <td class="product-thumbnail">
                     <?php
-						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image('custom-thumb'), $cart_item, $cart_item_key );
 
 						if ( ! $product_permalink ) {
 							echo $thumbnail; // PHPCS: XSS ok.
@@ -138,20 +138,27 @@ do_action( 'woocommerce_before_cart' ); ?>
 
             <tr>
                 <td colspan="6" class="actions">
+                    <div class="d-flex justify-content-between">
+                        <?php if ( wc_coupons_enabled() ) { ?>
+                        <div class="coupon">
+                            <div class="input-group mb-3">
+                                <label class="sr-only"
+                                    for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input
+                                    type="text" name="coupon_code" class="input-text form-control" id="coupon_code"
+                                    value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
+                                <div class="input-group-append"><button type="submit"
+                                        class="button btn btn-outline-primary btn-rounded" name="apply_coupon"
+                                        value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+                                </div>
+                                <?php do_action( 'woocommerce_cart_coupon' ); ?>
+                            </div>
+                        </div>
+                        <?php } ?>
 
-                    <?php if ( wc_coupons_enabled() ) { ?>
-                    <div class="coupon">
-                        <label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input
-                            type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
-                            placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit"
-                            class="button" name="apply_coupon"
-                            value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-                        <?php do_action( 'woocommerce_cart_coupon' ); ?>
+                        <button type="submit" class="btn btn-link" name="update_cart"
+                            value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
                     </div>
-                    <?php } ?>
 
-                    <button type="submit" class="button" name="update_cart"
-                        value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 
                     <?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -166,9 +173,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
-
-<div class="cart-collaterals">
-    <?php
+<div class="row justify-content-end">
+    <div class="col-12 col-lg-5">
+        <div class="cart-collaterals">
+            <?php
 		/**
 		 * Cart collaterals hook.
 		 *
@@ -177,6 +185,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 		 */
 		do_action( 'woocommerce_cart_collaterals' );
 	?>
+        </div>
+    </div>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>

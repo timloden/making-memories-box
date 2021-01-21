@@ -1147,7 +1147,7 @@ a.text-light:hover,a.text-light:focus{color:#cbd3da !important}
 a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .text-body{color:#212529 !important}
 .text-muted{color:#6c757d !important}
-.text-black-50,.product .woocommerce-variation-price{color:rgba(0,0,0,0.5) !important}
+.text-black-50{color:rgba(0,0,0,0.5) !important}
 .text-white-50{color:rgba(255,255,255,0.5) !important}
 .text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
 .text-decoration-none{text-decoration:none !important}
@@ -3022,7 +3022,8 @@ footer .social-icons li{padding:5px 8px}
 .product .woocommerce-product-gallery__image{text-align:center}
 .product .variations .label{vertical-align:middle}
 .product .variations .label label{margin-bottom:0}
-.product .woocommerce-variation-price{padding-bottom:1em}
+.product .in-stock{margin-bottom:0;font-size:16px;margin-left:1em}
+.product .woocommerce-variation-price{font-size:1.5em;font-weight:bold}
 .product .first-payment-date{padding-top:1em}
 .product .wp-post-image{max-width:100%}
 .woocommerce-checkout .mailchimp-newsletter{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:0;margin-right:0}
@@ -3042,6 +3043,7 @@ footer .social-icons li{padding:5px 8px}
 #add_payment_method .payment_method_stripe #stripe-cvc-element{margin-top:0;margin-bottom:1rem}
 #add_payment_method #payment ul.payment_methods li .stripe-credit-card-brand{width:20px !important;margin-top:-15px !important}
 .size-woocommerce_thumbnail{max-width:100%;height:auto}
+.cart_item td{vertical-align:middle}
 @media(prefers-reduced-motion:reduce){.form-control,.gform_wrapper input[type='email'],.gform_wrapper input[type='date'],.gform_wrapper input[type='datetime'],.gform_wrapper input[type='datetime-local'],.gform_wrapper input[type='month'],.gform_wrapper input[type='number'],.gform_wrapper input[type='password'],.gform_wrapper input[type='search'],.gform_wrapper input[type='tel'],.gform_wrapper input[type='text'],.gform_wrapper input[type='time'],.gform_wrapper input[type='week'],.gform_wrapper input[type='url'],.gform_wrapper select,.gform_wrapper textarea{-webkit-transition:none;transition:none}
 .btn,.gform_wrapper .button{-webkit-transition:none;transition:none}
 .fade{-webkit-transition:none;transition:none}

@@ -32,6 +32,8 @@ get_header();
             </div>
             <div class="col-12 col-lg-7 text-center">
                 <?php 
+                    //echo do_shortcode('[products ids="169"]');
+                    
                     $hero_image = get_field('hero_image');
                     if( !empty( $hero_image ) ): ?>
                 <img src="<?php echo esc_url($hero_image['url']); ?>" class="img-fluid"
