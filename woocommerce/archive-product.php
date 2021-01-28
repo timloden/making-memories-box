@@ -25,13 +25,13 @@ $featured_product = get_field('featured_product', 'option');
 	$featured_product_id = $featured_product->ID;
 	$featured_product_image = get_the_post_thumbnail_url($featured_product_id,'full'); 
 	$product = wc_get_product( $featured_product_id );
-	?>
+?>
 <section class="subscription-hero mb-5" style="background-color: #f5f9fd;">
     <div class="container py-5">
         <div class="row">
             <div class="col-12">
                 <div class="card shadow p-3 border-0">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-12 col-lg-4">
                             <a href="<?php the_permalink($featured_product_id); ?>">
                                 <img class="img-fluid" src="<?php echo esc_url($featured_product_image); ?>">
@@ -39,7 +39,9 @@ $featured_product = get_field('featured_product', 'option');
                         </div>
                         <div class="col-12 col-lg-8">
                             <h2><?php echo esc_attr($featured_product->post_title); ?></h2>
-                            <?php the_excerpt($featured_product_id); ?>
+                            <?php
+								echo apply_filters( 'the_content', $product->short_description )
+							?>
                             <div class="text-center text-lg-left">
 
                                 <a href="<?php the_permalink($featured_product_id); ?>"
