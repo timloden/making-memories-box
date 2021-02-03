@@ -19,7 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php wp_head();
+    the_field('header_embed', 'option');
     $logo = get_field('logo', 'option');
+    
 ?>
 </head>
 
