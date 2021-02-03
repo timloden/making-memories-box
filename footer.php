@@ -80,13 +80,13 @@ $facebook = get_field('facebook_link', 'option');
                     <ul class="nav social-icons justify-content-end">
                         <?php if($instagram ) : ?>
                         <li class="nav-item bg-primary rounded-circle mr-3">
-                            <a class="text-white" href="<?php echo esc_url($instagram ); ?>"><i
+                            <a class="text-white" href="<?php echo esc_url($facebook ); ?>"><i
                                     class="lab la-facebook-f"></i></a>
                         </li>
                         <?php endif; ?>
                         <?php if($facebook ) : ?>
                         <li class="nav-item bg-primary rounded-circle">
-                            <a class="text-white" href="<?php echo esc_url($facebook ); ?>"><i
+                            <a class="text-white" href="<?php echo esc_url($instagram ); ?>"><i
                                     class="lab la-instagram"></i></a>
                         </li>
                         <?php endif; ?>
