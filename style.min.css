@@ -3025,7 +3025,7 @@ footer .social-icons li{padding:5px 8px}
 .product .in-stock{margin-bottom:0;font-size:16px;margin-left:1em}
 .product .woocommerce-variation-price{font-size:1.5em;font-weight:bold}
 .product .first-payment-date{padding-top:1em}
-.product .wp-post-image{max-width:100%}
+.product .wp-post-image{max-width:100%;height:auto}
 .woocommerce-checkout .mailchimp-newsletter{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:0;margin-right:0}
 .woocommerce-checkout .mailchimp-newsletter label{margin-bottom:0;margin-left:.5em}
 .woocommerce-checkout .shipping.recurring-total{display:none}
