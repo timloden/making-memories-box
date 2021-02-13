@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
-
+$product_id = $product->get_id();
 /**
  * Hook: woocommerce_before_single_product.
  *
@@ -64,6 +64,27 @@ if ( post_password_required() ) {
             </div>
         </div>
     </div>
+    <?php if( have_rows('example_box_content') ): ?>
+    <section class="activity-examples mt-5">
+        <h2 class="text-center mb-5">Some example activities from <?php echo $product->get_name(); ?></h2>
+        <div class="row">
+            <?php while( have_rows('example_box_content') ): the_row(); 
+            $activity_image = get_sub_field('image');
+            ?>
+            <div class="col-12 col-lg-6 mb-5" data-aos="fade-up" data-aos-once="true">
+                <div class="media">
+                    <img src="<?php echo esc_url($activity_image['url']); ?>" class="rounded mr-3"
+                        style="width: 100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0"><?php echo esc_attr(the_sub_field('title')); ?></h5>
+                        <?php echo esc_attr(the_sub_field('description')); ?>
+                    </div>
+                </div>
+            </div>
+            <?php endwhile; ?>
+        </div>
+    </section>
+    <?php endif; ?>
     <?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
