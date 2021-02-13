@@ -12,6 +12,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+global $product;
+if ($product->is_in_stock()) :
 ?>
 <script type="text/template" id="tmpl-variation-template">
     <div class="d-flex align-items-center">
@@ -24,3 +26,4 @@ defined( 'ABSPATH' ) || exit;
 <script type="text/template" id="tmpl-unavailable-variation-template">
     <p><?php esc_html_e( 'Sorry, this product is unavailable. Please choose a different combination.', 'woocommerce' ); ?></p>
 </script>
+<?php endif; ?>

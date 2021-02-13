@@ -10,6 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
+if ($product->is_in_stock()) :
 ?>
 <div class="woocommerce-variation-add-to-cart variations_button">
     <div class="d-flex align-items-center">
@@ -42,3 +43,4 @@ global $product;
     <input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
     <input type="hidden" name="variation_id" class="variation_id" value="0" />
 </div>
+<?php endif; ?>
