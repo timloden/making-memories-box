@@ -22,6 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 ?>
 
-<?php if ( $price_html = $product->get_price_html() && $product->is_in_stock() ) : ?>
+<?php if ($product->is_in_stock() && $price_html = $product->get_price_html() ) : ?>
 <span class="price"><?php echo $price_html; ?></span>
 <?php endif; ?>
