@@ -125,38 +125,6 @@ get_header();
 <section class="home-box-contents py-5"
     style="background: url(<?php echo get_template_directory_uri(); ?>/assets/images/yellow-circle-left.png) center top / cover;">
     <div class="container">
-        <div class="row pb-3">
-            <div class="col-12">
-                <h2 class="text-center"><?php echo esc_attr(the_field('whats_in_the_box_title')); ?></h2>
-                <p class="text-center text-black-50"><?php echo esc_attr(the_field('whats_in_the_box_description')); ?>
-                </p>
-            </div>
-        </div>
-
-        <?php if( have_rows('whats_in_the_box_contents') ): ?>
-        <div class="row">
-            <?php while( have_rows('whats_in_the_box_contents') ): the_row(); 
-            $activity_image = get_sub_field('box_content_image');
-            ?>
-            <div class="col-12 col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-once="true">
-                <div class="media">
-                    <img src="<?php echo esc_url($activity_image['url']); ?>" class="rounded mr-3"
-                        style="width: 100px;">
-                    <div class="media-body">
-                        <h5 class="mt-0"><?php echo esc_attr(the_sub_field('box_content_title')); ?></h5>
-                        <?php echo esc_attr(the_sub_field('box_content_description')); ?>
-                    </div>
-                </div>
-            </div>
-            <?php endwhile; ?>
-        </div>
-        <?php endif; ?>
-
-        <div class="row pb-3">
-            <div class="col-12">
-                <p class="h2 text-center"><?php echo esc_attr(the_field('whats_in_the_box_after_content')); ?></p>
-            </div>
-        </div>
         <div class="row pb-5">
             <div class="col-12">
                 <p class="h3 text-center"><a href="<?php echo esc_url(the_field('bottom_special_offer_link')); ?>"
