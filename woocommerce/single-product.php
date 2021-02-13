@@ -19,7 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); 
+get_header( 'shop' );
+
+global $product;
 $featured_product = get_field('featured_product', 'option');
 ?>
 
@@ -60,10 +62,10 @@ $featured_product = get_field('featured_product', 'option');
 		 */
 		//do_action( 'woocommerce_sidebar' );
 	?>
-<?php if ($featured_product) : 
+<?php if ($featured_product && $featured_product->ID !== $product->get_id()) : 
 	$featured_product_id = $featured_product->ID;
 	$featured_product_image = get_the_post_thumbnail_url($featured_product_id,'full'); 
-	$product = wc_get_product( $featured_product_id );
+	$featured = wc_get_product( $featured_product_id );
 ?>
 <section class="subscription-hero">
     <div class="container py-5">
@@ -86,7 +88,7 @@ $featured_product = get_field('featured_product', 'option');
                                     Today and
                                     Save!</a>
                                 <span class="text-primary font-weight-bold">Staring at just
-                                    $<?php echo $product->get_price(); ?>!</span>
+                                    $<?php echo $featured->get_price(); ?>!</span>
 
                             </div>
 
