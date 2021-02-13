@@ -19,7 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+get_header( 'shop' ); 
+$featured_product = get_field('featured_product', 'option');
+?>
 
 <?php
 		/**
@@ -58,7 +60,44 @@ get_header( 'shop' ); ?>
 		 */
 		//do_action( 'woocommerce_sidebar' );
 	?>
+<?php if ($featured_product) : 
+	$featured_product_id = $featured_product->ID;
+	$featured_product_image = get_the_post_thumbnail_url($featured_product_id,'full'); 
+	$product = wc_get_product( $featured_product_id );
+?>
+<section class="subscription-hero">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <h2 class="text-center text-primary mb-5">Want to save $10 and guarantee your box each month?</h2>
+                <div class="card shadow p-3 border-0">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-5">
+                            <a href="<?php the_permalink($featured_product_id); ?>">
+                                <img class="img-fluid" src="<?php echo esc_url($featured_product_image); ?>">
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <h2><?php echo esc_attr($featured_product->post_title); ?></h2>
+                            <div class="text-center text-lg-left">
 
+                                <a href="<?php the_permalink($featured_product_id); ?>"
+                                    class="btn btn-primary btn-rounded d-block d-lg-inline-block mr-0 mr-lg-3 mb-3 mb-lg-0">Subscribe
+                                    Today and
+                                    Save!</a>
+                                <span class="text-primary font-weight-bold">Staring at just
+                                    $<?php echo $product->get_price(); ?>!</span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
 <?php
 get_footer( 'shop' );
 

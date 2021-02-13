@@ -89,9 +89,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post_taxonomy",
                 "operator": "==",
-                "value": "product"
+                "value": "product_cat:single-boxes"
             }
         ]
     ],
@@ -103,5 +103,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1611803368
+    "modified": 1613194582
 }
