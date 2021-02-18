@@ -3,6 +3,23 @@
     "title": "Products",
     "fields": [
         {
+            "key": "field_602ef72935a80",
+            "label": "Month Start",
+            "name": "month_start",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "Ymd",
+            "first_day": 1
+        },
+        {
             "key": "field_60122a82aacef",
             "label": "Example Box Content",
             "name": "example_box_content",
@@ -103,5 +120,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1613194582
+    "modified": 1613691629
 }
