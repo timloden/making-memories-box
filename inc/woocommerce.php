@@ -55,3 +55,27 @@ function remove_breadcrumbs() {
         remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
     }
 }
+
+// remove hawaii and alaska from shipping options
+
+add_filter( 'woocommerce_states', 'custom_us_states', 10, 1 );
+function custom_us_states( $states ) {
+    $non_allowed_us_states = array( 'AK', 'HI', 'AA', 'AE', 'AP'); 
+
+    // Loop through your non allowed us states and remove them
+    foreach( $non_allowed_us_states as $state_code ) {
+        if( isset($states['US'][$state_code]) )
+            unset( $states['US'][$state_code] );
+    }
+    return $states;
+}
+
+add_filter( 'woocommerce_checkout_fields', 'md_custom_woocommerce_checkout_fields' );
+
+function md_custom_woocommerce_checkout_fields( $fields ) 
+{
+    $fields['order']['order_comments']['placeholder'] = '';
+    $fields['order']['order_comments']['label'] = 'Delivery Instructions';
+
+    return $fields;
+}
