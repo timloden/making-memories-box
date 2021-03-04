@@ -48,7 +48,7 @@ $featured_product = get_field('featured_product', 'option');
                                     class="btn btn-primary btn-rounded d-block d-lg-inline-block mr-0 mr-lg-3 mb-3 mb-lg-0">Subscribe
                                     Today and
                                     Save!</a>
-                                <span class="text-primary font-weight-bold">Staring at just
+                                <span class="text-primary font-weight-bold">Starting at just
                                     $<?php echo $product->get_price(); ?>!</span>
 
                             </div>
