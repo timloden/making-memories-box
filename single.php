@@ -13,35 +13,53 @@ $categories = get_the_category();
 ?>
 
 <div id="primary" class="content-area article-single">
-    <main id="main" class="site-main">
-        <div class="jumbotron jumbotron-fluid"
-            style="background-image: url(<?php the_post_thumbnail_url('full'); ?>); background-position: center center; background-size: cover; position: relative">
-
-            <div class="container">
-                <h1 class="display-4 text-white font-weight-bold"><?php the_title(); ?></h1>
-                <p class="lead text-light">Posted on: <?php echo $post_date ?> in
-                    <?php echo esc_html( $categories[0]->name ); ?>
-                </p>
-            </div>
-            <div class="hero-overlay"></div>
-        </div>
+    <main id="main" class="site-main pb-5" style="background-color: #f5f9fd;">
 
         <div class="container">
-            <?php
-		while ( have_posts() ) :
-			the_post();
+            <div class="row justify-content-center">
+                <div class="col-12 bg-white rounded-bottom">
+                    <div class="px-3">
+                        <div class="py-3">
+                            <p class="text-black-50 mb-1"><?php echo $categories[0]->name; ?></p>
+                            <h1><?php the_title(); ?></h1>
+                            <p class="text-black-50" style="font-size: 14px;">Posted on <?php echo $post_date ?></p>
+                        </div>
+                        <div class="jumbotron jumbotron-fluid rounded"
+                            style="background-image: url(<?php the_post_thumbnail_url('full'); ?>); background-position: center center; background-size: cover; position: relative; height: 300px;">
 
-			get_template_part( 'template-parts/content-single', get_post_type() );
+                        </div>
 
-		endwhile; // End of the loop.
-		?>
+                        <?php
+                    while ( have_posts() ) :
+                        the_post();
+
+                        get_template_part( 'template-parts/content-single', get_post_type() );
+
+                    endwhile; // End of the loop.
+                    ?>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-
-
     </main><!-- #main -->
 </div><!-- #primary -->
+<div class="post-cta bg-white border-top"
+    style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/assets/images/post-detail-cta-bg-800-light.jpg)">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Let us do the prep work for you</h2>
+                <p class="mb-4">Each Making Memories Box comes packed and prepped with everything you need to celebrate
+                    all
+                    life&apos;s little moments. </p>
+                <a class="btn btn-primary btn-rounded btn-lg" href="<?php echo site_url(); ?>/shop">Sign up today</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

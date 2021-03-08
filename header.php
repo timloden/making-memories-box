@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-        <header class="header py-3">
+        <header class="header py-3 border-bottom">
             <div class="container">
                 <nav class="d-flex justify-content-between align-items-center">
                     <div class="logo">
