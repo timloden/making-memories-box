@@ -1,0 +1,21 @@
+.restricted-page {
+    #loginform {
+        @extend .card;
+        @extend .p-3;
+
+        p {
+            @extend .form-group;
+
+            .input {
+                @extend .form-control;
+            }
+
+            .button {
+                @extend .btn;
+                @extend .btn-primary;
+                @extend .btn-rounded;
+                @extend .btn-block;
+            }
+        }
+    }
+}
