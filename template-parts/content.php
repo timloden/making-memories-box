@@ -8,18 +8,19 @@
  */
 
 ?>
-<div class="col mb-3">
-
-    <div class="card h-100 post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="col mb-4">
+    <div class="card h-100 shadow border-0 post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'title' => 'Feature image']);
- ?>
+            <div class="rounded-top loop-card-image"
+                style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');?>);">
+
+            </div>
         </a>
         <div class="card-body">
-            <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
+            <h5 class="card-title"><a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
             <p class="card-text"><?php the_excerpt(); ?></p>
+            <p class="mb-0 text-right"><a href="<?php the_permalink(); ?>">Continue reading <i
+                        class="las la-angle-right"></i></a></p>
         </div>
     </div>
-
-
 </div>

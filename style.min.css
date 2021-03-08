@@ -3017,6 +3017,7 @@ footer .footer-newsletter .gform_fields{margin-bottom:0}
 footer .footer-newsletter .gform_fields li{margin-bottom:0}
 footer .footer-newsletter .gform_footer{margin-left:-3px}
 footer .social-icons li{padding:5px 8px}
+.loop-card-image{height:200px;background-size:cover;background-position:center center}
 .woocommerce-variation-add-to-cart label{display:none}
 .product .flex-control-thumbs{list-style:none;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:1.5em}
 .product .woocommerce-product-gallery__image{text-align:center}

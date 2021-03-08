@@ -44,9 +44,9 @@
                                 <a class="nav-link text-dark font-weight-bold"
                                     href="<?php echo site_url(); ?>/about">About</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link text-dark font-weight-bold" href="#">FAQ</a>
-                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link text-dark font-weight-bold" href="/blog">Blog</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold"
                                     href="<?php echo site_url(); ?>/contact">Contact</a>
