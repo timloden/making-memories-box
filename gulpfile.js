@@ -112,6 +112,7 @@ function vendorJS() {
                 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
                 'node_modules/tiny-slider/dist/tiny-slider.js',
                 'node_modules/aos/dist/aos.js',
+                'node_modules/sticky-sidebar/dist/sticky-sidebar.min.js',
                 config.jsVendorSRC,
             ],
             { since: gulp.lastRun('customJS') }

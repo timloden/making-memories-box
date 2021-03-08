@@ -17,7 +17,7 @@ get_header();
                 <?php if (get_field('page_title')) : ?>
                 <h1 class="text-center"><?php echo esc_attr(get_field('page_title')); ?></h1>
                 <?php else : ?>
-                <h1 class="text-center">Instructions</h1>
+                <h1 class="text-center">Instructions for this month</h1>
                 <?php endif; ?>
                 <?php if (get_field('page_subtitle')) : ?>
                 <p class="text-center text-black-50"><?php echo esc_attr(get_field('page_subtitle')); ?></p>
@@ -39,7 +39,7 @@ get_header();
                     while ( have_posts() ) :
                         the_post();
     
-                        get_template_part( 'template-parts/content', 'page' );
+                        get_template_part( 'template-parts/content', 'page-instructions' );
     
                     endwhile; // End of the loop.
                 }
@@ -51,4 +51,13 @@ get_header();
 </section>
 
 <?php
-get_footer();
+get_footer(); ?>
+
+<script type="text/javascript">
+var sidebar = new StickySidebar('#sidebar', {
+    containerSelector: '#instructions-container',
+    innerWrapperSelector: '.sidebar__inner',
+    topSpacing: 20,
+    bottomSpacing: 20
+});
+</script>
