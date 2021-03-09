@@ -60,6 +60,10 @@ if ( ! function_exists( 'theme_setup' ) ) :
 		//add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-slider' );
 
+		// add block css
+		add_theme_support('editor-styles');
+		add_theme_support( 'wp-block-styles' );
+
 		// remove emojis
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 
@@ -67,6 +71,16 @@ if ( ! function_exists( 'theme_setup' ) ) :
 endif;
 
 add_action( 'after_setup_theme', 'theme_setup' );
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function theme_add_editor_styles() {
+	
+    add_editor_style( get_template_directory_uri() . '/assets/css/editor-styles.css' );
+}
+
+add_action( 'admin_init', 'theme_add_editor_styles' );
 
 if ( function_exists( 'acf_add_options_page' ) ) {
 
