@@ -3017,6 +3017,7 @@ footer .footer-newsletter .gform_fields{margin-bottom:0}
 footer .footer-newsletter .gform_fields li{margin-bottom:0}
 footer .footer-newsletter .gform_footer{margin-left:-3px}
 footer .social-icons li{padding:5px 8px}
+.wp-block-image img{height:auto}
 .loop-card-image{height:200px;background-size:cover;background-position:center center}
 .restricted-page .sidebar{will-change:min-height}
 .restricted-page .sidebar__inner{-webkit-transform:translate(0,0);transform:translate(0,0);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);will-change:position,transform}
