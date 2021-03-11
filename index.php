@@ -33,7 +33,7 @@ get_header();
             <?php
 				if ( have_posts() ) :
 				
-				echo '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 pt-5 pb-3">';
+				echo '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 pt-5 pb-3 justify-content-center">';
 				
 				/* Start the Loop */
 				while ( have_posts() ) :
