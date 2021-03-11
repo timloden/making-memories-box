@@ -18,7 +18,7 @@
         </a>
         <div class="card-body">
             <h5 class="card-title"><a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
-            <p class="card-text"><?php the_excerpt(); ?></p>
+            <?php the_excerpt(); ?>
             <p class="mb-0 text-right"><a href="<?php the_permalink(); ?>">Continue reading <i
                         class="las la-angle-right"></i></a></p>
         </div>
