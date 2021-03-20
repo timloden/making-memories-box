@@ -22,10 +22,10 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_604adfafe8595",
-                    "label": "Box Image",
-                    "name": "box_image",
-                    "type": "image",
+                    "key": "field_6056656dfce41",
+                    "label": "Box Product",
+                    "name": "box_product",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -34,137 +34,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_604adfbfe8596",
-                    "label": "Box Name",
-                    "name": "box_name",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_604adfd8e8597",
-                    "label": "Box Description",
-                    "name": "box_description",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_604ae00ae8599",
-                    "label": "Box Activities",
-                    "name": "box_activities",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_604ae01fe859a",
-                            "label": "Activity Image",
-                            "name": "activity_image",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_604ae02ce859b",
-                            "label": "Activity Name",
-                            "name": "activity_name",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_604ae038e859c",
-                            "label": "Activity Description",
-                            "name": "activity_description",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
-                        }
-                    ]
+                    "post_type": [
+                        "product"
+                    ],
+                    "taxonomy": [
+                        "product_cat:single-boxes"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
                 }
             ]
         }
@@ -172,9 +51,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post",
                 "operator": "==",
-                "value": "post"
+                "value": "21"
             }
         ]
     ],
@@ -186,5 +65,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1615519817
+    "modified": 1616276689
 }

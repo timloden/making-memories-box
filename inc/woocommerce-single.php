@@ -43,7 +43,7 @@ function variation_price_custom_suffix( $variation_data, $product, $variation ) 
   //print_r($variation_data);  
   //$variation_data['price_html'] .= ' <span class="price-suffix">' . __("each", "woocommerce") . '</span>';
   $variation_data['price_html'] = '<p class="h3"><del class="text-black-50">$' . $variation_data['display_regular_price'] . '</del> <span class="text-primary">$' . $variation_data['display_price'] . '</span></p>';
-  $variation_data['price_html'] .= '<p>$' . $variation_data['display_price'] . ' each month after</p>';
+  $variation_data['price_html'] .= '<p>$' . $variation_data['display_price'] . ' /month after</p>';
   
   return $variation_data;
 }
