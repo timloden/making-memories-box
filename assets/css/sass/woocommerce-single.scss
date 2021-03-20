@@ -34,8 +34,8 @@
     }
 
     .woocommerce-variation-price {
-        font-size: 1.5em;
-        font-weight: bold;
+        // font-size: 1.5em;
+        // font-weight: bold;
     }
 
     .first-payment-date {
@@ -51,5 +51,11 @@
         .single_add_to_cart_button {
             width: auto;
         }
+    }
+}
+
+.woocommerce-variation-add-to-cart {
+    .quantity {
+        width: 75px;
     }
 }

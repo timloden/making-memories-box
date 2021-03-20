@@ -15,9 +15,14 @@ function order_cutoff() {
   
   if( class_exists( 'WC_Subscriptions_Product' ) && WC_Subscriptions_Product::is_subscription( $product ) ) {
     //echo 'is subscription';
+
     $date = new DateTime('now');
     $date->modify('last day of this month');
     date_sub($date, date_interval_create_from_date_string('6 days'));
+
+    $todays_date = new DateTime('now');
+
+
     echo '<p class="text-primary h4 mt-3 pt-3 border-top">Order cutoff this month: ' . $date->format('F j, Y') . '</p><p class="mb-3" style="font-size: 12px;">Orders placed after this date will ship the following month.</p>';
     
   } elseif (class_exists( 'WC_Subscriptions_Product' ) && !WC_Subscriptions_Product::is_subscription( $product ) && $product->is_in_stock()) {
@@ -29,4 +34,16 @@ function order_cutoff() {
     
     echo '<p class="text-primary h4 my-3 pt-3 border-top">Last day to purchase: ' . $date->format('F j, Y') . '</p>';
   }
+}
+
+
+add_filter('woocommerce_available_variation', 'variation_price_custom_suffix', 10, 3 );
+
+function variation_price_custom_suffix( $variation_data, $product, $variation ) {
+  //print_r($variation_data);  
+  //$variation_data['price_html'] .= ' <span class="price-suffix">' . __("each", "woocommerce") . '</span>';
+  $variation_data['price_html'] = '<p class="h3"><del class="text-black-50">$' . $variation_data['display_regular_price'] . '</del> <span class="text-primary">$' . $variation_data['display_price'] . '</span></p>';
+  $variation_data['price_html'] .= '<p>$' . $variation_data['display_price'] . ' each month after</p>';
+  
+  return $variation_data;
 }
