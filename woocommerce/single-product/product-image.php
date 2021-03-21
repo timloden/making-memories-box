@@ -40,17 +40,47 @@ $wrapper_classes   = apply_filters(
     data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
     <figure class="woocommerce-product-gallery__wrapper">
         <?php
-		if ( $product->get_image_id() ) {
+		if ( $product->get_image_id() && !$product->get_gallery_image_ids() ) {
 			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
-		} else {
+		}
+		elseif ($product->get_image_id() && $product->get_gallery_image_ids()) {
+			
+			// our main slider
+			echo '<div class="product-gallery">';
+			
+			$gallery_images = $product->get_gallery_image_ids();
+			//array_push($gallery_images, $product->get_image_id());
+
+			foreach ( $gallery_images as $image ) {
+				$image_url = wp_get_attachment_url($image, 'full');
+				echo '<img class="img-fluid" src="' . $image_url . '"/>';
+			}
+
+			echo '</div>';
+
+			// our thumbnails
+			echo '<div class="product-gallery-thumbs d-flex flex-wrap justify-content-between">';
+			foreach ( $gallery_images as $image ) {
+				$image_thumb_url = wp_get_attachment_thumb_url($image);
+				echo '<div><img width="100" class="img-fluid" src="' . $image_thumb_url . '"/></div>';
+			}
+			echo '</div>';
+
+		}
+	 	else {
 			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
 			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
 			$html .= '</div>';
 		}
 
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+		
 
-		do_action( 'woocommerce_product_thumbnails' );
+		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+		
+		// get thumbnails
+	
+		
+		//do_action( 'woocommerce_product_thumbnails' );
 		?>
     </figure>
 </div>

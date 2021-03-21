@@ -148,5 +148,20 @@ $featured_product = get_field('featured_product', 'option');
 
 <?php
 get_footer( 'shop' );
+$attachment_ids = $product->get_gallery_image_ids();
 
-/* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
+if ( $attachment_ids ) :
+?>
+<script>
+var slider = tns({
+    container: '.product-gallery',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    controls: false,
+    navContainer: '.product-gallery-thumbs',
+    navAsThumbnails: true,
+    navPosition: 'bottom',
+});
+</script>
+<?php endif;

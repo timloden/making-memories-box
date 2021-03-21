@@ -3023,8 +3023,8 @@ footer .social-icons li{padding:5px 8px}
 .restricted-page .sidebar__inner{-webkit-transform:translate(0,0);transform:translate(0,0);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);will-change:position,transform}
 .activity-instruction ol li{margin-bottom:.5rem}
 .woocommerce-variation-add-to-cart label{display:none}
-.product .flex-control-thumbs{list-style:none;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:1.5em}
-.product .woocommerce-product-gallery__image{text-align:center}
+.product .flex-control-thumbs{list-style:none;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:1.5em;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0}
+.product .woocommerce-product-gallery__image{text-align:center;max-width:100%}
 .product .variations .label{vertical-align:middle}
 .product .variations .label label{margin-bottom:0}
 .product .in-stock{margin-bottom:0;font-size:16px;margin-left:1em}
