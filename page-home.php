@@ -71,7 +71,7 @@ get_header();
             <?php endif; ?>
         </div>
         <div class="row mb-5">
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-3">
                 <?php 
                             $image_1 = get_field('how_it_works_image_1');
                             if( !empty( $image_1 ) ): ?>
@@ -79,7 +79,7 @@ get_header();
                     data-aos-delay="100" data-aos-once="true" alt="<?php echo esc_attr($image_1['alt']); ?>">
                 <?php endif; ?>
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-3">
                 <?php 
                             $image_2 = get_field('how_it_works_image_2');
                             if( !empty( $image_2 ) ): ?>
@@ -87,7 +87,7 @@ get_header();
                     data-aos-delay="200" data-aos-once="true" alt="<?php echo esc_attr($image_2['alt']); ?>">
                 <?php endif; ?>
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-3">
                 <?php 
                             $image_3 = get_field('how_it_works_image_3');
                             if( !empty( $image_3 ) ): ?>
@@ -95,7 +95,7 @@ get_header();
                     data-aos-delay="300" data-aos-once="true" alt="<?php echo esc_attr($image_3['alt']); ?>">
                 <?php endif; ?>
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-3">
                 <?php 
                             $image_4 = get_field('how_it_works_image_4');
                             if( !empty( $image_4 ) ): ?>

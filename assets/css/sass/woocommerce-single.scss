@@ -5,6 +5,14 @@
 }
 
 .product {
+    .product_title {
+        font-size: 2rem;
+    }
+
+    #wc-stripe-payment-request-button-separator, #wc-stripe-payment-request-wrapper {
+        display: none !important;
+    }
+
     .flex-control-thumbs {
         list-style: none;
         margin-left: 0;

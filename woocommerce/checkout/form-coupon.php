@@ -22,7 +22,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 }
 
 ?>
-<div class="woocommerce-form-coupon-toggle">
+<div class="woocommerce-form-coupon-toggle font-weight-bold">
     <?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', esc_html__( 'Have a coupon?', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . esc_html__( 'Click here to enter your code', 'woocommerce' ) . '</a>' ), 'notice' ); ?>
 </div>
 
@@ -35,7 +35,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
         <input type="text" name="coupon_code" class="form-control"
             placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
         <div class="input-group-append">
-            <button type="submit" class="btn btn-secondary" name="apply_coupon"
+            <button type="submit" class="btn btn-dark" name="apply_coupon"
                 value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
         </div>
     </div>
