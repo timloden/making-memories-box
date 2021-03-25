@@ -32,7 +32,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Copyright 2011-2020 Twitter,
 Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */:root{--blue:#5b84f8;--indigo:#6610f2;--purple:#6f42c1;--pink:#d63384;--red:#dc3545;--orange:#fd7e14;--yellow:#ffd943;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#5b84f8;--secondary:#ffd943;--success:#28a745;--info:#17a2b8;--warning:#ffd943;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:"Nunito",sans-serif;--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+ */:root{--blue:#5b84f8;--indigo:#6610f2;--purple:#6f42c1;--pink:#d63384;--red:#dc3545;--orange:#fd7e14;--yellow:#ffd943;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#5b84f8;--secondary:#adb5bd;--success:#28a745;--info:#17a2b8;--warning:#ffd943;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:"Nunito",sans-serif;--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
 *,*::before,*::after{-webkit-box-sizing:border-box;box-sizing:border-box}
 html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
@@ -190,10 +190,10 @@ pre code{font-size:inherit;color:inherit;word-break:normal}
 .table-primary th,.table-primary td,.table-primary thead th,.table-primary tbody+tbody{border-color:#aabffb}
 .table-hover .table-primary:hover{background-color:#b9cbfc}
 .table-hover .table-primary:hover>td,.table-hover .table-primary:hover>th{background-color:#b9cbfc}
-.table-secondary,.table-secondary>th,.table-secondary>td{background-color:#fff4ca}
-.table-secondary th,.table-secondary td,.table-secondary thead th,.table-secondary tbody+tbody{border-color:#ffeb9d}
-.table-hover .table-secondary:hover{background-color:#ffefb1}
-.table-hover .table-secondary:hover>td,.table-hover .table-secondary:hover>th{background-color:#ffefb1}
+.table-secondary,.table-secondary>th,.table-secondary>td{background-color:#e8eaed}
+.table-secondary th,.table-secondary td,.table-secondary thead th,.table-secondary tbody+tbody{border-color:#d4d9dd}
+.table-hover .table-secondary:hover{background-color:#dadde2}
+.table-hover .table-secondary:hover>td,.table-hover .table-secondary:hover>th{background-color:#dadde2}
 .table-success,.table-success>th,.table-success>td{background-color:#c3e6cb}
 .table-success th,.table-success td,.table-success thead th,.table-success tbody+tbody{border-color:#8fd19e}
 .table-hover .table-success:hover{background-color:#b1dfbb}
@@ -310,12 +310,12 @@ a.btn.disabled,.gform_wrapper a.disabled.button,.restricted-page #loginform p a.
 .btn-primary.disabled,.gform_wrapper .disabled.button,.restricted-page #loginform p .disabled.button,.btn-primary:disabled,.gform_wrapper .button:disabled,.restricted-page #loginform p .button:disabled{color:#fff;background-color:#5b84f8;border-color:#5b84f8}
 .btn-primary:not(:disabled):not(.disabled):active,.gform_wrapper .button:not(:disabled):not(.disabled):active,.restricted-page #loginform p .button:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.gform_wrapper .button:not(:disabled):not(.disabled).active,.gform_wrapper .button.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.restricted-page #loginform p .button:not(:disabled):not(.disabled).active,.restricted-page #loginform p .button.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.btn-primary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.show>.btn-primary.dropdown-toggle,.gform_wrapper .show>.dropdown-toggle.button,.restricted-page #loginform p .show>.dropdown-toggle.button{color:#fff;background-color:#2a5ff6;border-color:#1e56f5}
 .btn-primary:not(:disabled):not(.disabled):active:focus,.gform_wrapper .button:not(:disabled):not(.disabled):active:focus,.restricted-page #loginform p .button:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.gform_wrapper .button:not(:disabled):not(.disabled).active:focus,.gform_wrapper .button.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.restricted-page #loginform p .button:not(:disabled):not(.disabled).active:focus,.restricted-page #loginform p .button.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.btn-primary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.show>.btn-primary.dropdown-toggle:focus,.gform_wrapper .show>.dropdown-toggle.button:focus,.restricted-page #loginform p .show>.dropdown-toggle.button:focus{-webkit-box-shadow:0 0 0 .2rem rgba(116,150,249,0.5);box-shadow:0 0 0 .2rem rgba(116,150,249,0.5)}
-.btn-secondary{color:#212529;background-color:#ffd943;border-color:#ffd943}
-.btn-secondary:hover{color:#212529;background-color:#ffd11d;border-color:#ffcf10}
-.btn-secondary:focus,.btn-secondary.focus{color:#212529;background-color:#ffd11d;border-color:#ffcf10;-webkit-box-shadow:0 0 0 .2rem rgba(222,190,63,0.5);box-shadow:0 0 0 .2rem rgba(222,190,63,0.5)}
-.btn-secondary.disabled,.btn-secondary:disabled{color:#212529;background-color:#ffd943;border-color:#ffd943}
-.btn-secondary:not(:disabled):not(.disabled):active,.btn-secondary:not(:disabled):not(.disabled).active,.btn-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.show>.btn-secondary.dropdown-toggle{color:#212529;background-color:#ffcf10;border-color:#ffcc03}
-.btn-secondary:not(:disabled):not(.disabled):active:focus,.btn-secondary:not(:disabled):not(.disabled).active:focus,.btn-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.show>.btn-secondary.dropdown-toggle:focus{-webkit-box-shadow:0 0 0 .2rem rgba(222,190,63,0.5);box-shadow:0 0 0 .2rem rgba(222,190,63,0.5)}
+.btn-secondary{color:#212529;background-color:#adb5bd;border-color:#adb5bd}
+.btn-secondary:hover{color:#212529;background-color:#98a2ac;border-color:#919ca6}
+.btn-secondary:focus,.btn-secondary.focus{color:#212529;background-color:#98a2ac;border-color:#919ca6;-webkit-box-shadow:0 0 0 .2rem rgba(152,159,167,0.5);box-shadow:0 0 0 .2rem rgba(152,159,167,0.5)}
+.btn-secondary.disabled,.btn-secondary:disabled{color:#212529;background-color:#adb5bd;border-color:#adb5bd}
+.btn-secondary:not(:disabled):not(.disabled):active,.btn-secondary:not(:disabled):not(.disabled).active,.btn-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.show>.btn-secondary.dropdown-toggle{color:#212529;background-color:#919ca6;border-color:#8a95a1}
+.btn-secondary:not(:disabled):not(.disabled):active:focus,.btn-secondary:not(:disabled):not(.disabled).active:focus,.btn-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.show>.btn-secondary.dropdown-toggle:focus{-webkit-box-shadow:0 0 0 .2rem rgba(152,159,167,0.5);box-shadow:0 0 0 .2rem rgba(152,159,167,0.5)}
 .btn-success{color:#fff;background-color:#28a745;border-color:#28a745}
 .btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}
 .btn-success:focus,.btn-success.focus{color:#fff;background-color:#218838;border-color:#1e7e34;-webkit-box-shadow:0 0 0 .2rem rgba(72,180,97,0.5);box-shadow:0 0 0 .2rem rgba(72,180,97,0.5)}
@@ -358,12 +358,12 @@ a.btn.disabled,.gform_wrapper a.disabled.button,.restricted-page #loginform p a.
 .btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#5b84f8;background-color:transparent}
 .btn-outline-primary:not(:disabled):not(.disabled):active,.btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.show>.btn-outline-primary.dropdown-toggle{color:#fff;background-color:#5b84f8;border-color:#5b84f8}
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.btn-outline-primary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.show>.btn-outline-primary.dropdown-toggle:focus{-webkit-box-shadow:0 0 0 .2rem rgba(91,132,248,0.5);box-shadow:0 0 0 .2rem rgba(91,132,248,0.5)}
-.btn-outline-secondary{color:#ffd943;border-color:#ffd943}
-.btn-outline-secondary:hover{color:#212529;background-color:#ffd943;border-color:#ffd943}
-.btn-outline-secondary:focus,.btn-outline-secondary.focus{-webkit-box-shadow:0 0 0 .2rem rgba(255,217,67,0.5);box-shadow:0 0 0 .2rem rgba(255,217,67,0.5)}
-.btn-outline-secondary.disabled,.btn-outline-secondary:disabled{color:#ffd943;background-color:transparent}
-.btn-outline-secondary:not(:disabled):not(.disabled):active,.btn-outline-secondary:not(:disabled):not(.disabled).active,.btn-outline-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.show>.btn-outline-secondary.dropdown-toggle{color:#212529;background-color:#ffd943;border-color:#ffd943}
-.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,.btn-outline-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.show>.btn-outline-secondary.dropdown-toggle:focus{-webkit-box-shadow:0 0 0 .2rem rgba(255,217,67,0.5);box-shadow:0 0 0 .2rem rgba(255,217,67,0.5)}
+.btn-outline-secondary{color:#adb5bd;border-color:#adb5bd}
+.btn-outline-secondary:hover{color:#212529;background-color:#adb5bd;border-color:#adb5bd}
+.btn-outline-secondary:focus,.btn-outline-secondary.focus{-webkit-box-shadow:0 0 0 .2rem rgba(173,181,189,0.5);box-shadow:0 0 0 .2rem rgba(173,181,189,0.5)}
+.btn-outline-secondary.disabled,.btn-outline-secondary:disabled{color:#adb5bd;background-color:transparent}
+.btn-outline-secondary:not(:disabled):not(.disabled):active,.btn-outline-secondary:not(:disabled):not(.disabled).active,.btn-outline-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled),.show>.btn-outline-secondary.dropdown-toggle{color:#212529;background-color:#adb5bd;border-color:#adb5bd}
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,.btn-outline-secondary.woocommerce-MyAccount-navigation-link.is-active:not(:disabled):not(.disabled):focus,.show>.btn-outline-secondary.dropdown-toggle:focus{-webkit-box-shadow:0 0 0 .2rem rgba(173,181,189,0.5);box-shadow:0 0 0 .2rem rgba(173,181,189,0.5)}
 .btn-outline-success{color:#28a745;border-color:#28a745}
 .btn-outline-success:hover{color:#fff;background-color:#28a745;border-color:#28a745}
 .btn-outline-success:focus,.btn-outline-success.focus{-webkit-box-shadow:0 0 0 .2rem rgba(40,167,69,0.5);box-shadow:0 0 0 .2rem rgba(40,167,69,0.5)}
@@ -672,9 +672,9 @@ a.badge:hover,a.badge:focus{text-decoration:none}
 .badge-primary{color:#fff;background-color:#5b84f8}
 a.badge-primary:hover,a.badge-primary:focus{color:#fff;background-color:#2a5ff6}
 a.badge-primary:focus,a.badge-primary.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(91,132,248,0.5);box-shadow:0 0 0 .2rem rgba(91,132,248,0.5)}
-.badge-secondary{color:#212529;background-color:#ffd943}
-a.badge-secondary:hover,a.badge-secondary:focus{color:#212529;background-color:#ffcf10}
-a.badge-secondary:focus,a.badge-secondary.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(255,217,67,0.5);box-shadow:0 0 0 .2rem rgba(255,217,67,0.5)}
+.badge-secondary{color:#212529;background-color:#adb5bd}
+a.badge-secondary:hover,a.badge-secondary:focus{color:#212529;background-color:#919ca6}
+a.badge-secondary:focus,a.badge-secondary.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(173,181,189,0.5);box-shadow:0 0 0 .2rem rgba(173,181,189,0.5)}
 .badge-success{color:#fff;background-color:#28a745}
 a.badge-success:hover,a.badge-success:focus{color:#fff;background-color:#1e7e34}
 a.badge-success:focus,a.badge-success.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(40,167,69,0.5);box-shadow:0 0 0 .2rem rgba(40,167,69,0.5)}
@@ -703,9 +703,9 @@ a.badge-dark:focus,a.badge-dark.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem r
 .alert-primary{color:#2f4581;background-color:#dee6fe;border-color:#d1ddfd}
 .alert-primary hr{border-top-color:#b9cbfc}
 .alert-primary .alert-link{color:#21315c}
-.alert-secondary{color:#857123;background-color:#fff7d9;border-color:#fff4ca}
-.alert-secondary hr{border-top-color:#ffefb1}
-.alert-secondary .alert-link{color:#5d4f18}
+.alert-secondary{color:#5a5e62;background-color:#eff0f2;border-color:#e8eaed}
+.alert-secondary hr{border-top-color:#dadde2}
+.alert-secondary .alert-link{color:#424547}
 .alert-success,.gform_confirmation_message{color:#155724;background-color:#d4edda;border-color:#c3e6cb}
 .alert-success hr,.gform_confirmation_message hr{border-top-color:#b1dfbb}
 .alert-success .alert-link,.gform_confirmation_message .alert-link{color:#0b2e13}
@@ -753,9 +753,9 @@ a.badge-dark:focus,a.badge-dark.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem r
 .list-group-item-primary{color:#2f4581;background-color:#d1ddfd}
 .list-group-item-primary.list-group-item-action:hover,.list-group-item-primary.list-group-item-action:focus{color:#2f4581;background-color:#b9cbfc}
 .list-group-item-primary.list-group-item-action.active,.list-group-item-primary.list-group-item-action.woocommerce-MyAccount-navigation-link.is-active{color:#fff;background-color:#2f4581;border-color:#2f4581}
-.list-group-item-secondary{color:#857123;background-color:#fff4ca}
-.list-group-item-secondary.list-group-item-action:hover,.list-group-item-secondary.list-group-item-action:focus{color:#857123;background-color:#ffefb1}
-.list-group-item-secondary.list-group-item-action.active,.list-group-item-secondary.list-group-item-action.woocommerce-MyAccount-navigation-link.is-active{color:#fff;background-color:#857123;border-color:#857123}
+.list-group-item-secondary{color:#5a5e62;background-color:#e8eaed}
+.list-group-item-secondary.list-group-item-action:hover,.list-group-item-secondary.list-group-item-action:focus{color:#5a5e62;background-color:#dadde2}
+.list-group-item-secondary.list-group-item-action.active,.list-group-item-secondary.list-group-item-action.woocommerce-MyAccount-navigation-link.is-active{color:#fff;background-color:#5a5e62;border-color:#5a5e62}
 .list-group-item-success{color:#155724;background-color:#c3e6cb}
 .list-group-item-success.list-group-item-action:hover,.list-group-item-success.list-group-item-action:focus{color:#155724;background-color:#b1dfbb}
 .list-group-item-success.list-group-item-action.active,.list-group-item-success.list-group-item-action.woocommerce-MyAccount-navigation-link.is-active{color:#fff;background-color:#155724;border-color:#155724}
@@ -887,8 +887,8 @@ a.close.disabled{pointer-events:none}
 .align-text-top{vertical-align:text-top !important}
 .bg-primary{background-color:#5b84f8 !important}
 a.bg-primary:hover,a.bg-primary:focus,button.bg-primary:hover,button.bg-primary:focus{background-color:#2a5ff6 !important}
-.bg-secondary{background-color:#ffd943 !important}
-a.bg-secondary:hover,a.bg-secondary:focus,button.bg-secondary:hover,button.bg-secondary:focus{background-color:#ffcf10 !important}
+.bg-secondary{background-color:#adb5bd !important}
+a.bg-secondary:hover,a.bg-secondary:focus,button.bg-secondary:hover,button.bg-secondary:focus{background-color:#919ca6 !important}
 .bg-success{background-color:#28a745 !important}
 a.bg-success:hover,a.bg-success:focus,button.bg-success:hover,button.bg-success:focus{background-color:#1e7e34 !important}
 .bg-info{background-color:#17a2b8 !important}
@@ -914,7 +914,7 @@ a.bg-dark:hover,a.bg-dark:focus,button.bg-dark:hover,button.bg-dark:focus{backgr
 .border-bottom-0{border-bottom:0 !important}
 .border-left-0{border-left:0 !important}
 .border-primary{border-color:#5b84f8 !important}
-.border-secondary{border-color:#ffd943 !important}
+.border-secondary{border-color:#adb5bd !important}
 .border-success{border-color:#28a745 !important}
 .border-info{border-color:#17a2b8 !important}
 .border-warning{border-color:#ffd943 !important}
@@ -1131,8 +1131,8 @@ a.bg-dark:hover,a.bg-dark:focus,button.bg-dark:hover,button.bg-dark:focus{backgr
 .text-white{color:#fff !important}
 .text-primary{color:#5b84f8 !important}
 a.text-primary:hover,a.text-primary:focus{color:#124df5 !important}
-.text-secondary{color:#ffd943 !important}
-a.text-secondary:hover,a.text-secondary:focus{color:#f6c400 !important}
+.text-secondary{color:#adb5bd !important}
+a.text-secondary:hover,a.text-secondary:focus{color:#838f9b !important}
 .text-success{color:#28a745 !important}
 a.text-success:hover,a.text-success:focus{color:#19692c !important}
 .text-info{color:#17a2b8 !important}

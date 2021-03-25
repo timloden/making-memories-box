@@ -79,15 +79,21 @@ if ( ! defined( 'ABSPATH' ) ) {
         </tr>
         <?php endif; ?>
         <?php do_action( 'woocommerce_subscription_before_actions', $subscription ); ?>
-        <?php $actions = wcs_get_all_user_actions_for_subscription( $subscription, get_current_user_id() ); ?>
+        <?php 
+        $actions = wcs_get_all_user_actions_for_subscription( $subscription, get_current_user_id() ); 
+        $actions = array_reverse($actions);
+        ?>
         <?php if ( ! empty( $actions ) ) : ?>
         <tr>
             <td><?php esc_html_e( 'Actions', 'woocommerce-subscriptions' ); ?></td>
             <td>
+                <!-- <div class="btn-group" role="group"> -->
                 <?php foreach ( $actions as $key => $action ) : ?>
                 <a href="<?php echo esc_url( $action['url'] ); ?>"
-                    class="button <?php echo sanitize_html_class( $key ) ?>"><?php echo esc_html( $action['name'] ); ?></a>
+                    class="button btn <?php echo sanitize_html_class( $key ); echo ($key == 'cancel' ? ' btn-danger' : ' btn-secondary'); ?> "><?php echo esc_html( $action['name'] ); ?></a>
                 <?php endforeach; ?>
+
+                <!-- </div> -->
             </td>
         </tr>
         <?php endif; ?>
