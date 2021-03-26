@@ -4,6 +4,24 @@
     }
 }
 
+.woocommerce-MyAccount-content {
+    .shop_table {
+        @extend .table;
+    }
+
+    .col2-set.addresses {
+        .col-1,
+        .col-2 {
+            @extend .col-12;
+        }
+    }
+
+    button[type='submit'] {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}
+
 #add_payment_method {
     .payment_method_stripe {
         label {

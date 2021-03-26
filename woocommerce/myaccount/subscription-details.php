@@ -100,6 +100,17 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php do_action( 'woocommerce_subscription_after_actions', $subscription ); ?>
     </tbody>
 </table>
+<?php 
+    $next_date = $subscription->get_date( 'next_payment' );
+    $next_date_formatted = date('M Y', strtotime('+1 month', strtotime($next_date)));
+?>
+<script type="text/javascript">
+jQuery('.skip_next').on('click', function() {
+    return confirm(
+        'Your next box wont ship until <?php echo $next_date_formatted; ?>, are you sure you would like to skip?'
+    );
+});
+</script>
 
 <?php if ( $notes = $subscription->get_customer_order_notes() ) : ?>
 <h2><?php esc_html_e( 'Subscription updates', 'woocommerce-subscriptions' ); ?></h2>
