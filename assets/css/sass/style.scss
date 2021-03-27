@@ -14,7 +14,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Faustina:wght@600;700&family=Tajawal:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;800&family=Vidaloka&display=swap');
 
 // Bootstrap styles
 @import 'global/_variables';
@@ -23,6 +23,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 // line-awesome
 $la-font-path: '/wp-content/themes/making-memories-box/assets/fonts/line-awesome';
 @import 'node_modules/line-awesome/dist/line-awesome/scss/line-awesome';
+
+// cosmodrome font
+@import '/wp-content/themes/making-memories-box/assets/fonts/cosmodrome/cosmodrome.css';
 
 // tiny-slider
 @import 'node_modules/tiny-slider/dist/tiny-slider';
@@ -36,12 +39,14 @@ $la-font-path: '/wp-content/themes/making-memories-box/assets/fonts/line-awesome
 // Global
 @import 'global/typography';
 @import 'global/forms';
+@import 'global/colors';
 @import 'global/buttons';
 @import 'global/header';
 @import 'global/footer';
 @import 'global/wp-blocks';
 
 // Pages
+@import 'homepage';
 @import 'blog';
 @import 'restricted-page';
 @import 'woocommerce-single';
