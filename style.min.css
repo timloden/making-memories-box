@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;
+@import url("https://fonts.googleapis.com/css2?family=Faustina:wght@600;
 
 /*!
 Theme Name: Making Memories Box
@@ -15,28 +15,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 
-0,
-300;0,
-400;0,
-600;0,
-700;0,
-800;1,
-200;1,
-300;1,
-400;1,
-600;1,
-700;1,
-800&display=swap");/*!
+700&family=Tajawal:wght@400;800&display=swap");/*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter,
 Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */:root{--blue:#5b84f8;--indigo:#6610f2;--purple:#6f42c1;--pink:#d63384;--red:#dc3545;--orange:#fd7e14;--yellow:#ffd943;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#5b84f8;--secondary:#adb5bd;--success:#28a745;--info:#17a2b8;--warning:#ffd943;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:"Nunito",sans-serif;--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+ */:root{--blue:#5b84f8;--indigo:#6610f2;--purple:#6f42c1;--pink:#d63384;--red:#dc3545;--orange:#fd7e14;--yellow:#ffd943;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#5b84f8;--secondary:#adb5bd;--success:#28a745;--info:#17a2b8;--warning:#ffd943;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:"Tajawal",sans-serif;--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
 *,*::before,*::after{-webkit-box-sizing:border-box;box-sizing:border-box}
 html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
-body{margin:0;font-family:"Nunito",sans-serif;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}
+body{margin:0;font-family:"Tajawal",sans-serif;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}
 [tabindex="-1"]:focus:not(:focus-visible){outline:0 !important}
 hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}
 h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}
@@ -813,7 +802,7 @@ a.close.disabled{pointer-events:none}
 .modal-footer{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding:.75rem;border-top:1px solid #dee2e6;border-bottom-right-radius:subtract(.3rem,1px);border-bottom-left-radius:subtract(.3rem,1px)}
 .modal-footer>*{margin:.25rem}
 .modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}
-.tooltip{position:absolute;z-index:1070;display:block;margin:0;font-family:"Nunito",sans-serif;font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;opacity:0}
+.tooltip{position:absolute;z-index:1070;display:block;margin:0;font-family:"Tajawal",sans-serif;font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;opacity:0}
 .tooltip.show{opacity:.9}
 .tooltip .arrow{position:absolute;display:block;width:.8rem;height:.4rem}
 .tooltip .arrow::before{position:absolute;content:"";border-color:transparent;border-style:solid}
@@ -830,7 +819,7 @@ a.close.disabled{pointer-events:none}
 .bs-tooltip-left .arrow,.bs-tooltip-auto[x-placement^="left"] .arrow{right:0;width:.4rem;height:.8rem}
 .bs-tooltip-left .arrow::before,.bs-tooltip-auto[x-placement^="left"] .arrow::before{left:0;border-width:.4rem 0 .4rem .4rem;border-left-color:#000}
 .tooltip-inner{max-width:200px;padding:.25rem .5rem;color:#fff;text-align:center;background-color:#000;border-radius:.25rem}
-.popover{position:absolute;top:0;left:0;z-index:1060;display:block;max-width:276px;font-family:"Nunito",sans-serif;font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,0.2);border-radius:.3rem}
+.popover{position:absolute;top:0;left:0;z-index:1060;display:block;max-width:276px;font-family:"Tajawal",sans-serif;font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,0.2);border-radius:.3rem}
 .popover .arrow{position:absolute;display:block;width:1rem;height:.5rem;margin:0 .3rem}
 .popover .arrow::before,.popover .arrow::after{position:absolute;display:block;content:"";border-color:transparent;border-style:solid}
 .bs-popover-top,.bs-popover-auto[x-placement^="top"]{margin-bottom:.5rem}
@@ -2987,7 +2976,7 @@ a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .animate__slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}
 a{text-decoration:none}
 b,strong{font-weight:700}
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,#cart-dropdown .dropdown-toggle,.h6{font-weight:bold}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,#cart-dropdown .dropdown-toggle,.h6{font-family:"Faustina",serif}
 .gform_wrapper form{margin-bottom:0}
 .gform_wrapper .gfield_required{padding-left:1px;color:#dc3545}
 .validation_message{display:none}
