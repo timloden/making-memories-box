@@ -2980,7 +2980,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,#cart-dropdown .dropdown-toggle,.h6{font-f
 .gform_wrapper form{margin-bottom:0}
 .gform_wrapper .gfield_required{padding-left:1px;color:#dc3545}
 .validation_message{display:none}
-.btn-rounded,.restricted-page #loginform p .button{border-radius:30px;padding:.375rem 1.25rem;font-weight:bold}
+.btn-rounded,.restricted-page #loginform p .button{border-radius:30px;padding:.6rem 1.25rem .375rem;font-weight:bold;color:#fff}
 .btn-secondary{color:#fff}
 html{scroll-behavior:smooth}
 .logo img{max-width:300px}
@@ -2997,8 +2997,8 @@ html{scroll-behavior:smooth}
 #mobile-categories-button a[aria-expanded='true']:after{content:'\f068'}
 #mobile-categories .dropdown-submenu{position:relative}
 #mobile-categories .dropdown-submenu a:after{float:right}
-footer{background:#f5f9fd;color:#8492a6}
-footer .footer-links li a{color:#8492a6}
+footer{background:#e9e6e2;color:#212529}
+footer .footer-links li a{color:#212529}
 footer .footer-newsletter{display:-webkit-box;display:-ms-flexbox;display:flex}
 footer .footer-newsletter .gform_body{width:100%}
 footer .footer-newsletter .gfield_label{display:none}
