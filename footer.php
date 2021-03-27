@@ -79,14 +79,14 @@ $facebook = get_field('facebook_link', 'option');
                 <div>
                     <ul class="nav social-icons justify-content-end">
                         <?php if($instagram ) : ?>
-                        <li class="nav-item bg-primary rounded-circle mr-3">
-                            <a class="text-white" href="<?php echo esc_url($facebook ); ?>"><i
-                                    class="lab la-facebook-f"></i></a>
+                        <li class="nav-item mr-3">
+                            <a class="text-dark" style="font-size: 30px;" href="<?php echo esc_url($facebook ); ?>"><i
+                                    class="lab la-facebook-square"></i></a>
                         </li>
                         <?php endif; ?>
                         <?php if($facebook ) : ?>
-                        <li class="nav-item bg-primary rounded-circle">
-                            <a class="text-white" href="<?php echo esc_url($instagram ); ?>"><i
+                        <li class="nav-item">
+                            <a class="text-dark" style="font-size: 30px;" href="<?php echo esc_url($instagram ); ?>"><i
                                     class="lab la-instagram"></i></a>
                         </li>
                         <?php endif; ?>

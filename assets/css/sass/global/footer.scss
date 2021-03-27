@@ -1,11 +1,11 @@
 footer {
-    background: #f5f9fd;
-    color: #8492a6;
+    background: $mmb-gray;
+    color: $gray-900;
 
     .footer-links {
         li {
             a {
-                color: #8492a6;
+                color: $gray-900;
             }
         }
     }

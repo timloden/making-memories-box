@@ -13,7 +13,7 @@ $categories = get_the_category();
 ?>
 
 <div id="primary" class="content-area article-single">
-    <main id="main" class="site-main pb-5" style="background-color: #f5f9fd;">
+    <main id="main" class="site-main pb-5">
 
         <div class="container">
             <div class="row justify-content-center">

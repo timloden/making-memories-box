@@ -35,6 +35,13 @@ $blue: #5b84f8;
 $yellow: #ffd943;
 $light-blue: #06d2ff;
 
+// MMB colors
+
+$mmb-pink: #e9bbb5;
+$mmb-mint: #aad9cd;
+$mmb-gray: #e9e6e2;
+$mmb-yellow: #e8d595;
+
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
@@ -60,9 +67,9 @@ $colors: (
     'gray-dark': $gray-800,
 ) !default;
 
-$primary: $blue !default;
-$secondary: $gray-500 !default;
-$tertiary: $light-blue !default;
+$primary: $mmb-pink !default;
+$secondary: $mmb-mint !default;
+$tertiary: $mmb-gray !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -357,7 +364,10 @@ $transition-collapse: height 0.35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Tajawal', sans-serif;
+$font-family-serif: 'Vidaloka', serif;
+$font-family-signature: 'cosmodromemonoline', serif;
+
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;
