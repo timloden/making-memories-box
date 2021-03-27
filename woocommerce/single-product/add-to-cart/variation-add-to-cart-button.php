@@ -33,7 +33,7 @@ if ($product->is_in_stock()) :
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
         <button type="submit"
-            class="single_add_to_cart_button btn btn-primary btn-lg btn-rounded btn-block alt ml-3"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+            class="single_add_to_cart_button btn btn-primary btn-lg btn-rounded btn-block alt ml-3 text-white"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 
         <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>

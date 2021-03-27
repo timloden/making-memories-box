@@ -70,7 +70,7 @@ get_header();
             <?php if( have_rows('how_it_works_steps') ): ?>
             <?php while( have_rows('how_it_works_steps') ): the_row(); ?>
             <div class="col-12 col-lg-4">
-                <div class="card shadow p-3 border-0 text-center mb-3">
+                <div class="card shadow p-3 border-0 text-center mb-3 p-lg-4">
                     <h4 class="pb-2"><?php echo esc_attr(the_sub_field('how_it_works_step_title')); ?></h4>
                     <div class="text-black-50">
                         <p class="mb-0"><?php echo esc_attr(the_sub_field('how_is_works_step_description')); ?></p>

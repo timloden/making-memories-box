@@ -26,7 +26,7 @@ $featured_product = get_field('featured_product', 'option');
 	$featured_product_image = get_the_post_thumbnail_url($featured_product_id,'full'); 
 	$product = wc_get_product( $featured_product_id );
 ?>
-<section class="subscription-hero mb-5" style="background-color: #f5f9fd;">
+<section class="subscription-hero mb-5 bg-mmb-gray">
     <div class="container py-5">
         <div class="row">
             <div class="col-12">
