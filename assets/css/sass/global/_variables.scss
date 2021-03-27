@@ -35,6 +35,14 @@ $blue: #5b84f8;
 $yellow: #ffd943;
 $light-blue: #06d2ff;
 
+// MMB colors
+
+$mmb-pink: #e9bbb5;
+$mmb-mint: #aad9cd;
+$mmb-gray: #E9E6E2;
+$mmb-yellow: #E8D595;
+
+
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
@@ -60,9 +68,9 @@ $colors: (
     'gray-dark': $gray-800,
 ) !default;
 
-$primary: $blue !default;
-$secondary: $gray-500 !default;
-$tertiary: $light-blue !default;
+$primary: $mmb-pink !default;
+$secondary: $mmb-mint !default;
+$tertiary: $mmb-gray !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
