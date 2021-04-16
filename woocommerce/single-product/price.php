@@ -22,5 +22,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price h5 text-primary pb-3' ) ); ?>">
-    <?php echo $product->get_price_html(); ?></p>
+<div class="row justify-content-lg-between">
+    <div class="col-12 col-lg">
+        <p
+            class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price h5 text-primary pb-3' ) ); ?>">
+            <?php echo $product->get_price_html(); ?></p>
+    </div>
+    <div class="col-12 col-lg">
+        <p>Rating: <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i
+                class="las la-star"></i><i class="las la-star"></i></p>
+    </div>
+</div>
