@@ -123,6 +123,37 @@ get_header();
     </div>
 </section>
 
+<section class="section as-seen-on py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-lg-4 text-center text-lg-left">
+                        <div class="pr-lg-3">
+                            <h2 class="text-center text-lg-left pb-3">As Seen on</h2>
+                            <a
+                                href="https://gooddaysacramento.cbslocal.com/video/program/652/5435790-making-memories-box/">
+                                <img src="<?php bloginfo('template_directory'); ?>/assets/images/good-day-logo.jpg"
+                                    class="img-fluid">
+                            </a>
+                            <p class="pt-4">Making Memories Box was featured on Good Day Sacramento to show our April
+                                and
+                                May box, as well as all the great activities you can expect in each box!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" scrolling="no" frameborder="0" allowfullscreen
+                                webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen"
+                                src="https://w3.cdn.anvato.net/player/prod/v3/anvload.html?key=eyJtIjoiY2JzIiwidiI6IjU0MzU3OTAiLCJhbnZhY2siOiI1VkQ2RXlkNmRqZXdiQ21Od0JGbnNKajE3WUF2R1J3bCIsInNoYXJlTGluayI6Imh0dHBzOi8vY2JzbG9jLmFsLzN2WmtTdkQiLCJwbHVnaW5zIjp7ImNvbXNjb3JlIjp7ImNsaWVudElkIjoiMzAwMDAyMyIsImMzIjoiZ29vZGRheXNhY3JhbWVudG8uY2JzbG9jYWwuY29tIn0sImRmcCI6eyJjbGllbnRTaWRlIjp7ImFkVGFnVXJsIjoiaHR0cDovL3B1YmFkcy5nLmRvdWJsZWNsaWNrLm5ldC9nYW1wYWQvYWRzP3N6PTJ4MiZpdT0vNDEyOC9jdy5nZGF5JmNpdV9zenMmaW1wbD1zJmdkZnBfcmVxPTEmZW52PXZwJm91dHB1dD14bWxfdmFzdDImdW52aWV3ZWRfcG9zaXRpb25fc3RhcnQ9MSZ1cmw9W3JlZmVycmVyX3VybF0mZGVzY3JpcHRpb25fdXJsPVtkZXNjcmlwdGlvbl91cmxdJmNvcnJlbGF0b3I9W3RpbWVzdGFtcF0iLCJrZXlWYWx1ZXMiOnsiY2F0ZWdvcmllcyI6IltbQ0FURUdPUklFU11dIiwicHJvZ3JhbSI6IltbUFJPR1JBTV9OQU1FXV0iLCJzaXRlU2VjdGlvbiI6InZpZGVvLWV4cGVyaWVuY2UifX0sImxpYnJhcnlSZXF1ZXN0ZWQiOnRydWV9LCJoZWFydGJlYXRCZXRhIjp7ImFjY291bnQiOiJjYnNsb2NhbC1nbG9iYWwtdW5pZmllZCIsInB1Ymxpc2hlcklkIjoiY2JzbG9jYWwiLCJqb2JJZCI6InNjX3ZhIiwibWFya2V0aW5nQ2xvdWRJZCI6IjgyM0JBMDMzNTU2NzQ5N0Y3RjAwMDEwMUBBZG9iZU9yZyIsInRyYWNraW5nU2VydmVyIjoiY2JzZGlnaXRhbG1lZGlhLmhiLm9tdHJkYy5uZXQiLCJjdXN0b21UcmFja2luZ1NlcnZlciI6ImNic2RpZ2l0YWxtZWRpYS5kMS5zYy5vbXRyZGMubmV0IiwiY2hhcHRlclRyYWNraW5nIjpmYWxzZSwidmVyc2lvbiI6IjEuNSIsInBhcmVudFBhZ2VVUkwiOiJodHRwczovL2dvb2RkYXlzYWNyYW1lbnRvLmNic2xvY2FsLmNvbS92aWRlby9wcm9ncmFtLzY1Mi81NDM1NzkwLW1ha2luZy1tZW1vcmllcy1ib3gvIiwicGFyZW50VGl0bGUiOiJNYWtpbmcgTWVtb3JpZXMgQm94IiwicEluc3RhbmNlIjoicDAiLCJwcm9maWxlIjoiY2JzIiwiY3VzdG9tVHJhY2tpbmdTZXJ2ZXJTZWN1cmUiOiJjYnNkaWdpdGFsbWVkaWEuZDEuc2Mub210cmRjLm5ldCJ9LCJoZWFsdGhBbmFseXRpY3MiOnt9fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZGVmYXVsdCJ9"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php if(get_field('sign_up_for_coupon')) : ?>
 <section class="home-box-contents">
     <div class="container">
