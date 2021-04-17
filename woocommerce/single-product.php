@@ -101,6 +101,13 @@ $featured_product = get_field('featured_product', 'option');
 </section>
 <?php endif; ?>
 
+<?php 
+$show_as_seen = get_field('show_on_homepage_as_seen', 'option');
+if ( $show_as_seen ) {
+    get_template_part( 'template-parts/as-seen-on' ); 
+}
+?>
+
 <?php if (have_rows('previous_boxes')) : ?>
 <section class="section previous-boxes">
     <h2 class="text-center mt-5 mb-3">Here are some of our previous boxes!</h2>
