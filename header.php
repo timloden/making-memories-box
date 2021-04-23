@@ -78,6 +78,10 @@
                                     <a class="nav-link text-center text-dark font-weight-bold"
                                         href="<?php echo site_url(); ?>/about">About</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-center text-dark font-weight-bold"
+                                        href="<?php echo site_url(); ?>/blog">Blog</a>
+                                </li>
                                 <!-- <li class="nav-item">
                                     <a class="nav-link text-center text-dark font-weight-bold" href="#">FAQ</a>
                                 </li> -->
