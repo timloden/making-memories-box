@@ -436,6 +436,49 @@
             "maxlength": ""
         },
         {
+            "key": "field_60920598581ad",
+            "label": "Testimonials",
+            "name": "testimonials",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_609205b3581ae",
+                    "label": "Testimonial Post",
+                    "name": "testimonial_post",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "testimonial"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        },
+        {
             "key": "field_600511dd7745a",
             "label": "Whats in the box title",
             "name": "whats_in_the_box_title",
@@ -693,5 +736,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1616820313
+    "modified": 1620182510
 }

@@ -130,6 +130,11 @@ if ( $show_as_seen ) {
 }
 ?>
 
+<?php if( have_rows('testimonials') ) {
+    get_template_part( 'template-parts/testimonial-slider' ); 
+} 
+?>
+
 <?php if(get_field('sign_up_for_coupon')) : ?>
 <section class="home-box-contents">
     <div class="container">
@@ -156,5 +161,17 @@ var slider = tns({
     controls: false,
     nav: false,
     autoplayTimeout: 4000
+});
+
+var testimonial_slider = tns({
+    container: '.testimonial-slider',
+    items: 3,
+    center: true,
+    axis: 'vertical',
+    autoplay: true,
+    autoplayButtonOutput: false,
+    controls: false,
+    nav: false,
+    autoplayTimeout: 5000
 });
 </script>
