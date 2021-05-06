@@ -5,8 +5,15 @@
 #home-discount-amout {
     font-family: $font-family-serif;
 }
+.testimonial-section {
+    .left-slider-grad,
+    .right-slider-grad {
+        width: 120px;
+    }
 
-.testimonial-slider {
-    .testimonial-content {
+    @include media-breakpoint-up(lg) {
+        .testimonial-card {
+            min-height: 250px;
+        }
     }
 }
