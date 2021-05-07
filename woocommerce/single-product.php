@@ -101,6 +101,11 @@ $featured_product = get_field('featured_product', 'option');
 </section>
 <?php endif; ?>
 
+<?php if( have_rows('testimonials') ) {
+    get_template_part( 'template-parts/testimonial-slider' ); 
+} 
+?>
+
 <?php 
 $show_as_seen = get_field('show_on_homepage_as_seen', 'option');
 if ( $show_as_seen ) {
@@ -169,6 +174,18 @@ var slider = tns({
     navContainer: '.product-gallery-thumbs',
     navAsThumbnails: true,
     navPosition: 'bottom',
+});
+
+var testimonial_slider = tns({
+    container: '.testimonial-slider',
+    items: 1,
+    center: true,
+    edgePadding: 50,
+    autoplay: true,
+    autoplayButtonOutput: false,
+    controls: false,
+    nav: false,
+    autoplayTimeout: 5000
 });
 </script>
 <?php endif;

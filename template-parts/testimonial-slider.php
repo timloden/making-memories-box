@@ -15,10 +15,12 @@
         <div class="row align-items-center">
             <div class="col-12 col-lg-4">
                 <h2 class="text-center text-lg-left mb-3">See what other moms are saying</h2>
+                <?php if ( !is_product() ) : ?>
                 <a class="text-dark text-center text-lg-left d-block font-weight-bold"
                     href="<?php echo site_url(); ?>/shop"><u>Start
                         making
                         memories today <i class="las la-arrow-right"></u></i></a>
+                <?php endif; ?>
             </div>
             <div class="col-12 col-lg-8 px-0 px-lg-3">
                 <div class="position-absolute h-100 left-slider-grad d-none d-lg-inline-block"
