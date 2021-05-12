@@ -23,7 +23,7 @@ get_header();
                 </p>
                 <?php endif; ?>
 
-                <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-5">
                     <a href="<?php echo esc_url(the_field('hero_cta_button_link')); ?>"
                         class="btn btn-primary btn-rounded btn-lg"><?php echo esc_attr(the_field('hero_cta_button_text')); ?></a>
                     <?php if(the_field('hero_secondary_button_text')) : ?>
@@ -31,6 +31,18 @@ get_header();
                         href="<?php echo esc_url(the_field('hero_secondary_button_link')); ?>"><?php echo esc_attr(the_field('hero_secondary_button_text')); ?>
                         <i class="las la-arrow-down"></i></a>
                     <?php endif; ?>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center pt-lg-5">
+                    <div class="col-3">
+                        <img class="img-fluid"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/satisfaction-badge.png">
+                    </div>
+                    <div class="col-9 px-0">
+                        <p class="font-weight-bold mb-1 h4">Satisfaction guaranteed!</p>
+                        <p class="mb-0" style="font-size: 14px;">We guarantee you will love your box or your money back!
+                        </p>
+                    </div>
                 </div>
 
             </div>
