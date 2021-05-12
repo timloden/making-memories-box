@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.8.0
+ * @version 5.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 
             <td class="product-name border-top-0" colspan="2">
                 <?php
-								echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								echo wp_kses_post(apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 									'woocommerce_cart_item_remove_link',
 									sprintf(
 										'<a href="%s" class="remove mr-2" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
 										esc_attr( $_product->get_sku() )
 									),
 									$cart_item_key
-								);
+								)) . '&nbsp;';
 							?>
                 <?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                 <?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times;&nbsp;%s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>

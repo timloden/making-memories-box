@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 4.0.0
+ * @version 4.8.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -21,10 +21,12 @@ global $product, $post;
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<form class="cart grouped_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-	<table cellspacing="0" class="woocommerce-grouped-product-list group_table">
-		<tbody>
-			<?php
+<form class="cart grouped_form"
+    action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>"
+    method="post" enctype='multipart/form-data'>
+    <table cellspacing="0" class="woocommerce-grouped-product-list group_table">
+        <tbody>
+            <?php
 			$quantites_required      = false;
 			$previous_post           = $post;
 			$grouped_product_columns = apply_filters(
@@ -107,20 +109,21 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 			do_action( 'woocommerce_grouped_product_list_after', $grouped_product_columns, $quantites_required, $product );
 			?>
-		</tbody>
-	</table>
+        </tbody>
+    </table>
 
-	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
+    <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
 
-	<?php if ( $quantites_required && $show_add_to_cart_button ) : ?>
+    <?php if ( $quantites_required && $show_add_to_cart_button ) : ?>
 
-		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+    <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-		<button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+    <button type="submit"
+        class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
-		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+    <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
-	<?php endif; ?>
+    <?php endif; ?>
 </form>
 
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
