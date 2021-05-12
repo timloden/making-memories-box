@@ -28,8 +28,10 @@ global $product;
             class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price h5 text-primary pb-3' ) ); ?>">
             <?php echo $product->get_price_html(); ?></p>
     </div>
+    <?php if( class_exists( 'WC_Subscriptions_Product' ) && WC_Subscriptions_Product::is_subscription( $product ) ) : ?>
     <div class="col-12 col-lg">
         <p>Rating: <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i
                 class="las la-star"></i><i class="las la-star"></i></p>
     </div>
+    <?php endif; ?>
 </div>

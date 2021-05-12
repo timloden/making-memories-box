@@ -13,7 +13,7 @@ global $product;
 if ($product->is_in_stock()) :
 ?>
 <div class="woocommerce-variation-add-to-cart variations_button">
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-center">
 
 
         <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
@@ -33,7 +33,8 @@ if ($product->is_in_stock()) :
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
         <button type="submit"
-            class="single_add_to_cart_button btn btn-primary btn-lg btn-rounded btn-block alt ml-3 text-white"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+            class="single_add_to_cart_button btn btn-primary btn-lg btn-rounded btn-block alt ml-3 text-white">Start
+            Making Memories</button>
 
 
         <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>

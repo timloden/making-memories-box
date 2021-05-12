@@ -9,7 +9,8 @@
         font-size: 2rem;
     }
 
-    #wc-stripe-payment-request-button-separator, #wc-stripe-payment-request-wrapper {
+    #wc-stripe-payment-request-button-separator,
+    #wc-stripe-payment-request-wrapper {
         display: none !important;
     }
 
@@ -50,7 +51,7 @@
     }
 
     .first-payment-date {
-        padding-top: 1em;
+        //padding-top: 1em;
     }
 
     .wp-post-image {

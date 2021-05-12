@@ -290,7 +290,7 @@ textarea.form-control,.gform_wrapper textarea,.restricted-page #loginform p text
 .btn,.gform_wrapper .button,.restricted-page #loginform p .button,.woocommerce-MyAccount-content button[type='submit']{display:inline-block;font-weight:400;color:#212529;text-align:center;text-decoration:none;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;-webkit-transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out}
 .btn:hover,.gform_wrapper .button:hover,.restricted-page #loginform p .button:hover,.woocommerce-MyAccount-content button:hover[type='submit']{color:#212529;text-decoration:none}
 .btn:focus,.gform_wrapper .button:focus,.restricted-page #loginform p .button:focus,.woocommerce-MyAccount-content button:focus[type='submit'],.btn.focus,.gform_wrapper .focus.button,.restricted-page #loginform p .focus.button,.woocommerce-MyAccount-content button.focus[type='submit']{outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(233,187,181,0.25);box-shadow:0 0 0 .2rem rgba(233,187,181,0.25)}
-.btn.disabled,.gform_wrapper .disabled.button,.restricted-page #loginform p .disabled.button,.woocommerce-MyAccount-content button.disabled[type='submit'],.btn:disabled,.gform_wrapper .button:disabled,.restricted-page #loginform p .button:disabled,.woocommerce-MyAccount-content button:disabled[type='submit']{opacity:.65}
+.btn.disabled,.gform_wrapper .disabled.button,.restricted-page #loginform p .disabled.button,.woocommerce-MyAccount-content button.disabled[type='submit'],.btn:disabled,.gform_wrapper .button:disabled,.restricted-page #loginform p .button:disabled,.woocommerce-MyAccount-content button:disabled[type='submit']{opacity:.25}
 .btn:not(:disabled):not(.disabled),.gform_wrapper .button:not(:disabled):not(.disabled),.restricted-page #loginform p .button:not(:disabled):not(.disabled),.woocommerce-MyAccount-content button:not(:disabled):not(.disabled)[type='submit']{cursor:pointer}
 a.btn.disabled,.gform_wrapper a.disabled.button,.restricted-page #loginform p a.disabled.button,fieldset:disabled a.btn,fieldset:disabled .gform_wrapper a.button,.gform_wrapper fieldset:disabled a.button,fieldset:disabled .restricted-page #loginform p a.button,.restricted-page #loginform p fieldset:disabled a.button{pointer-events:none}
 .btn-primary,.gform_wrapper .button,.restricted-page #loginform p .button,.woocommerce-MyAccount-content button[type='submit']{color:#212529;background-color:#e9bbb5;border-color:#e9bbb5}
@@ -2982,6 +2982,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,#cart-dropdown .dropdown-toggle,.h6{font-f
 .validation_message{display:none}
 .bg-mmb-gray{background-color:#e9e6e2}
 .btn-rounded,.restricted-page #loginform p .button{border-radius:30px;padding:.6rem 1.25rem .375rem;font-weight:bold;color:#fff}
+.btn-primary:hover,.gform_wrapper .button:hover,.restricted-page #loginform p .button:hover,.woocommerce-MyAccount-content button:hover[type='submit']{color:#fff}
 .btn-secondary{color:#fff}
 html{scroll-behavior:smooth}
 .logo img{max-width:300px}
@@ -3023,7 +3024,6 @@ footer .social-icons li{padding:5px 8px}
 .product .variations .label{vertical-align:middle}
 .product .variations .label label{margin-bottom:0}
 .product .in-stock{margin-bottom:0;font-size:16px;margin-left:1em}
-.product .first-payment-date{padding-top:1em}
 .product .wp-post-image{max-width:100%;height:auto}
 .woocommerce-variation-add-to-cart .quantity{width:75px}
 .woocommerce-checkout .mailchimp-newsletter{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:0;margin-right:0}

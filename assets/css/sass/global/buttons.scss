@@ -5,6 +5,12 @@
     color: $white;
 }
 
+.btn-primary {
+    &:hover {
+        color: $white;
+    }
+}
+
 .btn-secondary {
     color: $white;
 }

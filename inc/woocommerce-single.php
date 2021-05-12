@@ -8,7 +8,28 @@ add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static func
   return $args;
 }, 2 );
 
-add_action('woocommerce_before_add_to_cart_form', 'order_cutoff');
+// add guarantee badge
+
+add_action('woocommerce_before_add_to_cart_form', 'product_guarantee');
+
+function product_guarantee() {
+  ?>
+
+<div class="d-flex align-items-center justify-content-center mb-4">
+    <div class="col-3">
+        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/satisfaction-badge.png">
+    </div>
+    <div class="col-9">
+        <p class="font-weight-bold mb-1 h4">Satisfaction guaranteed!</p>
+        <p class="mb-0" style="font-size: 14px;">We guarantee you will love your box or your money back!</p>
+    </div>
+</div>
+<?php
+}
+
+// add order cutoff notice 
+
+add_action('woocommerce_after_add_to_cart_form', 'order_cutoff');
 
 function order_cutoff() {
   global $product; 
@@ -23,7 +44,7 @@ function order_cutoff() {
     $todays_date = new DateTime('now');
 
 
-    echo '<p class="text-primary h4 mt-3 pt-3 border-top">Order cutoff this month: ' . $date->format('F j, Y') . '</p><p class="mb-3" style="font-size: 12px;">Orders placed after this date will ship the following month.</p>';
+    echo '<p class="text-primary h4 mt-3 pt-3">Order cutoff this month: ' . $date->format('F j, Y') . '</p><p class="mb-3" style="font-size: 12px;">Orders placed after this date will ship the following month.</p>';
     
   } elseif (class_exists( 'WC_Subscriptions_Product' ) && !WC_Subscriptions_Product::is_subscription( $product ) && $product->is_in_stock()) {
     $start_date = get_field('month_start', $product->get_id());
@@ -32,7 +53,7 @@ function order_cutoff() {
     $date->modify('last day of this month');
     date_sub($date, date_interval_create_from_date_string('6 days'));
     
-    echo '<p class="text-primary h4 my-3 pt-3 border-top">Last day to purchase: ' . $date->format('F j, Y') . '</p>';
+    echo '<p class="text-primary h4 my-3 pt-3">Last day to purchase: ' . $date->format('F j, Y') . '</p>';
   }
 }
 
