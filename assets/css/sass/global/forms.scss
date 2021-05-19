@@ -64,3 +64,25 @@
     @extend .alert;
     @extend .alert-success;
 }
+
+.printable-download_wrapper {
+    @extend .card;
+    @extend .p-3;
+    @extend .shadow;
+    .gform_heading,
+    .gform_footer {
+        text-align: center;
+    }
+}
+
+.printable-download {
+    .gform_confirmation_message {
+        background-color: #f7f7f7;
+        border: none;
+
+        p {
+            font-weight: bold;
+            color: $black;
+        }
+    }
+}
