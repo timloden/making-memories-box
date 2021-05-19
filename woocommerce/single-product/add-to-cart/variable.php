@@ -89,8 +89,6 @@ do_action( 'woocommerce_before_add_to_cart_form' );
         <?php do_action( 'woocommerce_after_variations_form' ); ?>
     </div>
 </form>
-<?php else : ?>
-<p class="h3 text-primary">SOLD OUT!</h5>
-    <?php endif; ?>
-    <?php
+<?php endif; ?>
+<?php
 do_action( 'woocommerce_after_add_to_cart_form' );
