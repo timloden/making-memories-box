@@ -34,6 +34,4 @@ if ( $product->is_in_stock() ) {
 		$product,
 		$args
 	);
-} else {
-	echo '<p class="h5 text-primary">SOLD OUT!</h5>';
 }
