@@ -124,6 +124,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_60a5d815e537d",
+            "label": "Show Guarantee?",
+            "name": "show_guarantee",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_601b06932d1d7",
             "label": "Header Embed",
             "name": "header_embed",
@@ -333,5 +352,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1618628315
+    "modified": 1621481530
 }

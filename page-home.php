@@ -33,6 +33,7 @@ get_header();
                     <?php endif; ?>
                 </div>
 
+                <?php if(get_field('show_guarantee', 'option')) : ?>
                 <div class="d-flex align-items-center justify-content-center pt-lg-5">
                     <div class="col-3">
                         <img class="img-fluid"
@@ -44,6 +45,7 @@ get_header();
                         </p>
                     </div>
                 </div>
+                <?php endif; ?>
 
             </div>
             <div class="col-12 col-lg-7 text-center">

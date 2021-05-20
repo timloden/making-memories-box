@@ -13,6 +13,7 @@ add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static func
 add_action('woocommerce_before_add_to_cart_form', 'product_guarantee');
 
 function product_guarantee() {
+  if(get_field('show_guarantee', 'option')) :
   ?>
 
 <div class="d-flex align-items-center justify-content-center mb-4">
@@ -25,6 +26,7 @@ function product_guarantee() {
     </div>
 </div>
 <?php
+endif;
 }
 
 // add order cutoff notice 
