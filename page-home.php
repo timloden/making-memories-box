@@ -137,6 +137,58 @@ get_header();
     </div>
 </section>
 
+
+<?php if (have_rows('previous_boxes')) : ?>
+<section id="previous-boxes" class="section previous-boxes">
+    <h2 class="text-center mt-5 mb-3"><?php echo esc_attr(the_field('previous_boxes_title')); ?></h2>
+    <p class="text-center"><?php echo esc_attr(the_field('previous_boxes_subtitle')); ?></p>
+    <div class="container py-5">
+        <?php while( have_rows('previous_boxes') ): the_row(); 
+        $box_post = get_sub_field('box_product');
+        
+        $post_id = $box_post->ID;
+        $box_featured_image = get_the_post_thumbnail_url($post_id,'full');
+        ?>
+        <div class="row align-items-center mb-5">
+            <div class="col-12 col-lg-4">
+                <img src="<?php echo $box_featured_image; ?>" class="img-fluid">
+            </div>
+            <div class="col-12 col-lg-8">
+
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <h3 class="mb-4 text-center text-lg-left"><?php echo get_the_title($post_id); ?></h3>
+                    </div>
+                    <?php while( have_rows('example_box_content', $post_id) ): the_row(); 
+                    $activity_image = get_sub_field('image');
+                    ?>
+                    <div class="col-12 col-lg-6 mb-3">
+
+                        <div class="media align-items-center">
+                            <img src="<?php echo esc_url($activity_image['url']); ?>" class="rounded mr-3"
+                                style="width: 100px;">
+                            <div class="media-body">
+                                <h5 class="mt-0"><?php echo esc_attr(the_sub_field('title')); ?></h5>
+                                <?php //echo esc_attr(the_sub_field('description')); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        </div>
+        <?php endwhile; ?>
+        <div class="row">
+            <div class="col-12 text-center">
+                <a href="<?php echo esc_url(the_field('previous_boxes_button_link')); ?>"
+                    class="btn btn-primary btn-rounded btn-lg d-block d-lg-inline-block"><?php echo esc_attr(the_field('previous_boxes_button_text')); ?></a>
+            </div>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+
+
 <?php if( have_rows('testimonials') ) {
     get_template_part( 'template-parts/testimonial-slider' ); 
 } 
