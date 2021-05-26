@@ -43,6 +43,44 @@
             "mime_types": ""
         },
         {
+            "key": "field_60ae593e2831e",
+            "label": "Header CTA Button Text",
+            "name": "header_cta_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60ae59482831f",
+            "label": "Header CTA Button Link",
+            "name": "header_cta_button_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60066811c4dd9",
             "label": "Footer Sub Logo Text",
             "name": "footer_sub_logo_text",
@@ -352,5 +390,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621481530
+    "modified": 1622038889
 }

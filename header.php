@@ -22,6 +22,14 @@
     the_field('header_embed', 'option');
     $logo = get_field('logo', 'option');
     
+    $cta_text = get_field('header_cta_button_text', 'option');
+    if (!$cta_text) {
+        $cta_text = 'Subscribe Now!';
+    }
+    $cta_link = get_field('header_cta_button_link', 'option');
+    if (!$cta_link) {
+        $cta_link = site_url() . '/shop';
+    }
 ?>
 </head>
 
@@ -59,8 +67,8 @@
                     </div>
                     <div class="ml-auto">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="<?php echo site_url(); ?>/shop"
-                                class="d-none d-md-inline-block btn btn-primary btn-rounded">Get Started!</a>
+                            <a href="<?php echo esc_url($cta_link); ?>"
+                                class="d-none d-md-inline-block btn btn-primary btn-rounded"><?php echo esc_attr($cta_text); ?></a>
                             <a href="#mobile-menu" class="d-inline-block d-lg-none nav-button ml-3 mb-0 p-2 h3"
                                 data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"
                                 role="button"><i class="las la-bars"></i></a>
@@ -94,8 +102,8 @@
                                         href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                                 </li>
                                 <li class="nav-item mt-3">
-                                    <a href="<?php echo site_url(); ?>/shop"
-                                        class="d-block w-100 btn btn-primary btn-rounded">Get Started</a>
+                                    <a href="<?php echo esc_url($cta_link); ?>"
+                                        class="d-block w-100 btn btn-primary btn-rounded"><?php echo esc_attr($cta_text); ?></a>
                                 </li>
                             </ul>
                         </div>
