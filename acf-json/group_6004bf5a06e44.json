@@ -600,6 +600,30 @@
             ]
         },
         {
+            "key": "field_60ae556e7329b",
+            "label": "Testimonials Background",
+            "name": "testimonials_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_6005127277462",
             "label": "Bottom special offer text",
             "name": "bottom_special_offer_text",
@@ -698,5 +722,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622037325
+    "modified": 1622037901
 }

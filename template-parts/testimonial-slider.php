@@ -8,15 +8,16 @@
  */
 
  //rgba(233,230,226,1)  
-
+ $testimonials_background = get_field('testimonials_background');
 ?>
-<section class="section py-5 testimonial-section" style="background-color: #f7f7f7;">
+<section class="section py-5 testimonial-section"
+    style="background-color: #f7f7f7; background-size: cover; <?php if ($testimonials_background) { echo 'background: url(' . $testimonials_background . ')'; } ?> ">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-4">
                 <h2 class="text-center text-lg-left mb-3">See what other moms are saying</h2>
                 <?php if ( !is_product() ) : ?>
-                <a class="text-dark text-center text-lg-left d-block font-weight-bold"
+                <a class=" text-dark text-center text-lg-left d-block font-weight-bold"
                     href="<?php echo site_url(); ?>/shop"><u>Start
                         making
                         memories today <i class="las la-arrow-right"></u></i></a>
