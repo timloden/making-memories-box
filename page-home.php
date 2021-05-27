@@ -150,7 +150,7 @@ get_header();
         $box_featured_image = get_the_post_thumbnail_url($post_id,'full');
         ?>
         <div class="row align-items-center mb-5">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
                 <img src="<?php echo $box_featured_image; ?>" class="img-fluid">
             </div>
             <div class="col-12 col-lg-8">

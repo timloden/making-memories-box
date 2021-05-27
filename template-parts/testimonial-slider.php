@@ -11,7 +11,7 @@
  $testimonials_background = get_field('testimonials_background');
 ?>
 <section class="section py-5 testimonial-section"
-    style="background-color: #f7f7f7; background-size: cover; <?php if ($testimonials_background) { echo 'background: url(' . $testimonials_background . ')'; } ?> ">
+    style="background-color: #f4ddda; background-size: cover; <?php if ($testimonials_background) { echo 'background: url(' . $testimonials_background . ')'; } ?> ">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-4">
@@ -25,10 +25,10 @@
             </div>
             <div class="col-12 col-lg-8 px-0 px-lg-3">
                 <div class="position-absolute h-100 left-slider-grad d-none d-lg-inline-block"
-                    style="background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(247,247,247,1) 100%); width: 120px; top: 0; left: 0; z-index: 999;">
+                    style="background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(244, 221, 218, 1) 100%); width: 120px; top: 0; left: 0; z-index: 999;">
                 </div>
                 <div class="position-absolute h-100 right-slider-grad d-none d-lg-inline-block"
-                    style="background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(247,247,247,1) 100%); width: 120px; top: 0; right: 0; z-index: 999;">
+                    style="background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(244, 221, 218, 1) 100%); width: 120px; top: 0; right: 0; z-index: 999;">
                 </div>
                 <div class="testimonial-slider">
                     <?php while( have_rows('testimonials') ): the_row(); 
