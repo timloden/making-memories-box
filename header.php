@@ -45,23 +45,31 @@
                     </div>
                     <div class="d-none d-lg-block ml-lg-auto">
                         <ul class="nav">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#">How it works</a>
-                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold"
-                                    href="<?php echo site_url(); ?>/about">About</a>
+                                    href="<?php echo site_url(); ?>#how-it-works">How it works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark font-weight-bold"
+                                    href="<?php echo site_url(); ?>#previous-boxes">Previous Boxes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold" href="/blog">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark font-weight-bold"
-                                    href="<?php echo site_url(); ?>/contact">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark font-weight-bold"
-                                    href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle nav-link font-weight-bold" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Resources
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="<?php echo site_url(); ?>/about">About</a>
+                                        <a class="dropdown-item" href="<?php echo site_url(); ?>/contact">Contact</a>
+                                        <a class="dropdown-item"
+                                            href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -79,31 +87,34 @@
                     <div class="d-flex">
                         <div class="col-12 px-0">
                             <ul class="nav flex-column">
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="#">How it works</a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link text-center text-dark font-weight-bold"
-                                        href="<?php echo site_url(); ?>/about">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-center text-dark font-weight-bold"
-                                        href="<?php echo site_url(); ?>/blog">Blog</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link text-center text-dark font-weight-bold" href="#">FAQ</a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link text-center text-dark font-weight-bold"
-                                        href="<?php echo site_url(); ?>/contact">Contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-center text-dark font-weight-bold"
-                                        href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
-                                </li>
+
                                 <li class="nav-item mt-3">
                                     <a href="<?php echo esc_url($cta_link); ?>"
                                         class="d-block w-100 btn btn-primary btn-rounded"><?php echo esc_attr($cta_text); ?></a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bold text-center"
+                                        href="<?php echo site_url(); ?>#how-it-works">How it works</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bold text-center"
+                                        href="<?php echo site_url(); ?>#previous-boxes">Previous Boxes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bold text-center" href="/blog">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bold text-center"
+                                        href="<?php echo site_url(); ?>/about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bold text-center"
+                                        href="<?php echo site_url(); ?>/contact">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bold text-center"
+                                        href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                                 </li>
                             </ul>
                         </div>

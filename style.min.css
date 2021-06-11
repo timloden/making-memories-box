@@ -2987,7 +2987,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,#cart-dropdown .dropdown-toggle,.h6{font-f
 .btn-primary:hover,.gform_wrapper .button:hover,.restricted-page #loginform p .button:hover,.woocommerce-MyAccount-content button:hover[type='submit']{color:#fff}
 .btn-secondary{color:#fff}
 html{scroll-behavior:smooth}
-.logo img{max-width:300px}
+.logo img{max-width:250px}
 .bg-dark-50{background-color:rgba(0,0,0,0.5)}
 .bg-dark-25{background-color:rgba(0,0,0,0.25)}
 .header-categories .dropdown-submenu{position:relative}
