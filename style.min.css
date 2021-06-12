@@ -3500,7 +3500,6 @@ footer .social-icons li{padding:5px 8px}
 .text-md-left{text-align:left !important}
 .text-md-right{text-align:right !important}
 .text-md-center{text-align:center !important}
-.logo img{max-width:350px}
 }@media(min-width:992px){.container,.container-sm,.container-md,.container-lg{max-width:960px}
 .col-lg{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
 .row-cols-lg-1>*{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}

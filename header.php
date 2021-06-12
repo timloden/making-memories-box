@@ -75,10 +75,12 @@
                     </div>
                     <div class="ml-auto">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="<?php echo esc_url($cta_link); ?>"
-                                class="d-none d-md-inline-block btn btn-primary btn-rounded"><?php echo esc_attr($cta_text); ?></a>
-                            <a class="d-inline-block d-lg-none nav-button ml-3 mb-0 p-2 h3"
+                            <a class="d-inline-block nav-button mr-lg-3 mb-0 p-2 h3"
                                 href="<?php echo site_url(); ?>/cart"><i class="las la-shopping-cart"></i></a>
+
+                            <a href="<?php echo esc_url($cta_link); ?>"
+                                class="d-none d-lg-inline-block btn btn-primary btn-rounded"><?php echo esc_attr($cta_text); ?></a>
+
                             <a href="#mobile-menu" class="d-inline-block d-lg-none nav-button mb-0 p-2 h3"
                                 data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"
                                 role="button"><i class="las la-bars"></i></a>
