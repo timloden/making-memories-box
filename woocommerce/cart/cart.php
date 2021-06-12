@@ -22,11 +22,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
     <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents table" cellspacing="0">
+    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents table table-responsive"
+        cellspacing="0">
         <thead>
             <tr>
                 <th class="product-remove">&nbsp;</th>
-                <th class="product-thumbnail">&nbsp;</th>
+
                 <th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
                 <th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
                 <th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
@@ -63,17 +64,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
                 </td>
 
-                <td class="product-thumbnail">
-                    <?php
-						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image('custom-thumb'), $cart_item, $cart_item_key );
 
-						if ( ! $product_permalink ) {
-							echo $thumbnail; // PHPCS: XSS ok.
-						} else {
-							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
-						}
-						?>
-                </td>
 
                 <td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
                     <?php
@@ -147,7 +138,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                                     type="text" name="coupon_code" class="input-text form-control" id="coupon_code"
                                     value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
                                 <div class="input-group-append"><button type="submit"
-                                        class="button btn btn-outline-primary btn-rounded" name="apply_coupon"
+                                        class="button btn btn-secondary btn-rounded" name="apply_coupon"
                                         value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
                                 </div>
                                 <?php do_action( 'woocommerce_cart_coupon' ); ?>
@@ -155,7 +146,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                         </div>
                         <?php } ?>
 
-                        <button type="submit" class="btn btn-link" name="update_cart"
+                        <button type="submit" class="btn btn-secondary" name="update_cart"
                             value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
                     </div>
 
