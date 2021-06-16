@@ -14,7 +14,7 @@ $as_seen_image = get_field('as_seen_on_image', 'option');
 $as_seen_embed = get_field('as_seen_on_embed', 'option');
 ?>
 <section class="section as-seen-on py-5">
-    <div class="container py-5">
+    <div class="container pb-5">
         <div class="row">
             <div class="col-12">
                 <div class="row align-items-center justify-content-center">

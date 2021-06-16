@@ -194,6 +194,11 @@ get_header();
 } 
 ?>
 
+<?php if(get_field('instagram_shortcode', 'option')) {
+    get_template_part( 'template-parts/instagram-feed' ); 
+}
+?>
+
 <?php 
 $show_as_seen = get_field('show_on_homepage_as_seen', 'option');
 if ( $show_as_seen ) {
