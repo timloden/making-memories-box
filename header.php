@@ -47,6 +47,10 @@
                         <ul class="nav">
                             <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold"
+                                    href="<?php echo site_url(); ?>/shop">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark font-weight-bold"
                                     href="<?php echo site_url(); ?>#how-it-works">How it works</a>
                             </li>
                             <li class="nav-item">
@@ -96,7 +100,10 @@
                                     <a href="<?php echo esc_url($cta_link); ?>"
                                         class="d-block w-100 btn btn-primary btn-rounded"><?php echo esc_attr($cta_text); ?></a>
                                 </li>
-
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark font-weight-bold text-center"
+                                        href="<?php echo site_url(); ?>/shop">Shop</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark font-weight-bold text-center"
                                         href="<?php echo site_url(); ?>#how-it-works">How it works</a>
