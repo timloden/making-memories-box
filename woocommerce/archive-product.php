@@ -51,6 +51,12 @@ $featured_product = get_field('featured_product', 'option');
                                 <span class="text-primary font-weight-bold">Starting at just
                                     $<?php echo $product->get_price(); ?>!</span>
 
+                                <!-- <div class="d-flex justify-content-center">
+                                    <div class="col-12 col-lg-8">
+                                        <?php //echo do_shortcode('[add_to_cart_form id="' . $featured_product_id . '"]'); ?>
+                                    </div>
+                                </div> -->
+
                             </div>
 
                         </div>
