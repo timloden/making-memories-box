@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<div class="row justify-content-lg-between">
+<div class="row justify-content-lg-between align-items-center mt-3">
     <div class="col-12 col-lg">
         <p
-            class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price h5 text-primary pb-3' ) ); ?>">
+            class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price h4 text-dark pb-3' ) ); ?>">
             <?php echo $product->get_price_html(); ?></p>
     </div>
     <?php if( class_exists( 'WC_Subscriptions_Product' ) && WC_Subscriptions_Product::is_subscription( $product ) ) : ?>
