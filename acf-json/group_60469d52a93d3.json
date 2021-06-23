@@ -122,6 +122,25 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_60d2a82f1ab76",
+            "label": "Password required?",
+            "name": "password_required",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -141,5 +160,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1615241644
+    "modified": 1624418383
 }

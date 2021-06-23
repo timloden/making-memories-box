@@ -28,10 +28,10 @@ get_header();
 </section>
 <section class="page-content pb-5 restricted-page">
     <div class="container">
-        <?php if (!is_user_logged_in()) { echo '<p class="text-black-50 text-center">Please login to access your box instructions</p>'; } ?>
+        <?php if (!is_user_logged_in() && get_field('password_required')) { echo '<p class="text-black-50 text-center">Please login to access your box instructions</p>'; } ?>
         <div class="row justify-content-center">
             <?php
-                if (!is_user_logged_in()) {
+                if (!is_user_logged_in() && get_field('password_required')) {
                     echo '<div class="col-10 col-lg-5 pb-5">';
                     wp_login_form();
                 } else {
