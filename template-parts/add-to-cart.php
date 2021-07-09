@@ -21,11 +21,13 @@ if ($featured_product) :
                     <div class="row align-items-center">
                         <div class="col-12 col-lg-4">
                             <a href="<?php the_permalink($featured_product_id); ?>">
-                                <img class="img-fluid" src="<?php echo esc_url($featured_product_image); ?>">
+                                <img class="img-fluid mb-3" src="<?php echo esc_url($featured_product_image); ?>">
                             </a>
                         </div>
                         <div class="col-12 col-lg-8">
-                            <h2><?php echo esc_attr($featured_product->post_title); ?></h2>
+                            <h2><a class="text-dark"
+                                    href="<?php echo esc_url(get_permalink($featured_product_id)); ?>"><?php echo esc_attr($featured_product->post_title); ?></a>
+                            </h2>
                             <?php
 								echo apply_filters( 'the_content', $product->short_description )
 							?>

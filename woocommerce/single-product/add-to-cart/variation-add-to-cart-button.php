@@ -33,7 +33,7 @@ if ($product->is_in_stock()) :
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
         <button type="submit"
-            class="single_add_to_cart_button btn btn-primary btn-lg btn-rounded btn-block alt ml-3 text-white">Start
+            class="single_add_to_cart_button btn btn-primary btn-lg btn-rounded d-block d-md-inline-block alt ml-3 text-white">Start
             Making Memories</button>
 
 

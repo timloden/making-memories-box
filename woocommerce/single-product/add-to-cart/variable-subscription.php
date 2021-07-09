@@ -46,7 +46,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
         <?php endif; ?>
         <div class="variations pb-3">
             <?php foreach ( $attributes as $attribute_name => $options ) : ?>
-            <div class="d-flex align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-center">
                 <div class="label mr-3">
                     <label
                         for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></label>

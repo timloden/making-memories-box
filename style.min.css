@@ -864,7 +864,7 @@ a.close.disabled{pointer-events:none}
 .carousel-indicators li{-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;width:30px;height:3px;margin-right:3px;margin-left:3px;text-indent:-999px;cursor:pointer;background-color:#fff;background-clip:padding-box;border-top:10px solid transparent;border-bottom:10px solid transparent;opacity:.5;-webkit-transition:opacity .6s ease;transition:opacity .6s ease}
 .carousel-indicators .active,.carousel-indicators .woocommerce-MyAccount-navigation-link.is-active{opacity:1}
 .carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center}
-.spinner-border{display:inline-block;width:2rem;height:2rem;vertical-align:text-bottom;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite}
+.spinner-border,.single_add_to_cart_button.loading:before{display:inline-block;width:2rem;height:2rem;vertical-align:text-bottom;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite}
 .spinner-border-sm{width:1rem;height:1rem;border-width:.2em}
 .spinner-grow{display:inline-block;width:2rem;height:2rem;vertical-align:text-bottom;background-color:currentColor;border-radius:50%;opacity:0;-webkit-animation:spinner-grow .75s linear infinite;animation:spinner-grow .75s linear infinite}
 .spinner-grow-sm{width:1rem;height:1rem}
@@ -2986,6 +2986,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,#cart-dropdown .dropdown-toggle,.h6{font-f
 .btn-rounded,.restricted-page #loginform p .button{border-radius:30px;padding:.6rem 1.25rem .375rem;font-weight:bold;color:#fff}
 .btn-primary:hover,.gform_wrapper .button:hover,.restricted-page #loginform p .button:hover,.woocommerce-MyAccount-content button:hover[type='submit']{color:#fff}
 .btn-secondary{color:#fff}
+.single_add_to_cart_button.loading{opacity:.5}
+.single_add_to_cart_button.loading:before{margin-right:5px;content:'';height:18px;width:18px;border-width:.2em}
 html{scroll-behavior:smooth}
 .logo img{max-width:250px}
 .bg-dark-50{background-color:rgba(0,0,0,0.5)}
