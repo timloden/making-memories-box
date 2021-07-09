@@ -88,8 +88,10 @@ get_header();
             <div class="col-12 col-lg-4">
                 <div class="card shadow p-3 border-0 text-center mb-3 p-lg-4">
                     <?php if($image) : ?>
-                    <img class="img-fluid" loading="lazy" src="<?php echo esc_url($image['url']); ?>"
-                        alt="<?php echo esc_attr($image['alt']); ?>">
+                    <div class="text-center w-100">
+                        <img class="img-fluid mb-3" style="width: 75px;" loading="lazy"
+                            src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                    </div>
                     <?php endif; ?>
                     <h4 class="pb-2"><?php echo esc_attr(the_sub_field('how_it_works_step_title')); ?></h4>
                     <div class="text-black-50">
