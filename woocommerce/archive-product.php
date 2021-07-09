@@ -21,52 +21,7 @@ get_header( 'shop' );
 $featured_product = get_field('featured_product', 'option');
 ?>
 
-<?php if ($featured_product) : 
-	$featured_product_id = $featured_product->ID;
-	$featured_product_image = get_the_post_thumbnail_url($featured_product_id,'full'); 
-	$product = wc_get_product( $featured_product_id );
-?>
-<section class="subscription-hero mb-5 bg-mmb-gray">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="card shadow p-3 border-0">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-lg-4">
-                            <a href="<?php the_permalink($featured_product_id); ?>">
-                                <img class="img-fluid" src="<?php echo esc_url($featured_product_image); ?>">
-                            </a>
-                        </div>
-                        <div class="col-12 col-lg-8">
-                            <h2><?php echo esc_attr($featured_product->post_title); ?></h2>
-                            <?php
-								echo apply_filters( 'the_content', $product->short_description )
-							?>
-                            <div class="text-center text-lg-left">
-
-                                <a href="<?php the_permalink($featured_product_id); ?>"
-                                    class="btn btn-primary btn-rounded d-block d-lg-inline-block mr-0 mr-lg-3 mb-3 mb-lg-0">Subscribe
-                                    Today and
-                                    Save!</a>
-                                <span class="text-primary font-weight-bold">Starting at just
-                                    $<?php echo $product->get_price(); ?>!</span>
-
-                                <!-- <div class="d-flex justify-content-center">
-                                    <div class="col-12 col-lg-8">
-                                        <?php //echo do_shortcode('[add_to_cart_form id="' . $featured_product_id . '"]'); ?>
-                                    </div>
-                                </div> -->
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<?php endif; ?>
+<?php get_template_part( 'template-parts/add-to-cart' ); ?>
 
 <div class="container">
     <h2 class="text-center">Individual boxes</h2>

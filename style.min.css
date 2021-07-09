@@ -3025,10 +3025,10 @@ footer .social-icons li{padding:5px 8px}
 .product #wc-stripe-payment-request-button-separator,.product #wc-stripe-payment-request-wrapper{display:none !important}
 .product .flex-control-thumbs{list-style:none;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:1.5em;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0}
 .product .woocommerce-product-gallery__image{text-align:center;max-width:100%}
-.product .variations .label{vertical-align:middle}
-.product .variations .label label{margin-bottom:0}
 .product .in-stock{margin-bottom:0;font-size:16px;margin-left:1em}
 .product .wp-post-image{max-width:100%;height:auto}
+.variations .label{vertical-align:middle}
+.variations .label label{margin-bottom:0}
 .woocommerce-variation-add-to-cart .quantity{width:75px}
 .woocommerce-checkout .mailchimp-newsletter{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:0;margin-right:0}
 .woocommerce-checkout .mailchimp-newsletter label{margin-bottom:0;margin-left:.5em}

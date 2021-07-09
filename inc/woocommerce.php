@@ -151,6 +151,7 @@ jQuery(document).ready(function($) {
     <?php } ?>
 });
 </script>
+
 <?php
   }
 

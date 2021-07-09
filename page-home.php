@@ -128,14 +128,16 @@ get_header();
                 <?php endif; ?>
             </div>
         </div>
+
         <div class="row">
             <div class="col-12 text-center">
                 <a href="<?php echo esc_url(the_field('how_it_works_button_link')); ?>"
-                    class="btn btn-primary btn-rounded btn-lg d-block d-lg-inline-block"><?php echo esc_attr(the_field('how_it_works_button_text')); ?></a>
+                    class="btn btn-light text-dark btn-rounded btn-lg d-block d-lg-inline-block"><?php echo esc_attr(the_field('how_it_works_button_text')); ?></a>
             </div>
         </div>
     </div>
 </section>
+
 
 
 <?php if (have_rows('previous_boxes')) : ?>

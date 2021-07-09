@@ -29,16 +29,6 @@
         max-width: 100%;
     }
 
-    .variations {
-        .label {
-            vertical-align: middle;
-
-            label {
-                margin-bottom: 0;
-            }
-        }
-    }
-
     .in-stock {
         margin-bottom: 0;
         font-size: 16px;
@@ -62,6 +52,16 @@
     @media (min-width: 992px) {
         .single_add_to_cart_button {
             width: auto;
+        }
+    }
+}
+
+.variations {
+    .label {
+        vertical-align: middle;
+
+        label {
+            margin-bottom: 0;
         }
     }
 }
