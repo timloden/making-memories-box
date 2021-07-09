@@ -82,9 +82,15 @@ get_header();
 
         <div class="row mb-5">
             <?php if( have_rows('how_it_works_steps') ): ?>
-            <?php while( have_rows('how_it_works_steps') ): the_row(); ?>
+            <?php while( have_rows('how_it_works_steps') ): the_row(); 
+                $image = get_sub_field('how_it_works_step_icon');
+            ?>
             <div class="col-12 col-lg-4">
                 <div class="card shadow p-3 border-0 text-center mb-3 p-lg-4">
+                    <?php if($image) : ?>
+                    <img class="img-fluid" loading="lazy" src="<?php echo esc_url($image['url']); ?>"
+                        alt="<?php echo esc_attr($image['alt']); ?>">
+                    <?php endif; ?>
                     <h4 class="pb-2"><?php echo esc_attr(the_sub_field('how_it_works_step_title')); ?></h4>
                     <div class="text-black-50">
                         <p class="mb-0"><?php echo esc_attr(the_sub_field('how_is_works_step_description')); ?></p>
