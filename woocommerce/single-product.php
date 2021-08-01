@@ -106,6 +106,11 @@ $featured_product = get_field('featured_product', 'option');
 } 
 ?>
 
+<?php if(get_field('whats_in_the_box_items')) {
+    get_template_part( 'template-parts/whats-in-the-box' ); 
+}
+?>
+
 <?php 
 $show_as_seen = get_field('show_on_homepage_as_seen', 'option');
 if ( $show_as_seen ) {

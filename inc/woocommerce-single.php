@@ -47,7 +47,7 @@ function order_cutoff() {
 
 
     //echo '<p class="text-primary h4 mt-3 pt-3">Orders placed before ' . $date->format('F j, Y') . '</p><p class="mb-3" style="font-size: 12px;">Orders placed after this date will ship the following month.</p>';
-    echo '<p class="text-dark h4 mt-3 pt-3 text-center">Order before the 25th to receive the upcoming box!</p>';
+    echo '<p class="text-dark h4 mt-3 pt-3 text-center">Order before the 25th to receive next months box!</p>';
   } elseif (class_exists( 'WC_Subscriptions_Product' ) && !WC_Subscriptions_Product::is_subscription( $product ) && $product->is_in_stock()) {
     $start_date = get_field('month_start', $product->get_id());
     
