@@ -198,15 +198,14 @@ get_header();
 </section>
 <?php endif; ?>
 
+<?php if(get_field('whats_in_the_box_items')) {
+    get_template_part( 'template-parts/whats-in-the-box' ); 
+}
+?>
 
 <?php if( have_rows('testimonials') ) {
     get_template_part( 'template-parts/testimonial-slider' ); 
 } 
-?>
-
-<?php if(get_field('instagram_shortcode', 'option')) {
-    get_template_part( 'template-parts/instagram-feed' ); 
-}
 ?>
 
 <?php 
@@ -216,7 +215,10 @@ if ( $show_as_seen ) {
 }
 ?>
 
-
+<?php if(get_field('instagram_shortcode', 'option')) {
+    get_template_part( 'template-parts/instagram-feed' ); 
+}
+?>
 
 <?php if(get_field('sign_up_for_coupon')) : ?>
 <section class="home-box-contents">

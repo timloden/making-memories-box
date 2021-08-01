@@ -17,3 +17,14 @@
         }
     }
 }
+
+.whats-in-the-box {
+    background: none;
+
+    @include media-breakpoint-up(lg) {
+        background: url('/wp-content/themes/making-memories-box/assets/images/whats-in-the-box-bg-stars.jpg');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-position-y: 190px;
+    }
+}

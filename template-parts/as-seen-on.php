@@ -101,14 +101,16 @@ $as_seen_embed_2 = get_field('as_seen_on_embed_2', 'option');
     <?php if( have_rows('as_seen_on_logos', 'option') ): ?>
     <div class="py-3" style="background-color: #f4f4f4;">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <?php while( have_rows('as_seen_on_logos', 'option') ): the_row(); 
                 $logo_image = get_sub_field('as_seen_on_logo_image');
                 $logo_link = get_sub_field('as_seen_on_logo_link');
                 ?>
                 <div class="col-6 col-lg-3">
+                    <?php echo ($logo_link) ? '<a href="' . esc_url($logo_link) . '"/>' : '' ?>
                     <img src="<?php echo esc_url($logo_image['url']); ?>"
                         alt="<?php echo esc_url($logo_image['alt']); ?>" class="img-fluid">
+                    <?php echo ($logo_link) ? '</a>' : '' ?>
                 </div>
                 <?php endwhile; ?>
             </div>
