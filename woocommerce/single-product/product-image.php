@@ -59,10 +59,10 @@ $wrapper_classes   = apply_filters(
 			echo '</div>';
 
 			// our thumbnails
-			echo '<div class="product-gallery-thumbs d-flex flex-wrap justify-content-between">';
+			echo '<div class="product-gallery-thumbs d-flex flex-wrap justify-content-center">';
 			foreach ( $gallery_images as $image ) {
 				$image_thumb_url = wp_get_attachment_thumb_url($image);
-				echo '<div><img width="100" class="img-fluid" src="' . $image_thumb_url . '"/></div>';
+				echo '<div><img width="100" class="img-fluid p-2" src="' . $image_thumb_url . '"/></div>';
 			}
 			echo '</div>';
 
