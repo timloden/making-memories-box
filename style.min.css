@@ -3708,7 +3708,7 @@ footer .social-icons li{padding:5px 8px}
 .text-lg-right{text-align:right !important}
 .text-lg-center{text-align:center !important}
 .testimonial-section .testimonial-card{min-height:250px}
-.whats-in-the-box{background:url("/wp-content/themes/making-memories-box/assets/images/whats-in-the-box-bg-stars.jpg");background-position:center bottom;background-repeat:no-repeat;background-position-y:190px}
+.whats-in-the-box{background:url("/wp-content/themes/making-memories-box/assets/images/whats-in-the-box-bg-stars.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover}
 .product .single_add_to_cart_button{width:auto}
 }@media(min-width:1200px){.container,.container-sm,.container-md,.container-lg,.container-xl{max-width:1140px}
 .col-xl{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
