@@ -100,15 +100,14 @@ $featured_product = get_field('featured_product', 'option');
     </div>
 </section>
 <?php endif; ?>
+<?php if(get_field('whats_in_the_box_items')) {
+    get_template_part( 'template-parts/whats-in-the-box' ); 
+}
+?>
 
 <?php if( have_rows('testimonials') ) {
     get_template_part( 'template-parts/testimonial-slider' ); 
 } 
-?>
-
-<?php if(get_field('whats_in_the_box_items')) {
-    get_template_part( 'template-parts/whats-in-the-box' ); 
-}
 ?>
 
 <?php 
