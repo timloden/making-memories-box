@@ -55,7 +55,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold"
-                                    href="<?php echo site_url(); ?>frequently-asked-questions">FAQs</a>
+                                    href="<?php echo site_url(); ?>/frequently-asked-questions">FAQs</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark font-weight-bold" href="/blog">Blog</a>
