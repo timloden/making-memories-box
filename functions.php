@@ -118,6 +118,7 @@ function my_prefix_comments_open( $open, $post_id ) {
 }
 add_filter( 'comments_open', 'my_prefix_comments_open', 10, 2 );
 
+add_filter( 'edit_post_link', '__return_false' );
 /**
  * Load includes
  */
