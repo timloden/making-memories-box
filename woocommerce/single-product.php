@@ -117,6 +117,11 @@ if ( $show_as_seen ) {
 }
 ?>
 
+<?php if( get_field('frequently_asked_questions') ) {
+    echo '<h2 class="text-center mt-5 mb-3">Frequently Asked Questions</h2>';
+    get_template_part( 'template-parts/faq' ); 
+} ?>
+
 <?php if (have_rows('previous_boxes')) : ?>
 <section class="section previous-boxes">
     <h2 class="text-center mt-5 mb-3">Here are some of our previous boxes!</h2>

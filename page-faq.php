@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Contact
+ * Template Name: FAQ
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,7 +9,6 @@
 
 get_header();
 ?>
-
 <section class="page-header py-5">
     <div class="container">
         <div class="row">
@@ -17,7 +16,7 @@ get_header();
                 <?php if (get_field('page_title')) : ?>
                 <h1 class="text-center"><?php echo esc_attr(get_field('page_title')); ?></h1>
                 <?php else : ?>
-                <h1 class="text-center">Contact us</h1>
+                <h1 class="text-center"><?php the_title(); ?></h1>
                 <?php endif; ?>
                 <?php if (get_field('page_subtitle')) : ?>
                 <p class="text-center text-black-50"><?php echo esc_attr(get_field('page_subtitle')); ?></p>
@@ -28,28 +27,21 @@ get_header();
 </section>
 <section class="page-content pb-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-6">
-                <?php
-                while ( have_posts() ) :
-                    the_post();
+        <?php
+		while ( have_posts() ) :
+			the_post();
 
-                    get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'page' );
 
-                endwhile; // End of the loop.
-                ?>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <?php if( get_field('frequently_asked_questions') ) {
-                    echo '<h2 class="text-center mt-5 mb-3">Frequently Asked Questions</h2>';
-                    get_template_part( 'template-parts/faq' ); 
-                } ?>
-            </div>
-        </div>
-    </div>
+		endwhile; // End of the loop.
+		?>
+
+        <?php if( get_field('frequently_asked_questions') ) {
+        get_template_part( 'template-parts/faq' ); 
+        } ?>
+    </div><!-- #primary -->
 </section>
+
 
 <?php
 get_footer();
