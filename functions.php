@@ -118,7 +118,35 @@ function my_prefix_comments_open( $open, $post_id ) {
 }
 add_filter( 'comments_open', 'my_prefix_comments_open', 10, 2 );
 
+// hide edit page link
 add_filter( 'edit_post_link', '__return_false' );
+
+// order items in shop admin
+
+function wc_new_order_column( $columns ) {
+    $columns['order_products'] = 'Order Products';
+    return $columns;
+}
+add_filter( 'manage_edit-shop_order_columns', 'wc_new_order_column' );
+
+add_action( 'manage_shop_order_posts_custom_column' , 'custom_orders_list_column_content', 20, 2 );
+function custom_orders_list_column_content( $column, $post_id ) {
+    global $the_order, $post;
+
+    if ( 'order_products' === $column ) {
+        $products_names = []; // Initializing
+
+        // Loop through order items
+        foreach ( $the_order->get_items() as $item ) {
+            $product = $item->get_product(); // Get the WC_Product object
+            $products_names[]  = $item->get_name(); // Store in an array
+        }
+        // Display
+        echo '<ul style="list-style: none;"><li>' . implode('</li><li>', $products_names) . '</li></ul>';
+    }
+}
+
+
 /**
  * Load includes
  */
