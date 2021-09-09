@@ -23,5 +23,8 @@ global $product;
 ?>
 
 <?php if ($product->is_in_stock() && $price_html = $product->get_price_html() ) : ?>
-<span class="price"><?php echo $price_html; ?></span>
+<span class="price"><?php //echo $price_html; ?></span>
+
+<?php elseif (!$product->is_in_stock()) : ?>
+<p class="mb-0 font-weight-bold h4">SOLD OUT!</p>
 <?php endif; ?>
