@@ -110,7 +110,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark font-weight-bold text-center"
-                                        href="<?php echo site_url(); ?>#previous-boxes">Previous Boxes</a>
+                                        href="<?php echo site_url(); ?>/shop">Previous Boxes</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark font-weight-bold text-center" href="/blog">Blog</a>
