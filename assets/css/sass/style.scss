@@ -19,10 +19,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 // Bootstrap styles
 @import 'global/_variables';
 @import 'node_modules/bootstrap/scss/bootstrap';
-
-// line-awesome
-$la-font-path: '/wp-content/themes/making-memories-box/assets/fonts/line-awesome';
-@import 'node_modules/line-awesome/dist/line-awesome/scss/line-awesome';
+@import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 // cosmodrome font
 @import '/wp-content/themes/making-memories-box/assets/fonts/cosmodrome/cosmodrome.css';

@@ -2,10 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.screen-reader-text {
-    @extend .sr-only;
-}
-
 .logo {
     img {
         max-width: 250px;
