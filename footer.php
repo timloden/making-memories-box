@@ -14,91 +14,89 @@ $instagram = get_field('instagram_link', 'option');
 $facebook = get_field('facebook_link', 'option');
 ?>
 
-</div><!-- #content -->
 
-<footer class="site-footer border-top">
-    <div class="container pt-5 pb-4">
-        <div class="row">
-            <div class="col-12 col-lg-4">
-                <div class="footer-logo pr-3">
-                    <a class="mb-3 d-block" href="<?php echo site_url(); ?>"><img class="img-fluid"
-                            src="<?php echo esc_url($logo['url']); ?>"></a>
-                    <?php if(get_field('footer_sub_logo_text', 'option')) : ?>
-                    <p><?php echo esc_attr(get_field('footer_sub_logo_text', 'option')); ?></p>
-                    <?php endif; ?>
+<footer class="site-footer bg-light py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 col-lg-3">
+                <div class="logo footer-logo text-center">
+                    <a class="mb-3 d-block" href="<?php echo site_url(); ?>">
+                        <img class="img-fluid" src="<?php echo esc_url($logo['url']); ?>">
+                    </a>
                 </div>
             </div>
-            <div class="col-6 col-lg-2">
-                <h6 class="text-dark text-center text-lg-left">About</h6>
-                <ul class="nav flex-column footer-links text-center text-lg-left">
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 col-lg-6">
+                <ul class="nav footer-links justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/shop">Order</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">How it works</a>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">FAQ</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">About</a>
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/shop">Boxes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Contact</a>
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">FAQs</a>
                     </li>
-                </ul>
-            </div>
-            <div class="col-6 col-lg-2">
-                <h6 class="text-dark text-center text-lg-left">Account</h6>
-                <ul class="nav flex-column footer-links text-center text-lg-left">
+                    <li class="nav-item">
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/contact">Contact</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link pl-lg-0"
-                            href="<?php echo site_url(); ?>"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/privacy">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/terms">Terms</a>
+                            href="<?php echo site_url(); ?>/my-account"><?php echo (is_user_logged_in() ? 'My Account' : 'Login'); ?></a>
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-lg-4">
-                <h6 class="text-dark">Newsletter</h6>
-                <p>Signup for our newsletter to get the latest news, updates and special offers in your inbox.</p>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 col-lg-6">
+                <p class="text-center">Signup for our newsletter to get the latest news, updates and special offers in
+                    your inbox.</p>
                 <?php echo gravity_form( 1, false, false, false, '', true, 12 ); ?>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12">
+
+                <ul class="nav social-icons justify-content-center">
+                    <?php if($instagram ) : ?>
+                    <li class="nav-item mr-3">
+                        <a class="text-dark" style="font-size: 30px;" href="<?php echo esc_url($facebook ); ?>"><i
+                                class="bi bi-instagram"></i></a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if($facebook ) : ?>
+                    <li class="nav-item">
+                        <a class="text-dark" style="font-size: 30px;" href="<?php echo esc_url($instagram ); ?>"><i
+                                class="bi bi-facebook"></i></a>
+                    </li>
+                    <?php endif; ?>
+                </ul>
+
             </div>
         </div>
     </div>
     <div class="copyright py-3">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <div>
-                    <p class="mb-0">&copy; Making Memories Box <?php echo date( 'Y' ); ?></p>
-                </div>
-                <div>
-                    <ul class="nav social-icons justify-content-end">
-                        <?php if($instagram ) : ?>
-                        <li class="nav-item mr-3">
-                            <a class="text-dark" style="font-size: 30px;" href="<?php echo esc_url($facebook ); ?>"><i
-                                    class="lab la-facebook-square"></i></a>
-                        </li>
-                        <?php endif; ?>
-                        <?php if($facebook ) : ?>
-                        <li class="nav-item">
-                            <a class="text-dark" style="font-size: 30px;" href="<?php echo esc_url($instagram ); ?>"><i
-                                    class="lab la-instagram"></i></a>
-                        </li>
-                        <?php endif; ?>
-                    </ul>
+
+            <div class="row">
+                <div class="col-12">
+
+                    <p class="mb-0 small text-center text-black-50">&copy; Making Memories Box
+                        <?php echo date( 'Y' ); ?> | <a class="text-black-50"
+                            href="<?php echo site_url(); ?>/privacy">Privacy</a> | <a class="text-black-50"
+                            href="<?php echo site_url(); ?>/terms">Terms</a>
+                    </p>
+
                 </div>
             </div>
 
         </div>
-
     </div>
 </footer>
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 <?php the_field('footer_embed', 'option'); ?>

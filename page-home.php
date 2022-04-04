@@ -9,254 +9,138 @@
 
 get_header();
 ?>
-<section class="home-hero">
-    <div class="container">
+<section class="home-hero py-5"
+    style="background-image: url(<?php echo site_url(); ?>/wp-content/themes/making-memories-box/assets/images/placeholder-hero-bg.jpg); background-size: cover;">
+    <div class="container py-5">
         <div class="row align-items-center py-5">
             <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-                <h1 class="text-center text-lg-left"><?php echo esc_attr(the_field('hero_title')); ?></h1>
+                <h1 class="text-center text-lg-start"><?php echo esc_attr(the_field('hero_title')); ?></h1>
+
                 <p class="my-3 text-black-50"><?php echo esc_attr(the_field('hero_description')); ?></p>
 
-                <?php if(get_field('hero_offer')) : ?>
-                <p style="font-size: 16px;" class="mb-1 text-primary font-weight-bold pt-3">LIMITED OFFER:</p>
-                <p class="font-weight-bolder h4 text-center text-lg-left pb-3" style="text-decoration: underline;">
-                    <?php echo esc_attr(the_field('hero_offer')); ?>
-                </p>
-                <?php endif; ?>
+                <a href="<?php echo esc_url(the_field('hero_cta_button_link')); ?>"
+                    class="btn btn-primary btn-rounded"><?php echo esc_attr(the_field('hero_cta_button_text')); ?></a>
 
-                <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-5">
-                    <a href="<?php echo esc_url(the_field('hero_cta_button_link')); ?>"
-                        class="btn btn-primary btn-rounded btn-lg"><?php echo esc_attr(the_field('hero_cta_button_text')); ?></a>
-                    <?php if(the_field('hero_secondary_button_text')) : ?>
-                    <a class="ml-3"
-                        href="<?php echo esc_url(the_field('hero_secondary_button_link')); ?>"><?php echo esc_attr(the_field('hero_secondary_button_text')); ?>
-                        <i class="las la-arrow-down"></i></a>
-                    <?php endif; ?>
-                </div>
-
-                <?php if(get_field('show_guarantee', 'option')) : ?>
-                <div class="d-flex align-items-center justify-content-center pt-lg-5">
-                    <div class="col-3">
-                        <img class="img-fluid"
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/satisfaction-badge.png">
-                    </div>
-                    <div class="col-9 px-0">
-                        <p class="font-weight-bold mb-1 h4">Satisfaction guaranteed!</p>
-                        <p class="mb-0" style="font-size: 14px;">We guarantee you will love your box or your money back!
-                        </p>
-                    </div>
-                </div>
-                <?php endif; ?>
-
+                <a class="ms-3 btn btn-outline-dark btn-rounded text-dark"
+                    href="<?php echo esc_url(the_field('hero_secondary_button_link')); ?>"><?php echo esc_attr(the_field('hero_secondary_button_text')); ?>
+                </a>
             </div>
-            <div class="col-12 col-lg-7 text-center">
-                <?php 
-                $hero_images = get_field('hero_images');
-                if( !empty( $hero_images ) ): ?>
-                <div class="hero-slider">
-                    <?php while( have_rows('hero_images') ): the_row(); 
-                    $hero_image = get_sub_field('image');
-                ?>
+            <div class="col-12 col-lg-7">
 
-                    <div>
-                        <img src="<?php echo esc_url($hero_image['url']); ?>" class="img-fluid shadow"
-                            alt="<?php echo esc_url($hero_image['alt']); ?>">
-                    </div>
-
-
-                    <?php endwhile; ?>
-                </div>
-                <?php endif; ?>
             </div>
         </div>
     </div>
 </section>
 
-<section id="how-it-works" class="home-how-it-works py-5 bg-mmb-gray">
-    <div class="container">
-
-        <div class="row pb-3">
-            <div class="col-12">
-                <h2 class="text-center pb-3"><?php echo esc_attr(the_field('how_it_works_title')); ?></h2>
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <?php if( have_rows('how_it_works_steps') ): ?>
-            <?php while( have_rows('how_it_works_steps') ): the_row(); 
-                $image = get_sub_field('how_it_works_step_icon');
-            ?>
-            <div class="col-12 col-lg-4">
-                <div class="card shadow p-3 border-0 text-center mb-3 p-lg-4">
-                    <?php if($image) : ?>
-                    <div class="text-center w-100">
-                        <img class="img-fluid mb-3" style="width: 75px;" loading="lazy"
-                            src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                    </div>
-                    <?php endif; ?>
-                    <h4 class="pb-2"><?php echo esc_attr(the_sub_field('how_it_works_step_title')); ?></h4>
-                    <div class="text-black-50">
-                        <p class="mb-0"><?php echo esc_attr(the_sub_field('how_is_works_step_description')); ?></p>
-                    </div>
-                </div>
-            </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
-        </div>
-        <div class="row mb-5">
-            <div class="col-6 col-lg-3 mb-3">
-                <?php 
-                            $image_1 = get_field('how_it_works_image_1');
-                            if( !empty( $image_1 ) ): ?>
-                <img class="img-fluid shadow" src="<?php echo esc_url($image_1['url']); ?>" data-aos="fade-down"
-                    data-aos-delay="100" data-aos-once="true" alt="<?php echo esc_attr($image_1['alt']); ?>">
-                <?php endif; ?>
-            </div>
-            <div class="col-6 col-lg-3 mb-3">
-                <?php 
-                            $image_2 = get_field('how_it_works_image_2');
-                            if( !empty( $image_2 ) ): ?>
-                <img class="img-fluid shadow" src="<?php echo esc_url($image_2['url']); ?>" data-aos="fade-down"
-                    data-aos-delay="200" data-aos-once="true" alt="<?php echo esc_attr($image_2['alt']); ?>">
-                <?php endif; ?>
-            </div>
-            <div class="col-6 col-lg-3 mb-3">
-                <?php 
-                            $image_3 = get_field('how_it_works_image_3');
-                            if( !empty( $image_3 ) ): ?>
-                <img class="img-fluid shadow" src="<?php echo esc_url($image_3['url']); ?>" data-aos="fade-down"
-                    data-aos-delay="300" data-aos-once="true" alt="<?php echo esc_attr($image_3['alt']); ?>">
-                <?php endif; ?>
-            </div>
-            <div class="col-6 col-lg-3 mb-3">
-                <?php 
-                            $image_4 = get_field('how_it_works_image_4');
-                            if( !empty( $image_4 ) ): ?>
-                <img class="img-fluid shadow" src="<?php echo esc_url($image_4['url']); ?>" data-aos="fade-down"
-                    data-aos-delay="400" data-aos-once="true" alt="<?php echo esc_attr($image_4['alt']); ?>">
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="<?php echo esc_url(the_field('how_it_works_button_link')); ?>"
-                    class="btn btn-light text-dark btn-rounded btn-lg d-block d-lg-inline-block"><?php echo esc_attr(the_field('how_it_works_button_text')); ?></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<?php if (have_rows('previous_boxes')) : ?>
-<section id="previous-boxes" class="section previous-boxes">
-    <h2 class="text-center mt-5 mb-3"><?php echo esc_attr(the_field('previous_boxes_title')); ?></h2>
-    <p class="text-center"><?php echo esc_attr(the_field('previous_boxes_subtitle')); ?></p>
+<section class="product py-5">
     <div class="container py-5">
-        <?php while( have_rows('previous_boxes') ): the_row(); 
-        $box_post = get_sub_field('box_product');
-        
-        $post_id = $box_post->ID;
-        $box_featured_image = get_the_post_thumbnail_url($post_id,'full');
-        ?>
-        <div class="row align-items-center mb-5">
-            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                <img src="<?php echo $box_featured_image; ?>" class="img-fluid">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6 order-1 order-lg-0 text-center">
+                <img src="https://makingmemories.local/wp-content/uploads/2021/03/home-slider-1.jpg"
+                    class="img-fluid px-5" loading="lazy">
             </div>
-            <div class="col-12 col-lg-8">
-
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <h3 class="mb-4 text-center text-lg-left"><?php echo get_the_title($post_id); ?></h3>
-                    </div>
-                    <?php while( have_rows('example_box_content', $post_id) ): the_row(); 
-                    $activity_image = get_sub_field('image');
-                    ?>
-                    <div class="col-12 col-lg-6 mb-3">
-
-                        <div class="media align-items-center">
-                            <img src="<?php echo esc_url($activity_image['url']); ?>" class="rounded mr-3"
-                                style="width: 100px;">
-                            <div class="media-body">
-                                <h5 class="mt-0"><?php echo esc_attr(the_sub_field('title')); ?></h5>
-                                <?php //echo esc_attr(the_sub_field('description')); ?>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endwhile; ?>
-                </div>
-            </div>
-        </div>
-        <?php endwhile; ?>
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="<?php echo esc_url(the_field('previous_boxes_button_link')); ?>"
-                    class="btn btn-primary btn-rounded btn-lg d-block d-lg-inline-block"><?php echo esc_attr(the_field('previous_boxes_button_text')); ?></a>
+            <div class="col-12 col-lg-5 order-0 order-lg-1">
+                <h2>Fun and creative activities delivered each month</h2>
+                <p class="text-black-50">You will get a NEW themed box at the start of each month. We take care of all
+                    the planning & prep
+                    work for you.</p>
+                <p class="fw-bold mb-2"><i class="bi bi-palette"></i> All supplies included</p>
+                <p class="fw-bold mb-2"><i class="bi bi-truck"></i> Free shipping</p>
+                <p class="fw-bold"><i class="bi bi-pause-circle"></i> Pause or cancel anytime</p>
+                <a href="#" class="btn btn-primary btn-rounded">Choose your box</a>
             </div>
         </div>
     </div>
 </section>
-<?php endif; ?>
 
-<?php if(get_field('whats_in_the_box_items')) {
-    get_template_part( 'template-parts/whats-in-the-box' ); 
-}
-?>
-
-<?php if( have_rows('testimonials') ) {
+<?php if ( have_rows('testimonials') ) {
     get_template_part( 'template-parts/testimonial-slider' ); 
 } 
 ?>
 
-<?php 
-$show_as_seen = get_field('show_on_homepage_as_seen', 'option');
-if ( $show_as_seen ) {
-    get_template_part( 'template-parts/as-seen-on' ); 
-}
-?>
+<?php get_template_part( 'template-parts/what-to-expect' ); ?>
 
-<?php if(get_field('instagram_shortcode', 'option')) {
+
+<?php if (get_field('instagram_shortcode', 'option')) {
     get_template_part( 'template-parts/instagram-feed' ); 
 }
 ?>
 
-<?php if(get_field('sign_up_for_coupon')) : ?>
-<section class="home-box-contents">
-    <div class="container">
-        <div class="row pb-5">
+<section id="choose-your-box" class="boxes bg-light py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Choose your box</h2>
+                <p>Starting at $34.95. Pre-pay and save!</p>
+            </div>
+        </div>
+        <?php echo do_shortcode('[products category="subscriptions"]'); ?>
+        <div class="row">
             <div class="col-12">
-                <?php echo get_field('sign_up_for_coupon'); ?>
+                <p class="text-center mb-0 mt-4"><a class="text-dark" href="<?php echo site_url(); ?>/shop">Browse all
+                        Making Memory Boxes</a></p>
             </div>
         </div>
     </div>
 </section>
-<?php endif; ?>
 
+<?php 
+   $the_query = new WP_Query( array(
+      'posts_per_page' => 3,
+   )); 
+?>
+<section class="recent-posts py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 text-center">
+                <h2>Some of our latest articles</h2>
+                <p>The latest activities, crafts, and helpful articles for sparking your kids creativity. </p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3">
+            <?php if ( $the_query->have_posts() ) : ?>
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <div class="col">
+                <?php 
+                if(has_post_thumbnail()){
+                  the_post_thumbnail();
+                }
+                ?>
+                <?php the_title(); ?>
+                <?php the_excerpt(); ?>
+            </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+            <p><?php __('No News'); ?></p>
+            <?php endif; ?>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center mb-0 mt-4"><a href="<?php echo site_url(); ?>/resources">Browse all our helpful
+                        kids
+                        activity articles</a></p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php
 get_footer(); 
 ?>
 
 <script>
-var slider = tns({
-    container: '.hero-slider',
-    items: 1,
-    autoplay: true,
-    autoplayButtonOutput: false,
-    controls: false,
-    nav: false,
-    autoplayTimeout: 4000
-});
-
 var testimonial_slider = tns({
     container: '.testimonial-slider',
     items: 1,
     center: true,
-    edgePadding: 50,
+    edgePadding: 0,
     autoplay: true,
     autoplayButtonOutput: false,
     controls: false,
-    nav: false,
+    nav: true,
+    navPosition: 'bottom',
     autoplayTimeout: 5000
 });
 </script>
