@@ -99,21 +99,19 @@ get_header();
         </div>
         <div class="row row-cols-1 row-cols-lg-3">
             <?php if ( $the_query->have_posts() ) : ?>
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+            $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+            ?>
             <div class="col">
-                <?php 
-                if(has_post_thumbnail()){
-                  the_post_thumbnail();
-                }
-                ?>
-                <?php the_title(); ?>
+                <a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($featured_img_url); ?>"
+                        class="img-fluid" alt="" loading="lazy"></a>
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">Continue reading <i class="bi bi-arrow-right"></i></a>
             </div>
             <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
 
-            <?php else : ?>
-            <p><?php __('No News'); ?></p>
+            <?php wp_reset_postdata(); ?>
             <?php endif; ?>
         </div>
         <div class="row">
