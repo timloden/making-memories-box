@@ -32,16 +32,6 @@
     .in-stock {
         margin-bottom: 0;
         font-size: 16px;
-        margin-left: 1em;
-    }
-
-    .woocommerce-variation-price {
-        // font-size: 1.5em;
-        // font-weight: bold;
-    }
-
-    .first-payment-date {
-        //padding-top: 1em;
     }
 
     .wp-post-image {
@@ -51,7 +41,15 @@
 
     @media (min-width: 992px) {
         .single_add_to_cart_button {
-            width: auto;
+            width: 300px;
+        }
+    }
+
+    .product-page-value-prop {
+        line-height: 1;
+        font-size: 0.875rem;
+        i {
+            font-size: 1.25rem;
         }
     }
 }
@@ -66,7 +64,7 @@
     }
 }
 
-.woocommerce-variation-add-to-cart {
+.woocommerce {
     .quantity {
         width: 75px;
     }

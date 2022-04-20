@@ -103,9 +103,13 @@ get_header();
             $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
             ?>
             <div class="col">
-                <a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($featured_img_url); ?>"
-                        class="img-fluid" alt="" loading="lazy"></a>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <a href="<?php the_permalink(); ?>">
+                    <div class="featured-image"
+                        style="background-image: url(<?php echo esc_url($featured_img_url); ?>); background-size: cover;">
+
+                    </div>
+                </a>
+                <h3 class="mt-3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>">Continue reading <i class="bi bi-arrow-right"></i></a>
             </div>
@@ -116,9 +120,9 @@ get_header();
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="text-center mb-0 mt-4"><a href="<?php echo site_url(); ?>/resources">Browse all our helpful
-                        kids
-                        activity articles</a></p>
+                <p class="text-center mb-0 mt-4">
+                    <a href="<?php echo site_url(); ?>/resources">Browse all our helpful kids activity articles</a>
+                </p>
             </div>
         </div>
     </div>

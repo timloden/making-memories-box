@@ -1,3 +1,35 @@
+.recent-posts {
+    .featured-image {
+        height: 250px;
+    }
+}
+
+.testimonial-section {
+    .testimonial-content {
+        p {
+            font-size: 2rem;
+        }
+    }
+    .tns-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        button {
+            height: 15px;
+            width: 15px;
+            border-radius: 50px;
+            margin: 0 5px;
+            border: none;
+            background-color: #c4c4c4;
+
+            &.tns-nav-active {
+                background-color: #000000;
+            }
+        }
+    }
+}
+
 @include media-breakpoint-up(lg) {
     .what-to-expect-section {
         overflow-x: hidden;

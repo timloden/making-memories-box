@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package underscores
+ * @package making-memories-box
  */
 
 get_header();
@@ -24,11 +24,6 @@ $categories = get_the_category();
                             <h1><?php the_title(); ?></h1>
                             <p class="text-black-50" style="font-size: 14px;">Posted on <?php echo $post_date ?></p>
                         </div>
-                        <div class="jumbotron jumbotron-fluid rounded"
-                            style="background-image: url(<?php the_post_thumbnail_url('full'); ?>); background-position: center center; background-size: cover; position: relative; height: 300px;">
-
-                        </div>
-
                         <?php
                     while ( have_posts() ) :
                         the_post();
@@ -44,7 +39,7 @@ $categories = get_the_category();
         </div>
     </main><!-- #main -->
 </div><!-- #primary -->
-<div class="post-cta bg-white border-top"
+<div class="post-cta bg-white border-top border-bottom"
     style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/assets/images/post-detail-cta-bg-800-light.jpg)">
     <div class="container py-5">
         <div class="row">

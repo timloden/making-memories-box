@@ -19,15 +19,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-global $post;
+global $product;
 
-$short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
+$short_description = apply_filters( 'woocommerce_short_description', $product->short_description );
 
 if ( ! $short_description ) {
 	return;
 }
-
 ?>
+
 <div class="woocommerce-product-details__short-description">
-	<?php echo $short_description; // WPCS: XSS ok. ?>
+    <?php echo $short_description; // WPCS: XSS ok. ?>
 </div>
+
+<?php if (WC_Subscriptions_Product::is_subscription( $product )) : ?>
+<p class="mt-3 mb-4 text-center text-md-start">Order before the <?php echo date('F'); ?> 25th to receive next months
+    box!</p>
+<?php endif; ?>

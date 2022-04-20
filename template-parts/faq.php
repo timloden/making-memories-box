@@ -9,28 +9,30 @@
 ?>
 
 <?php if( have_rows('frequently_asked_questions') ): ?>
-<section class="section faqs py-5">
+<section class="section faqs pb-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
+
                 <div class="accordion" id="faq-accordion">
-                    <?php while( have_rows('frequently_asked_questions') ): the_row(); ?>
+                    <?php while( have_rows('frequently_asked_questions') ): the_row(); 
+                    $row_index = get_row_index();
+                    ?>
 
-                    <div class="card">
-                        <div class="card-header" id="heading-<?php echo get_row_index(); ?>">
-                            <h2 class="mb-0">
-                                <button class="btn btn-block text-left text-dark" style="font-size: 1.2rem;"
-                                    type="button" data-toggle="collapse"
-                                    data-target="#collapse-<?php echo get_row_index(); ?>"
-                                    aria-controls="collapse-<?php echo get_row_index(); ?>">
-                                    <?php echo esc_attr(get_sub_field('question')); ?>
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapse-<?php echo get_row_index(); ?>" class="collapse"
-                            aria-labelledby="heading-<?php echo get_row_index(); ?>" data-parent="#faq-accordion">
-                            <div class="card-body">
+                    <div class="accordion-item" id="faq-accordion">
+                        <h2 class="accordion-header" id="heading-<?php echo $row_index; ?>">
+                            <button class="accordion-button <?php echo $row_index == 1 ? "" : "collapsed"; ?>"
+                                type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-<?php echo $row_index; ?>"
+                                aria-expanded="<?php echo $row_index == 1 ? "true" : "false"; ?>"
+                                aria-controls="collapse-<?php echo $row_index; ?>">
+                                <?php echo esc_attr(get_sub_field('question')); ?>
+                            </button>
+                        </h2>
+                        <div id="collapse-<?php echo $row_index; ?>"
+                            class="accordion-collapse collapse <?php echo $row_index == "1" ? "show" : ""; ?>"
+                            aria-labelledby="heading-<?php echo $row_index; ?>" data-bs-parent="#faq-accordion">
+                            <div class="accordion-body">
                                 <?php echo esc_attr(get_sub_field('answer')); ?>
                             </div>
                         </div>

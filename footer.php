@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package underscores
+ * @package making-memories-box
  */
 $logo = get_field('logo', 'option');
 $instagram = get_field('instagram_link', 'option');

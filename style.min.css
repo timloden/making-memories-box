@@ -3211,7 +3211,14 @@ html{scroll-behavior:smooth}
 .header{-webkit-box-shadow:0 8px 10px rgba(0,0,0,.05);box-shadow:0 8px 10px rgba(0,0,0,.05)}
 .header .nav .nav-link{padding:.5rem .75rem}
 footer{color:#212529}
+footer .footer-newsletter{display:-webkit-box;display:-ms-flexbox;display:flex}
 .wp-block-image img{height:auto}
+.recent-posts .featured-image{height:250px}
+.testimonial-section .testimonial-content p{font-size:2rem}
+.testimonial-section .tns-nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:2rem}
+.testimonial-section .tns-nav button{height:15px;width:15px;border-radius:50px;margin:0 5px;border:0;background-color:#c4c4c4}
+.testimonial-section .tns-nav button.tns-nav-active{background-color:#000}
+body.blog{background-color:#f8f9fa}
 .loop-card-image{height:200px;background-size:cover;background-position:center center}
 .restricted-page .sidebar{will-change:min-height}
 .restricted-page .sidebar__inner{-webkit-transform:translate(0,0);transform:translate(0,0);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);will-change:position,transform}
@@ -3221,11 +3228,13 @@ footer{color:#212529}
 .product #wc-stripe-payment-request-button-separator,.product #wc-stripe-payment-request-wrapper{display:none !important}
 .product .flex-control-thumbs{list-style:none;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:1.5em;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0}
 .product .woocommerce-product-gallery__image{text-align:center;max-width:100%}
-.product .in-stock{margin-bottom:0;font-size:16px;margin-left:1em}
+.product .in-stock{margin-bottom:0;font-size:16px}
 .product .wp-post-image{max-width:100%;height:auto}
+.product .product-page-value-prop{line-height:1;font-size:.875rem}
+.product .product-page-value-prop i{font-size:1.25rem}
 .variations .label{vertical-align:middle}
 .variations .label label{margin-bottom:0}
-.woocommerce-variation-add-to-cart .quantity{width:75px}
+.woocommerce .quantity{width:75px}
 .woocommerce-checkout .mailchimp-newsletter{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:0;margin-right:0}
 .woocommerce-checkout .mailchimp-newsletter label{margin-bottom:0;margin-left:.5em}
 .woocommerce-checkout .shipping.recurring-total{display:none}
@@ -3998,7 +4007,7 @@ html:not(.no-js) [data-aos=flip-down].aos-animate{-webkit-transform:perspective(
 .text-lg-end{text-align:right !important}
 .text-lg-center{text-align:center !important}
 .what-to-expect-section{overflow-x:hidden}
-.product .single_add_to_cart_button{width:auto}
+.product .single_add_to_cart_button{width:300px}
 }@media(min-width:1200px){h1,.h1{font-size:2.5rem}
 h2,.h2{font-size:2rem}
 h3,.h3{font-size:1.75rem}

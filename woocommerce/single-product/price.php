@@ -23,17 +23,15 @@ global $product;
 
 ?>
 <div class="row justify-content-lg-between align-items-center mt-3">
-    <?php if (WC_Subscriptions_Product::is_subscription( $product )) : ?>
+
     <div class="col-12 col-lg">
-        <p
-            class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price h4 text-dark pb-3' ) ); ?>">
+        <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price h4 text-dark' ) ); ?>">
             <?php echo $product->get_price_html(); ?></p>
     </div>
-    <?php endif; ?>
     <?php if( class_exists( 'WC_Subscriptions_Product' ) && WC_Subscriptions_Product::is_subscription( $product ) ) : ?>
     <div class="col-12 col-lg">
-        <p>Rating: <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i
-                class="las la-star"></i><i class="las la-star"></i></p>
+        <p>Rating: <i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i
+                class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill"></i></p>
     </div>
     <?php endif; ?>
 </div>
