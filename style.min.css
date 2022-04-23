@@ -3254,6 +3254,7 @@ body.blog{background-color:#f8f9fa}
 #add_payment_method .payment_method_stripe #stripe-exp-element{margin-top:0;margin-bottom:1rem}
 #add_payment_method .payment_method_stripe #stripe-cvc-element{margin-top:0;margin-bottom:1rem}
 #add_payment_method #payment ul.payment_methods li .stripe-credit-card-brand{width:20px !important;margin-top:-15px !important}
+.woocommerce-form-register .mailchimp-newsletter{display:none}
 .size-woocommerce_thumbnail{max-width:100%;height:auto}
 .cart_item td{vertical-align:middle}
 .cart_item td.product-quantity .quantity .qty{width:75px}

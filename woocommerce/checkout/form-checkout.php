@@ -29,7 +29,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 ?>
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout"
+<form name="checkout" method="post" class="checkout woocommerce-checkout mt-3 mt-lg-4"
     action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
     <div class="row">
