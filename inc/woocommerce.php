@@ -83,3 +83,23 @@ function md_custom_woocommerce_checkout_fields( $fields )
 
 		return $fields;
 }
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'misha_add_to_cart_fragment' );
+
+function misha_add_to_cart_fragment( $fragments ) {
+
+	$fragments[ '#header-cart' ] = 
+	'<a id="header-cart" class="d-inline-block h4 mx-lg-3 mb-0 text-dark position-relative"
+	href="' . wc_get_cart_url() . '"><i class="bi bi-cart3"></i>
+	<span
+		class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+		style="font-size: 12px;">
+		' . WC()->cart->get_cart_contents_count() . '
+		<span class="visually-hidden">unread messages</span>
+	</span>
+	</a>';
+ 	
+	
+	return $fragments;
+
+ }

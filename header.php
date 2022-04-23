@@ -65,8 +65,14 @@
                             href="<?php echo site_url(); ?>/my-account"><i class="bi bi-person"></i>
                         </a>
 
-                        <a class="d-inline-block h4 mx-lg-3 mb-0 text-dark" href="<?php echo site_url(); ?>/cart"><i
-                                class="bi bi-cart3"></i>
+                        <a id="header-cart" class="d-inline-block h4 mx-lg-3 mb-0 text-dark position-relative"
+                            href="<?php echo site_url(); ?>/cart"><i class="bi bi-cart3"></i>
+                            <span
+                                class="d-none position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+                                style="font-size: 12px;">
+
+                                <span class="visually-hidden">items in cart</span>
+                            </span>
                         </a>
 
                         <a class="d-inline-block d-lg-none h3 mb-0 ms-3 text-dark" data-bs-toggle="offcanvas"
