@@ -3201,7 +3201,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Vidaloka",serif}
 .printable-download .gform_confirmation_message{background-color:#f7f7f7;border:0}
 .printable-download .gform_confirmation_message p{font-weight:bold;color:#000}
 .bg-mmb-gray{background-color:#e9e6e2}
-.btn-rounded,.restricted-page #loginform p .button{border-radius:30px;padding:.6rem 1.25rem .375rem;font-weight:bold;color:#fff}
+.btn-rounded,.restricted-page #loginform p .button{border-radius:30px;padding:.6rem 1.25rem;font-weight:bold;color:#fff}
 .btn-primary:hover,.woocommerce-MyAccount-content button[type=submit]:hover,.restricted-page #loginform p .button:hover,.gform_wrapper .button:hover{color:#fff}
 .btn-secondary{color:#fff}
 .single_add_to_cart_button.loading{opacity:.5}
