@@ -13,8 +13,20 @@
             .qty {
                 width: 75px;
             }
-            
         }
     }
 }
 
+.cart_totals {
+    .woocommerce-shipping-totals {
+        display: none;
+    }
+
+    .cart-subtotal {
+        display: none;
+    }
+
+    .tax-total.recurring-total {
+        display: none;
+    }
+}

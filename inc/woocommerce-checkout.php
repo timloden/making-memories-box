@@ -61,3 +61,15 @@ add_action( 'woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form
 // remove added to cart message
 
 add_filter( 'wc_add_to_cart_message_html', '__return_false' );
+
+add_filter( 'woocommerce_order_button_html', 'custom_order_button_html');
+function custom_order_button_html( $button ) {
+
+  // Button text
+  $order_button_text = __('Place Your Order', 'woocommerce');
+
+  // Markup - add in classes, data attibutes
+  $button = '<button type="submit" class="btn btn-primary btn-lg d-block btn-rounded w-100 mt-3 mt-md-4" name="woocommerce_checkout_place_order" id="place_order">Place Your Order <i class="bi bi-lock-fill"></i></button>';
+
+  return $button;
+}

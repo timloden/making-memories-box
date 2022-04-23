@@ -133,14 +133,13 @@ do_action( 'woocommerce_before_cart' ); ?>
                         <?php if ( wc_coupons_enabled() ) { ?>
                         <div class="coupon">
                             <div class="input-group mb-3">
-                                <label class="sr-only"
-                                    for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input
-                                    type="text" name="coupon_code" class="input-text form-control" id="coupon_code"
+                                <label class="visually-hidden"
+                                    for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label>
+                                <input type="text" name="coupon_code" class="input-text form-control" id="coupon_code"
                                     value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
-                                <div class="input-group-append"><button type="submit"
-                                        class="button btn btn-secondary btn-rounded" name="apply_coupon"
-                                        value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-                                </div>
+
+                                <button type="submit" class="button btn btn-secondary btn-rounded" name="apply_coupon"
+                                    value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
                                 <?php do_action( 'woocommerce_cart_coupon' ); ?>
                             </div>
                         </div>

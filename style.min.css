@@ -3235,6 +3235,7 @@ body.blog{background-color:#f8f9fa}
 .variations .label{vertical-align:middle}
 .variations .label label{margin-bottom:0}
 .woocommerce .quantity{width:75px}
+.woocommerce-checkout .woocommerce-checkout-review-order .cart-subtotal.recurring-total,.woocommerce-checkout .woocommerce-checkout-review-order .tax-total.recurring-total{display:none}
 .woocommerce-checkout .mailchimp-newsletter{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:0;margin-right:0}
 .woocommerce-checkout .mailchimp-newsletter label{margin-bottom:0;margin-left:.5em}
 .woocommerce-checkout .shipping.recurring-total{display:none}
@@ -3244,7 +3245,9 @@ body.blog{background-color:#f8f9fa}
 .woocommerce-checkout .payment_method_stripe #stripe-card-element{margin-top:0;margin-bottom:1rem}
 .woocommerce-checkout .payment_method_stripe #stripe-exp-element{margin-top:0;margin-bottom:1rem}
 .woocommerce-checkout .payment_method_stripe #stripe-cvc-element{margin-top:0;margin-bottom:1rem}
-.woocommerce-checkout #payment ul.payment_methods li .stripe-credit-card-brand{width:20px;margin-top:-15px}
+.woocommerce-checkout #payment ul{list-style:none}
+.woocommerce-checkout #payment ul li .stripe-credit-card-brand{width:20px;margin-top:-15px}
+.woocommerce-checkout #payment .wc-saved-payment-methods{list-style:none;padding-left:0;padding-bottom:1rem}
 #add_payment_method .payment_method_stripe label{width:100%}
 #add_payment_method .payment_method_stripe .stripe-card-group,#add_payment_method .payment_method_stripe .wc-stripe-elements-field{width:100%}
 #add_payment_method .payment_method_stripe #stripe-card-element{margin-top:0;margin-bottom:1rem}
@@ -3254,6 +3257,9 @@ body.blog{background-color:#f8f9fa}
 .size-woocommerce_thumbnail{max-width:100%;height:auto}
 .cart_item td{vertical-align:middle}
 .cart_item td.product-quantity .quantity .qty{width:75px}
+.cart_totals .woocommerce-shipping-totals{display:none}
+.cart_totals .cart-subtotal{display:none}
+.cart_totals .tax-total.recurring-total{display:none}
 .products .product a:hover{text-decoration:none}
 .products .product a h2,.products .product a .h2{color:#000}
 @media(prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}

@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <th><?php echo wp_kses_post( $package_name ); ?></th>
     <td data-title="<?php echo esc_attr( $package_name ); ?>">
         <?php if ( 1 < count( $available_methods ) ) : ?>
-        <ul class="list-unstyled" id="shipping_method_<?php echo esc_attr( $recurring_cart_key ); ?>">
+        <ul class="list-unstyled mb-0" id="shipping_method_<?php echo esc_attr( $recurring_cart_key ); ?>">
             <?php foreach ( $available_methods as $method ) : ?>
             <li>
                 <?php

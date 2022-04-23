@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
 		do_action( 'woocommerce_review_order_after_cart_contents' );
         ?>
         <tr>
-            <td class="text-right border-top-0" colspan="2"><a href="/cart">Edit your order</a></td>
+            <td class="text-end border-top-0" colspan="2"><a href="/cart">Edit your order</a></td>
         </tr>
     </tbody>
     <tfoot>
