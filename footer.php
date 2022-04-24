@@ -63,7 +63,7 @@ $facebook = get_field('facebook_link', 'option');
 
                 <ul class="nav social-icons justify-content-center">
                     <?php if($instagram ) : ?>
-                    <li class="nav-item mr-3">
+                    <li class="nav-item me-3">
                         <a class="text-dark" style="font-size: 30px;" href="<?php echo esc_url($facebook ); ?>"><i
                                 class="bi bi-instagram"></i></a>
                     </li>

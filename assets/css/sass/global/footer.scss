@@ -3,5 +3,24 @@ footer {
 
     .footer-newsletter {
         display: flex;
+        .gform-body {
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 300px;
+
+            input[type='email'] {
+                @extend .form-control;
+            }
+        }
+
+        .gform_footer {
+            margin-left: 0.5rem;
+
+            .gform_button {
+                @extend .btn;
+                @extend .btn-secondary;
+                @extend .btn-rounded;
+            }
+        }
     }
 }

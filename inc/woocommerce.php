@@ -3,8 +3,7 @@
 // add_filter( 'woocommerce_add_to_cart_redirect', 'redirect_checkout_add_cart' );
  
 // function redirect_checkout_add_cart() {
-// 	$checkout_url = WC()->cart->get_checkout_url();
-// 	wp_redirect( $checkout_url );
+// 	return wc_get_checkout_url();
 // }
 
 // add form control to checkout forms
@@ -53,6 +52,7 @@ add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );
 // Remove breadcrumbs from shop & categories
 
 add_filter( 'woocommerce_before_main_content', 'remove_breadcrumbs');
+
 function remove_breadcrumbs() {
 		if(!is_product()) {
 				remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
@@ -87,14 +87,20 @@ function md_custom_woocommerce_checkout_fields( $fields )
 add_filter( 'woocommerce_add_to_cart_fragments', 'misha_add_to_cart_fragment' );
 
 function misha_add_to_cart_fragment( $fragments ) {
+	$cart_count = WC()->cart->get_cart_contents_count();
+	if ($cart_count == 0 ) {
+		$cart_display = 'd-none';
+	} else {
+		$cart_display = '';
+	}
 
 	$fragments[ '#header-cart' ] = 
 	'<a id="header-cart" class="d-inline-block h4 mx-lg-3 mb-0 text-dark position-relative"
 	href="' . wc_get_cart_url() . '"><i class="bi bi-cart3"></i>
 	<span
-		class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+		class="' . $cart_display . ' position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
 		style="font-size: 12px;">
-		' . WC()->cart->get_cart_contents_count() . '
+		' . $cart_count . '
 		<span class="visually-hidden">unread messages</span>
 	</span>
 	</a>';
