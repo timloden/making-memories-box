@@ -14,7 +14,7 @@
                 <div class="card shadow p-3 border-0">
 
                     <div class="row justify-content-center">
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-lg-10">
                             <h1 class="text-center">Fun and creative activities delivered to you each month</h1>
                             <p class="text-center">Save time and money with a NEW themed box at the start of each month.
                                 We take
