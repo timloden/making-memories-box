@@ -8,7 +8,7 @@
  */
 ?>
 <section class="subscription-hero mb-5 bg-mmb-gray">
-    <div class="container py-5">
+    <div class="container py-lg-5">
         <div class="row py-5">
             <div class="col-12">
                 <div class="card shadow p-3 border-0">

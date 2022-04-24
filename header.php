@@ -97,9 +97,29 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
-                lists, etc.
-            </div>
+            <ul class="nav flex-column mb-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url(); ?>/shop">Boxes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url(); ?>/frequently-asked-questions">Frequently Asked
+                        Questions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url(); ?>/resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url(); ?>/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url(); ?>/about">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav flex-column mb-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url(); ?>/my-account">My Account</a>
+                </li>
+            </ul>
         </div>
     </div>
