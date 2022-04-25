@@ -16,12 +16,12 @@ get_header();
             <div class="col-12 col-lg-5 pb-5 pb-lg-0">
                 <h1 class="text-center text-lg-start"><?php echo esc_attr(the_field('hero_title')); ?></h1>
 
-                <p class="my-3 text-black-50"><?php echo esc_attr(the_field('hero_description')); ?></p>
+                <p class="mt-3 mb-4 text-black-50"><?php echo esc_attr(the_field('hero_description')); ?></p>
 
                 <a href="<?php echo esc_url(the_field('hero_cta_button_link')); ?>"
                     class="btn btn-primary btn-rounded"><?php echo esc_attr(the_field('hero_cta_button_text')); ?></a>
 
-                <a class="ms-3 btn btn-outline-dark btn-rounded text-dark"
+                <a class="ms-2 btn btn-outline-primary btn-rounded"
                     href="<?php echo esc_url(the_field('hero_secondary_button_link')); ?>"><?php echo esc_attr(the_field('hero_secondary_button_text')); ?>
                 </a>
             </div>
@@ -47,7 +47,7 @@ get_header();
                 <p class="fw-bold mb-2"><i class="bi bi-palette"></i> All supplies included</p>
                 <p class="fw-bold mb-2"><i class="bi bi-truck"></i> Free shipping</p>
                 <p class="fw-bold"><i class="bi bi-pause-circle"></i> Pause or cancel anytime</p>
-                <a href="#" class="btn btn-primary btn-rounded">Choose your box</a>
+                <a href="#" class="btn btn-primary btn-rounded mt-3">Choose your box</a>
             </div>
         </div>
     </div>
@@ -77,7 +77,8 @@ get_header();
         <?php echo do_shortcode('[products category="subscriptions"]'); ?>
         <div class="row">
             <div class="col-12">
-                <p class="text-center mb-0 mt-4"><a class="text-dark" href="<?php echo site_url(); ?>/shop">Browse all
+                <p class="text-center mb-0 mt-4"><a style="font-size: 1.25rem;"
+                        class="text-dark text-decoration-underline" href="<?php echo site_url(); ?>/shop">Browse all
                         Making Memory Boxes</a></p>
             </div>
         </div>
@@ -109,7 +110,7 @@ get_header();
 
                     </div>
                 </a>
-                <h3 class="mt-3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h3 class="mt-3"><a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>">Continue reading <i class="bi bi-arrow-right"></i></a>
             </div>
@@ -120,8 +121,9 @@ get_header();
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="text-center mb-0 mt-4">
-                    <a href="<?php echo site_url(); ?>/resources">Browse all our helpful kids activity articles</a>
+                <p class="text-center mb-0 mt-4 mt-lg-5">
+                    <a style="font-size: 1.25rem;" class="text-dark text-decoration-underline"
+                        href="<?php echo site_url(); ?>/resources">Browse all our helpful kids activity articles</a>
                 </p>
             </div>
         </div>

@@ -18,8 +18,9 @@ footer {
 
             .gform_button {
                 @extend .btn;
-                @extend .btn-secondary;
+                @extend .btn-outline-primary;
                 @extend .btn-rounded;
+                @extend .btn-sm;
             }
         }
     }

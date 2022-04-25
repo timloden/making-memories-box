@@ -37,10 +37,15 @@ $light-blue: #06d2ff;
 
 // MMB colors
 
-$mmb-pink: #f7b8af;
-$mmb-mint: #aad9cd;
-$mmb-gray: #e9e6e2;
-$mmb-yellow: #e8d595;
+$mmb-blue-primary: #4D77FF;
+$mmb-blue-light: #56BBF1;
+$mmb-secondary: #5EE6EB;
+$mmb-yellow: #F2FA5A;
+
+// $mmb-pink: #f7b8af;
+// $mmb-mint: #aad9cd;
+// $mmb-gray: #e9e6e2;
+// $mmb-yellow: #e8d595;
 
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
@@ -67,26 +72,26 @@ $colors: (
     'gray-dark': $gray-800,
 ) !default;
 
-$primary: $mmb-pink !default;
-$secondary: $mmb-mint !default;
-$tertiary: $mmb-gray !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
+$primary: $mmb-blue-primary;
+$secondary: $mmb-secondary;
+// $tertiary: $mmb-gray !default;
+// $success: $green !default;
+// $info: $cyan !default;
+// $warning: $yellow !default;
+// $danger: $red !default;
+// $light: $gray-100 !default;
+// $dark: $gray-800 !default;
 
-$theme-colors: (
-    'primary': $primary,
-    'secondary': $secondary,
-    'success': $success,
-    'info': $info,
-    'warning': $warning,
-    'danger': $danger,
-    'light': $light,
-    'dark': $dark,
-) !default;
+// $theme-colors: (
+//     'primary': $primary,
+//     'secondary': $secondary,
+//     'success': $success,
+//     'info': $info,
+//     'warning': $warning,
+//     'danger': $danger,
+//     'light': $light,
+//     'dark': $dark,
+// ) !default;
 
 // Body
 //
@@ -101,12 +106,11 @@ $body-text-align: null !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Tajawal', sans-serif;
-$font-family-serif: 'Vidaloka', serif;
-$font-family-signature: 'cosmodromemonoline', serif;
+$font-family-sans-serif: 'Lato', sans-serif;
 
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace !default;
+
 $font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 

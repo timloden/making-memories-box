@@ -21,7 +21,7 @@
 
                     <div class="accordion-item" id="faq-accordion">
                         <h2 class="accordion-header" id="heading-<?php echo $row_index; ?>">
-                            <button class="accordion-button <?php echo $row_index == 1 ? "" : "collapsed"; ?>"
+                            <button class="accordion-button fw-bold <?php echo $row_index == 1 ? "" : "collapsed"; ?>"
                                 type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapse-<?php echo $row_index; ?>"
                                 aria-expanded="<?php echo $row_index == 1 ? "true" : "false"; ?>"

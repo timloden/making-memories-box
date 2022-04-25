@@ -14,7 +14,7 @@
             <div class="col-12 col-lg-4">
                 <div class="ms-md-5 mb-4 mb-md-0 mx-3 mx-md-0">
                     <h2>What you can expect</h2>
-                    <p class="text-black-50">Fun seasonal activities that range from crafts to games to family
+                    <p class="text-black-50 mb-4">Fun seasonal activities that range from crafts to games to family
                         activities.</p>
                     <a href="#" class="btn btn-primary btn-rounded">Get started today</a>
                 </div>

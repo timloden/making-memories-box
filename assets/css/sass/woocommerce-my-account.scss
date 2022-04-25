@@ -16,10 +16,10 @@
         }
     }
 
-    button[type='submit'] {
-        @extend .btn;
-        @extend .btn-primary;
-    }
+    // button[type='submit'] {
+    //     @extend .btn;
+    //     @extend .btn-primary;
+    // }
 }
 
 #add_payment_method {

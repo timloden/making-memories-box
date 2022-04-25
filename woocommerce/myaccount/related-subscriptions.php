@@ -21,10 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
         <tr>
             <th
                 class="subscription-id order-number woocommerce-orders-table__header woocommerce-orders-table__header-order-number woocommerce-orders-table__header-subscription-id">
-                <span class="nobr"><?php esc_html_e( 'Subscription', 'woocommerce-subscriptions' ); ?></span></th>
+                <span class="nobr"><?php esc_html_e( 'Subscription', 'woocommerce-subscriptions' ); ?></span>
+            </th>
             <th
                 class="subscription-status order-status woocommerce-orders-table__header woocommerce-orders-table__header-order-status woocommerce-orders-table__header-subscription-status">
-                <span class="nobr"><?php esc_html_e( 'Status', 'woocommerce-subscriptions' ); ?></span></th>
+                <span class="nobr"><?php esc_html_e( 'Status', 'woocommerce-subscriptions' ); ?></span>
+            </th>
             <th
                 class="subscription-next-payment order-date woocommerce-orders-table__header woocommerce-orders-table__header-order-date woocommerce-orders-table__header-subscription-next-payment">
                 <span
@@ -65,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <td
                 class="subscription-actions order-actions woocommerce-orders-table__cell woocommerce-orders-table__cell-subscription-actions woocommerce-orders-table__cell-order-actions">
                 <a href="<?php echo esc_url( $subscription->get_view_order_url() ) ?>"
-                    class="woocommerce-button button view"><?php echo esc_html_x( 'View', 'view a subscription', 'woocommerce-subscriptions' ); ?></a>
+                    class="woocommerce-button button view me-2"><?php echo esc_html_x( 'View', 'view a subscription', 'woocommerce-subscriptions' ); ?></a>
             </td>
         </tr>
         <?php endforeach; ?>

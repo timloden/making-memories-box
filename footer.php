@@ -15,7 +15,7 @@ $facebook = get_field('facebook_link', 'option');
 ?>
 
 
-<footer class="site-footer bg-light py-5">
+<footer class="site-footer bg-light py-5 border-top">
     <div class="container py-5">
         <div class="row justify-content-center mb-3">
             <div class="col-12 col-lg-3">

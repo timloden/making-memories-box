@@ -130,7 +130,7 @@ defined( 'ABSPATH' ) || exit;
                     <?php do_action( 'woocommerce_cart_contents' ); ?>
 
                     <tr>
-                        <td colspan="6" class="actions">
+                        <td colspan="6" class="actions py-3">
                             <div class="d-flex justify-content-between">
                                 <?php if ( wc_coupons_enabled() ) { ?>
                                 <div class="coupon d-flex">
@@ -141,14 +141,15 @@ defined( 'ABSPATH' ) || exit;
                                         id="coupon_code" value=""
                                         placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
 
-                                    <button type="submit" class="button btn btn-secondary btn-rounded col-auto ms-2"
+                                    <button type="submit"
+                                        class="button btn btn-outline-primary btn-sm btn-rounded col-auto ms-2"
                                         name="apply_coupon"
                                         value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
                                     <?php do_action( 'woocommerce_cart_coupon' ); ?>
                                 </div>
                                 <?php } ?>
 
-                                <button type="submit" class="btn btn-secondary btn-rounded" name="update_cart"
+                                <button type="submit" class="btn btn-light btn-sm btn-rounded d-none" name="update_cart"
                                     value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
                             </div>
 
