@@ -65,25 +65,6 @@
             "new_lines": ""
         },
         {
-            "key": "field_6004c19b62f50",
-            "label": "Hero Offer",
-            "name": "hero_offer",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_6004c1c262f51",
             "label": "Hero CTA Button Text",
             "name": "hero_cta_button_text",
@@ -160,15 +141,15 @@
             "maxlength": ""
         },
         {
-            "key": "field_6004c2bf104b0",
-            "label": "How it Works Title",
-            "name": "how_it_works_title",
+            "key": "field_6267329ad61ff",
+            "label": "Box Information Title",
+            "name": "box_information_title",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -179,66 +160,52 @@
             "maxlength": ""
         },
         {
-            "key": "field_6004c2ec104b1",
-            "label": "How it Works Subtitle",
-            "name": "how_it_works_subtitle",
-            "type": "text",
+            "key": "field_626732bad6200",
+            "label": "Box Information Description",
+            "name": "box_information_description",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
-            "key": "field_6004c394104b7",
-            "label": "How it Works Button Text",
-            "name": "how_it_works_button_text",
-            "type": "text",
+            "key": "field_626732c8d6201",
+            "label": "Box Information Image",
+            "name": "box_information_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "key": "field_6004c3a4104b8",
-            "label": "How it Works Button Link",
-            "name": "how_it_works_button_link",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6004c353104b4",
-            "label": "How it Works Steps",
-            "name": "how_it_works_steps",
+            "key": "field_626732e7d6202",
+            "label": "Box Information Features",
+            "name": "box_information_features",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -255,9 +222,9 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_6004c36a104b5",
-                    "label": "How it Works Step Title",
-                    "name": "how_it_works_step_title",
+                    "key": "field_626732fdd6203",
+                    "label": "Feature",
+                    "name": "feature",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -272,27 +239,46 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_6004c37b104b6",
-                    "label": "How is Works Step Description",
-                    "name": "how_is_works_step_description",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
                 }
             ]
+        },
+        {
+            "key": "field_6267330bd6204",
+            "label": "Box Information Button Text",
+            "name": "box_information_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62673319d6205",
+            "label": "Box Information Button Link",
+            "name": "box_information_button_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_624a7943c73d6",
@@ -336,6 +322,127 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_62673344d6206",
+            "label": "What to Expect Title",
+            "name": "what_to_expect_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62673367d6207",
+            "label": "What to Expect Description",
+            "name": "what_to_expect_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_62673381d6208",
+            "label": "What to Expect Button Text",
+            "name": "what_to_expect_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62673393d6209",
+            "label": "What to Expect Button Link",
+            "name": "what_to_expect_button_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6267339bd620a",
+            "label": "What to Expect Boxes",
+            "name": "what_to_expect_boxes",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_626733a9d620b",
+                    "label": "What to Expect Box",
+                    "name": "what_to_expect_box",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -356,5 +463,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649048780
+    "modified": 1650930817
 }

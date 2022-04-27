@@ -14,16 +14,18 @@ get_header();
     <div class="container py-5">
         <div class="row align-items-center py-5">
             <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-                <h1 class="text-center text-lg-start"><?php echo esc_attr(the_field('hero_title')); ?></h1>
+                <h1 class="text-center text-lg-start"><?php echo esc_attr(get_field('hero_title')); ?></h1>
 
-                <p class="mt-3 mb-4 text-black-50"><?php echo esc_attr(the_field('hero_description')); ?></p>
-
-                <a href="<?php echo esc_url(the_field('hero_cta_button_link')); ?>"
-                    class="btn btn-primary btn-rounded"><?php echo esc_attr(the_field('hero_cta_button_text')); ?></a>
-
+                <p class="mt-3 mb-4 text-black-50"><?php echo esc_attr(get_field('hero_description')); ?></p>
+                <?php if (get_field('hero_cta_button_text')) : ?>
+                <a href="<?php echo esc_url(get_field('hero_cta_button_link')); ?>"
+                    class="btn btn-primary btn-rounded"><?php echo esc_attr(get_field('hero_cta_button_text')); ?></a>
+                <?php endif; ?>
+                <?php if (get_field('hero_secondary_button_text')) : ?>
                 <a class="ms-2 btn btn-outline-primary btn-rounded"
-                    href="<?php echo esc_url(the_field('hero_secondary_button_link')); ?>"><?php echo esc_attr(the_field('hero_secondary_button_text')); ?>
+                    href="<?php echo esc_url(get_field('hero_secondary_button_link')); ?>"><?php echo esc_attr(get_field('hero_secondary_button_text')); ?>
                 </a>
+                <?php endif; ?>
             </div>
             <div class="col-12 col-lg-7">
 
@@ -40,14 +42,21 @@ get_header();
                     class="img-fluid px-5" loading="lazy">
             </div>
             <div class="col-12 col-lg-5 order-0 order-lg-1">
-                <h2>Fun and creative activities delivered each month</h2>
-                <p class="text-black-50">You will get a NEW themed box at the start of each month. We take care of all
-                    the planning & prep
-                    work for you.</p>
-                <p class="fw-bold mb-2"><i class="bi bi-palette"></i> All supplies included</p>
-                <p class="fw-bold mb-2"><i class="bi bi-truck"></i> Free shipping</p>
-                <p class="fw-bold"><i class="bi bi-pause-circle"></i> Pause or cancel anytime</p>
-                <a href="#" class="btn btn-primary btn-rounded mt-3">Choose your box</a>
+                <h2><?php echo esc_attr(get_field('box_information_title')); ?></h2>
+                <p class="text-black-50"><?php echo esc_attr(get_field('box_information_description')); ?></p>
+
+                <?php if (have_rows('box_information_features')) : ?>
+                <?php while( have_rows('box_information_features') ): the_row(); 
+                $feature = get_sub_field('feature');
+                ?>
+                <p class="fw-bold mb-2" style="font-size: 1.25rem;"><?php echo $feature; ?></p>
+                <?php endwhile; ?>
+                <?php endif; ?>
+
+                <?php if (get_field('box_information_button_text')) : ?>
+                <a href="<?php echo esc_url(get_field('box_information_button_link')); ?>"
+                    class="btn btn-primary btn-rounded mt-3 mt-lg-4"><?php echo esc_attr(get_field('box_information_button_text')); ?></a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -68,7 +77,7 @@ get_header();
 
 <section id="choose-your-box" class="boxes bg-light py-5">
     <div class="container py-5">
-        <div class="row">
+        <div class="row mb-3 mb-lg-4">
             <div class="col-12 text-center">
                 <h2>Choose your box</h2>
                 <p>Starting at $34.95. Pre-pay and save!</p>

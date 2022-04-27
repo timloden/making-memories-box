@@ -12,7 +12,7 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <p class="display-1 text-center" style="height: 3rem;">&ldquo;</p>
+                <p class="display-1 text-center" style="font-size: 3rem;"><i class="bi bi-chat-square-quote"></i></p>
             </div>
             <div class="col-12 col-lg-10">
                 <div class="testimonial-slider">

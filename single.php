@@ -17,7 +17,7 @@ $categories = get_the_category();
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 bg-white rounded-bottom">
+                <div class="col-12 col-lg-8 bg-white rounded-bottom">
                     <div class="px-3">
                         <div class="py-3">
                             <p class="text-black-50 mb-1"><?php echo $categories[0]->name; ?></p>

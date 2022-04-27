@@ -1,6 +1,7 @@
 "use strict";
 
 console.log('custom js');
+AOS.init();
 jQuery(document).ready(function ($) {
   $('button.single_add_to_cart_button').on('click', function () {
     $(this).addClass('loading').text('Adding to Your Cart');
@@ -14,6 +15,14 @@ document.addEventListener('om.Scripts.init', function (event) {
 "use strict";
 
 (function ($) {
+  // set country to US
+  var country_input = $('.woocommerce-shipping-calculator').find('#calc_shipping_country');
+
+  if (country_input) {
+    country_input.val('US');
+    country_input.hide();
+  }
+
   $('.woocommerce').on('change', 'input.qty', function () {
     var timeout;
 

@@ -20,11 +20,12 @@
 }
 
 .btn-outline-primary {
-    background-color: #fff;
+    background-color: transparent;
     color: $mmb-blue-primary;
 
     &:hover {
-        color: #fff;
+        background-color: #fff;
+        color: $mmb-blue-primary;
     }
 }
 
