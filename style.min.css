@@ -3209,6 +3209,7 @@ html{scroll-behavior:smooth}
 .logo img{max-width:250px}
 .header{-webkit-box-shadow:0 8px 10px rgba(0,0,0,.05);box-shadow:0 8px 10px rgba(0,0,0,.05)}
 .header .nav .nav-link{padding:.5rem .75rem}
+.offcanvas-body .nav-link{font-size:1.25rem}
 footer{color:#212529}
 footer .footer-newsletter{display:-webkit-box;display:-ms-flexbox;display:flex}
 footer .footer-newsletter .gform-body{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:100%;max-width:300px}

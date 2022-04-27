@@ -99,27 +99,37 @@
         <div class="offcanvas-body">
             <ul class="nav flex-column mb-5">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url(); ?>/shop">Boxes</a>
+                    <a class="nav-link px-0 border-bottom text-dark" href="<?php echo site_url(); ?>/shop">Boxes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url(); ?>/frequently-asked-questions">Frequently Asked
+                    <a class="nav-link px-0 border-bottom text-dark"
+                        href="<?php echo site_url(); ?>/frequently-asked-questions">Frequently Asked
                         Questions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url(); ?>/resources">Resources</a>
+                    <a class="nav-link px-0 border-bottom text-dark"
+                        href="<?php echo site_url(); ?>/resources">Resources</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url(); ?>/contact">Contact</a>
+                    <a class="nav-link px-0 border-bottom text-dark"
+                        href="<?php echo site_url(); ?>/contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url(); ?>/about">About</a>
+                    <a class="nav-link px-0 border-bottom text-dark" href="<?php echo site_url(); ?>/about">About</a>
                 </li>
             </ul>
 
             <ul class="nav flex-column mb-5">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url(); ?>/my-account">My Account</a>
+                    <a class="nav-link px-0 text-dark" href="<?php echo site_url(); ?>/checkout">Checkout</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link px-0 text-dark" href="<?php echo site_url(); ?>/cart">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-0 text-dark" href="<?php echo site_url(); ?>/my-account">My Account</a>
+                </li>
+
             </ul>
         </div>
     </div>
