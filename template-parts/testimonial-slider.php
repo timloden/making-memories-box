@@ -8,7 +8,7 @@
  */
 
 ?>
-<section class="section py-5 testimonial-section bg-light">
+<section class="section py-md-5 testimonial-section bg-light">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12">

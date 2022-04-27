@@ -3215,7 +3215,7 @@ footer .footer-newsletter .gform-body{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:
 footer .footer-newsletter .gform_footer{margin-left:.5rem}
 .wp-block-image img{height:auto}
 .recent-posts .featured-image{height:250px}
-.testimonial-section .testimonial-content p{font-size:2rem}
+.testimonial-section .testimonial-content p{font-size:1.5rem}
 .testimonial-section .tns-nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:2rem}
 .testimonial-section .tns-nav button{height:15px;width:15px;border-radius:50px;margin:0 5px;border:0;background-color:#c4c4c4}
 .testimonial-section .tns-nav button.tns-nav-active{background-color:#000}
@@ -3226,6 +3226,7 @@ body.blog{background-color:#f8f9fa}
 .activity-instruction ol li{margin-bottom:.5rem}
 .woocommerce-variation-add-to-cart label{display:none}
 .product .product_title{font-size:2rem}
+.product .price del{font-weight:normal;color:#adb5bd}
 .product #wc-stripe-payment-request-button-separator,.product #wc-stripe-payment-request-wrapper{display:none !important}
 .product .flex-control-thumbs{list-style:none;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:1.5em;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0}
 .product .woocommerce-product-gallery__image{text-align:center;max-width:100%}
@@ -3266,7 +3267,8 @@ body.blog{background-color:#f8f9fa}
 .cart_totals .cart-subtotal{display:none}
 .cart_totals .tax-total.recurring-total{display:none}
 .products .product a:hover{text-decoration:none}
-.products .product a h2,.products .product a .h2{color:#000;font-size:1.5rem;margin-top:1rem}
+.products .product a h2,.products .product a .h2{color:#000;font-size:1.25rem;margin-top:1rem}
+.products .product a .size-woocommerce_thumbnail{border-radius:.25rem}
 .products .product p.loop-price del{color:#adb5bd}
 .products .product p.loop-price bdi{font-weight:900}
 @media(prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}
@@ -4020,6 +4022,7 @@ html:not(.no-js) [data-aos=flip-down].aos-animate{-webkit-transform:perspective(
 .text-lg-end{text-align:right !important}
 .text-lg-center{text-align:center !important}
 .what-to-expect-section{overflow-x:hidden}
+.testimonial-section .testimonial-content p{font-size:2rem}
 .product .single_add_to_cart_button{width:300px}
 }@media(min-width:1200px){h1,.h1{font-size:2.5rem}
 h2,.h2{font-size:2rem}

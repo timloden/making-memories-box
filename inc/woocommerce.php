@@ -6,6 +6,20 @@
 // 	return wc_get_checkout_url();
 // }
 
+add_filter( 'woocommerce_add_to_cart_redirect', 'woo_redirect_checkout', 10, 2 );
+function woo_redirect_checkout( $url, $product ) {
+
+    //Define your categories here
+
+    if ( $product->get_type() == 'subscription' ) {
+		$url = wc_get_checkout_url();
+    } else {
+		$url = wc_get_cart_url();
+	}
+
+	return $url;
+}
+
 // add form control to checkout forms
 add_filter('woocommerce_form_field_args',  'wc_form_field_args',10,3);
 

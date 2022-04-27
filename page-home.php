@@ -13,8 +13,8 @@ get_header();
     style="background-image: url(<?php echo site_url(); ?>/wp-content/themes/making-memories-box/assets/images/placeholder-hero-bg.jpg); background-size: cover;">
     <div class="container py-5">
         <div class="row align-items-center py-5">
-            <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-                <h1 class="text-center text-lg-start"><?php echo esc_attr(get_field('hero_title')); ?></h1>
+            <div class="col-12 col-lg-5 pb-5 pb-md-0 text-center text-lg-start">
+                <h1><?php echo esc_attr(get_field('hero_title')); ?></h1>
 
                 <p class="mt-3 mb-4 text-black-50"><?php echo esc_attr(get_field('hero_description')); ?></p>
                 <?php if (get_field('hero_cta_button_text')) : ?>
@@ -34,28 +34,35 @@ get_header();
     </div>
 </section>
 
-<section class="product py-5">
+<section class="product py-md-5">
     <div class="container py-5">
         <div class="row align-items-center">
-            <div class="col-12 col-lg-6 order-1 order-lg-0 text-center">
+            <div class="col-12 col-lg-6 text-center mb-lg-0 order-1 order-lg-0">
                 <img src="https://makingmemories.local/wp-content/uploads/2021/03/home-slider-1.jpg"
-                    class="img-fluid px-5" loading="lazy">
+                    class="img-fluid px-lg-5" loading="lazy" data-aos="fade-up" data-aos-once="true">
             </div>
             <div class="col-12 col-lg-5 order-0 order-lg-1">
-                <h2><?php echo esc_attr(get_field('box_information_title')); ?></h2>
-                <p class="text-black-50"><?php echo esc_attr(get_field('box_information_description')); ?></p>
+                <h2 class="text-center text-lg-start"><?php echo esc_attr(get_field('box_information_title')); ?></h2>
+                <p class="text-black-50 text-center text-lg-start">
+                    <?php echo esc_attr(get_field('box_information_description')); ?></p>
 
                 <?php if (have_rows('box_information_features')) : ?>
-                <?php while( have_rows('box_information_features') ): the_row(); 
+                <div class="d-flex justify-content-center justify-content-lg-start mb-4 mb-md-0">
+                    <div class="col-auto">
+                        <?php while( have_rows('box_information_features') ): the_row(); 
                 $feature = get_sub_field('feature');
                 ?>
-                <p class="fw-bold mb-2" style="font-size: 1.25rem;"><?php echo $feature; ?></p>
-                <?php endwhile; ?>
+                        <p class="fw-bold mb-2" style="font-size: 1.25rem;"><?php echo $feature; ?></p>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
                 <?php endif; ?>
 
                 <?php if (get_field('box_information_button_text')) : ?>
-                <a href="<?php echo esc_url(get_field('box_information_button_link')); ?>"
-                    class="btn btn-primary btn-rounded mt-3 mt-lg-4"><?php echo esc_attr(get_field('box_information_button_text')); ?></a>
+                <p class="text-center text-lg-start mt-3 mb-5 mb-md-0"><a
+                        href="<?php echo esc_url(get_field('box_information_button_link')); ?>"
+                        class="btn btn-primary btn-rounded d-block d-lg-inline-block mt-3 mt-lg-4"><?php echo esc_attr(get_field('box_information_button_text')); ?></a>
+                </p>
                 <?php endif; ?>
             </div>
         </div>
@@ -75,15 +82,17 @@ get_header();
 }
 ?>
 
-<section id="choose-your-box" class="boxes bg-light py-5">
+<section id="choose-your-box" class="boxes bg-light py-md-5">
     <div class="container py-5">
-        <div class="row mb-3 mb-lg-4">
+        <div class="row mb-3 mb-md-4">
             <div class="col-12 text-center">
                 <h2>Choose your box</h2>
                 <p>Starting at $34.95. Pre-pay and save!</p>
             </div>
         </div>
-        <?php echo do_shortcode('[products category="subscriptions"]'); ?>
+        <div class="card shadow p-3 border-0 mb-md-3">
+            <?php echo do_shortcode('[products category="subscriptions"]'); ?>
+        </div>
         <div class="row">
             <div class="col-12">
                 <p class="text-center mb-0 mt-4"><a style="font-size: 1.25rem;"
@@ -99,7 +108,7 @@ get_header();
       'posts_per_page' => 3,
    )); 
 ?>
-<section class="recent-posts py-5">
+<section class="recent-posts py-md-5">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-6 text-center">
@@ -112,14 +121,15 @@ get_header();
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
             $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
             ?>
-            <div class="col">
+            <div class="col text-center">
                 <a href="<?php the_permalink(); ?>">
                     <div class="featured-image"
                         style="background-image: url(<?php echo esc_url($featured_img_url); ?>); background-size: cover;">
 
                     </div>
                 </a>
-                <h3 class="mt-3"><a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h3 class="mt-3 mt-md-4"><a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h3>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>">Continue reading <i class="bi bi-arrow-right"></i></a>
             </div>

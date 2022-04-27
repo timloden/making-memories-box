@@ -9,6 +9,13 @@
         font-size: 2rem;
     }
 
+    .price {
+        del {
+            font-weight: normal;
+            color: $gray-500;
+        }
+    }
+
     #wc-stripe-payment-request-button-separator,
     #wc-stripe-payment-request-wrapper {
         display: none !important;
