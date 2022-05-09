@@ -24,7 +24,7 @@
                         </div>
                     </div>
 
-                    <?php echo do_shortcode('[products category="subscriptions"]'); ?>
+                    <?php echo do_shortcode('[products category="subscriptions" orderby="id" order="ASC"]'); ?>
 
                     <div class="row justify-content-center g-4">
                         <div class="col-auto pe-md-4">

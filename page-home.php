@@ -93,7 +93,7 @@ get_header();
             </div>
         </div>
         <div class="card shadow p-3 border-0 mb-md-3">
-            <?php echo do_shortcode('[products category="subscriptions"]'); ?>
+            <?php echo do_shortcode('[products category="subscriptions" orderby="id" order="ASC"]'); ?>
         </div>
         <div class="row">
             <div class="col-12">
