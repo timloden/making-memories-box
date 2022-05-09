@@ -74,6 +74,8 @@ get_header();
 } 
 ?>
 
+<?php get_template_part( 'template-parts/as-seen-on' ); ?>
+
 <?php get_template_part( 'template-parts/what-to-expect' ); ?>
 
 

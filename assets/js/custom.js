@@ -8,11 +8,6 @@ jQuery(document).ready(function ($) {
 });
 "use strict";
 
-document.addEventListener('om.Scripts.init', function (event) {
-  event.detail.Scripts.enabled.fonts = false;
-});
-"use strict";
-
 (function ($) {
   // set country to US
   var country_input = $('.woocommerce-shipping-calculator').find('#calc_shipping_country');
@@ -34,3 +29,8 @@ document.addEventListener('om.Scripts.init', function (event) {
     }, 500); // 1 second delay, half a second (500) seems comfortable too
   });
 })(jQuery);
+"use strict";
+
+document.addEventListener('om.Scripts.init', function (event) {
+  event.detail.Scripts.enabled.fonts = false;
+});

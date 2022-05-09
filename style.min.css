@@ -1154,7 +1154,7 @@ textarea.form-control-lg{min-height:calc(1.5em + 1rem + 2px)}
 .rounded-start{border-bottom-left-radius:.25rem !important;border-top-left-radius:.25rem !important}
 .visible{visibility:visible !important}
 .invisible{visibility:hidden !important}
-@font-face{font-family:"bootstrap-icons";src:url("./assets/fonts/bootstrap-icons/bootstrap-icons.woff2") format("woff2"),url("./fonts/bootstrap-icons/bootstrap-icons.woff") format("woff")}
+@font-face{font-family:"bootstrap-icons";src:url("./assets/fonts/bootstrap-icons/bootstrap-icons.woff2") format("woff2"),url("./assets/fonts/bootstrap-icons/bootstrap-icons.woff") format("woff")}
 .bi::before,[class^=bi-]::before,[class*=" bi-"]::before{display:inline-block;font-family:"bootstrap-icons" !important;font-style:normal;font-weight:normal !important;font-variant:normal;text-transform:none;line-height:1;vertical-align:-0.125em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .bi-123::before{content:""}
 .bi-alarm-fill::before{content:""}
