@@ -33,10 +33,10 @@ $facebook = get_field('facebook_link', 'option');
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/shop">Boxes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">FAQs</a>
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/frequently-asked-questions">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>">Resources</a>
+                        <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/resources">Resources</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link pl-lg-0" href="<?php echo site_url(); ?>/about">About</a>

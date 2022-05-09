@@ -34,40 +34,7 @@ get_header();
     </div>
 </section>
 
-<section class="product py-md-5">
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-6 text-center mb-lg-0 order-1 order-lg-0">
-                <img src="https://makingmemories.local/wp-content/uploads/2021/03/home-slider-1.jpg"
-                    class="img-fluid px-lg-5" loading="lazy" data-aos="fade-up" data-aos-once="true">
-            </div>
-            <div class="col-12 col-lg-5 order-0 order-lg-1">
-                <h2 class="text-center text-lg-start"><?php echo esc_attr(get_field('box_information_title')); ?></h2>
-                <p class="text-black-50 text-center text-lg-start">
-                    <?php echo esc_attr(get_field('box_information_description')); ?></p>
-
-                <?php if (have_rows('box_information_features')) : ?>
-                <div class="d-flex justify-content-center justify-content-lg-start mb-4 mb-md-0">
-                    <div class="col-auto">
-                        <?php while( have_rows('box_information_features') ): the_row(); 
-                $feature = get_sub_field('feature');
-                ?>
-                        <p class="fw-bold mb-2" style="font-size: 1.25rem;"><?php echo $feature; ?></p>
-                        <?php endwhile; ?>
-                    </div>
-                </div>
-                <?php endif; ?>
-
-                <?php if (get_field('box_information_button_text')) : ?>
-                <p class="text-center text-lg-start mt-3 mb-5 mb-md-0"><a
-                        href="<?php echo esc_url(get_field('box_information_button_link')); ?>"
-                        class="btn btn-primary btn-rounded d-block d-lg-inline-block mt-3 mt-lg-4"><?php echo esc_attr(get_field('box_information_button_text')); ?></a>
-                </p>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part( 'template-parts/box-information' ); ?>
 
 <?php if ( have_rows('testimonials') ) {
     get_template_part( 'template-parts/testimonial-slider' ); 
@@ -154,7 +121,7 @@ get_header();
 <?php
 get_footer(); 
 ?>
-
+<?php if ( have_rows('testimonials') ): ?>
 <script>
 var testimonial_slider = tns({
     container: '.testimonial-slider',
@@ -169,3 +136,19 @@ var testimonial_slider = tns({
     autoplayTimeout: 5000
 });
 </script>
+<?php endif; ?>
+<?php if ( have_rows('box_information_images') ): ?>
+<script>
+var testimonial_slider = tns({
+    container: '.box-information-slider',
+    items: 1,
+    center: true,
+    edgePadding: 0,
+    autoplay: true,
+    autoplayButtonOutput: false,
+    controls: false,
+    nav: false,
+    autoplayTimeout: 3000
+});
+</script>
+<?php endif; ?>
