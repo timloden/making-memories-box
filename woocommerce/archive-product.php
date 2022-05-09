@@ -18,7 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-$featured_product = get_field('featured_product', 'option');
 ?>
 
 <?php get_template_part( 'template-parts/add-to-cart' ); ?>

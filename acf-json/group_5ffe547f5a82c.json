@@ -100,30 +100,6 @@
             "rows": ""
         },
         {
-            "key": "field_6012054a06f44",
-            "label": "Featured Product",
-            "name": "featured_product",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "product"
-            ],
-            "taxonomy": [
-                "product_cat:subscriptions"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
-        },
-        {
             "key": "field_60121a3c37cb0",
             "label": "Instagram Link",
             "name": "instagram_link",
@@ -179,25 +155,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_60a5d815e537d",
-            "label": "Show Guarantee?",
-            "name": "show_guarantee",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
         },
         {
             "key": "field_601b06932d1d7",
@@ -411,5 +368,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652135191
+    "modified": 1652135725
 }
