@@ -10,7 +10,7 @@
 get_header();
 ?>
 <section class="home-hero py-5"
-    style="background-image: url(<?php echo site_url(); ?>/wp-content/themes/making-memories-box/assets/images/placeholder-hero-bg.jpg); background-size: cover;">
+    style="background-image: url(<?php echo esc_url(get_field('hero_image')); ?>); background-size: cover;">
     <div class="container py-5">
         <div class="row align-items-center py-5">
             <div class="col-12 col-lg-5 pb-5 pb-md-0 text-center text-lg-start">
