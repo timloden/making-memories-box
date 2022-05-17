@@ -5,7 +5,7 @@ footer {
         display: flex;
         .gform-body {
             flex: 0 0 auto;
-            width: 100%;
+            width: auto;
             max-width: 300px;
 
             input[type='email'] {
@@ -24,4 +24,15 @@ footer {
             }
         }
     }
+}
+@include media-breakpoint-up(lg) {
+    footer {
+        .footer-newsletter {
+            .gform-body {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+    
 }

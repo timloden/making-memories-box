@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-<section class="home-hero">
+<section class="home-hero mb-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-5 pb-5 pb-lg-0 pt-5 pt-lg-0 text-center text-lg-start ">
@@ -33,6 +33,7 @@ get_header();
     </div>
 </section>
 
+<?php get_template_part( 'template-parts/as-seen-on' ); ?>
 
 <?php get_template_part( 'template-parts/box-information' ); ?>
 
@@ -40,8 +41,6 @@ get_header();
     get_template_part( 'template-parts/testimonial-slider' ); 
 } 
 ?>
-
-<?php get_template_part( 'template-parts/as-seen-on' ); ?>
 
 <?php get_template_part( 'template-parts/what-to-expect' ); ?>
 

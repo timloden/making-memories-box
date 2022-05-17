@@ -3212,10 +3212,11 @@ html{scroll-behavior:smooth}
 .offcanvas-body .nav-link{font-size:1.25rem}
 footer{color:#212529}
 footer .footer-newsletter{display:-webkit-box;display:-ms-flexbox;display:flex}
-footer .footer-newsletter .gform-body{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:100%;max-width:300px}
+footer .footer-newsletter .gform-body{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:300px}
 footer .footer-newsletter .gform_footer{margin-left:.5rem}
 .wp-block-image img{height:auto}
 .recent-posts .featured-image{height:250px}
+.as-seen-on .logo{max-width:100%}
 .testimonial-section .testimonial-content p{font-size:1.5rem}
 .testimonial-section .tns-nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:2rem}
 .testimonial-section .tns-nav button{height:15px;width:15px;border-radius:50px;margin:0 5px;border:0;background-color:#c4c4c4}
@@ -3573,6 +3574,7 @@ html:not(.no-js) [data-aos=flip-down].aos-animate{-webkit-transform:perspective(
 .text-sm-start{text-align:left !important}
 .text-sm-end{text-align:right !important}
 .text-sm-center{text-align:center !important}
+.as-seen-on .logo{max-width:200px}
 }@media(min-width:768px){.container-md,.container-sm,.container{max-width:720px}
 .col-md{-webkit-box-flex:1;-ms-flex:1 0 0;flex:1 0 0}
 .row-cols-md-auto>*{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto}
@@ -4022,6 +4024,7 @@ html:not(.no-js) [data-aos=flip-down].aos-animate{-webkit-transform:perspective(
 .text-lg-start{text-align:left !important}
 .text-lg-end{text-align:right !important}
 .text-lg-center{text-align:center !important}
+footer .footer-newsletter .gform-body{width:100%;max-width:300px}
 .what-to-expect-section{overflow-x:hidden}
 .testimonial-section .testimonial-content p{font-size:2rem}
 .product .single_add_to_cart_button{width:300px}

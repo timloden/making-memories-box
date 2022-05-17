@@ -4,6 +4,12 @@
     }
 }
 
+.as-seen-on {
+    .logo {
+        max-width: 100%;
+    }
+}
+
 .testimonial-section {
     .testimonial-content {
         p {
@@ -26,6 +32,14 @@
             &.tns-nav-active {
                 background-color: #000000;
             }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .as-seen-on {
+        .logo {
+            max-width: 200px;
         }
     }
 }
