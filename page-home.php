@@ -9,11 +9,10 @@
 
 get_header();
 ?>
-<section class="home-hero py-5"
-    style="background-image: url(<?php echo esc_url(get_field('hero_image')); ?>); background-size: cover;">
-    <div class="container py-5">
-        <div class="row align-items-center py-5">
-            <div class="col-12 col-lg-5 pb-5 pb-md-0 text-center text-lg-start">
+<section class="home-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5 pb-5 pb-lg-0 pt-5 pt-lg-0 text-center text-lg-start ">
                 <h1><?php echo esc_attr(get_field('hero_title')); ?></h1>
 
                 <p class="mt-3 mb-4 text-black-50"><?php echo esc_attr(get_field('hero_description')); ?></p>
@@ -27,12 +26,13 @@ get_header();
                 </a>
                 <?php endif; ?>
             </div>
-            <div class="col-12 col-lg-7">
-
+            <div class="col-12 col-lg-7 hero-image">
+                <img class="img-fluid" src="<?php echo esc_url(get_field('hero_image')); ?>" alt="Making Memories Box">
             </div>
         </div>
     </div>
 </section>
+
 
 <?php get_template_part( 'template-parts/box-information' ); ?>
 
