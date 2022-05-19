@@ -1,17 +1,10 @@
 <?php
-// redirect to checkout after add to cart
-// add_filter( 'woocommerce_add_to_cart_redirect', 'redirect_checkout_add_cart' );
- 
-// function redirect_checkout_add_cart() {
-// 	return wc_get_checkout_url();
-// }
 
 add_filter( 'woocommerce_add_to_cart_redirect', 'woo_redirect_checkout', 10, 2 );
+
 function woo_redirect_checkout( $url, $product ) {
 
-    //Define your categories here
-
-    if ( $product->get_type() == 'subscription' ) {
+    if ( $product && $product->get_type() == 'subscription' ) {
 		$url = wc_get_checkout_url();
     } else {
 		$url = wc_get_cart_url();
