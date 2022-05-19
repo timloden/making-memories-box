@@ -45,7 +45,7 @@ if ( post_password_required() ) {
 	?>
         </div>
         <div class="col-12 col-lg-6">
-            <div class="summary entry-summary">
+            <div class="summary entry-summary ps-lg-3">
                 <?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
@@ -67,15 +67,19 @@ if ( post_password_required() ) {
     <?php if( have_rows('example_box_content') ): ?>
     <section class="activity-examples mt-5">
         <h2 class="text-center mb-5">Some example activities from <?php echo $product->get_name(); ?></h2>
-        <div class="row">
+        <div class="row justify-content-center">
             <?php while( have_rows('example_box_content') ): the_row(); 
             $activity_image = get_sub_field('image');
             ?>
-            <div class="col-12 col-lg-6 mb-5" data-aos="fade-up" data-aos-once="true">
-                <div class="media">
-                    <img src="<?php echo esc_url($activity_image['url']); ?>" class="rounded mr-3"
-                        style="width: 100px;">
-                    <div class="media-body">
+            <div class="col-12 col-md-4 mb-5" data-aos="fade-up" data-aos-once="true">
+                <div class="d-flex align-items-center">
+                    <?php if ($activity_image) : ?>
+                    <div class="flex-shrink-0">
+                        <img src="<?php echo esc_url($activity_image['url']); ?>" class="rounded mr-3"
+                            style="width: 100px;">
+                    </div>
+                    <?php endif; ?>
+                    <div class="flex-grow-1 ms-3">
                         <h5 class="mt-0"><?php echo esc_attr(the_sub_field('title')); ?></h5>
                         <?php echo esc_attr(the_sub_field('description')); ?>
                     </div>

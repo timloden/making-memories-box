@@ -34,7 +34,8 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
             <?php foreach ( wc_get_account_payment_methods_columns() as $column_id => $column_name ) : ?>
             <th
                 class="woocommerce-PaymentMethod woocommerce-PaymentMethod--<?php echo esc_attr( $column_id ); ?> payment-method-<?php echo esc_attr( $column_id ); ?>">
-                <span class="nobr"><?php echo esc_html( $column_name ); ?></span></th>
+                <span class="nobr"><?php echo esc_html( $column_name ); ?></span>
+            </th>
             <?php endforeach; ?>
         </tr>
     </thead>
@@ -79,6 +80,6 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 <?php do_action( 'woocommerce_after_account_payment_methods', $has_methods ); ?>
 
 <?php if ( WC()->payment_gateways->get_available_payment_gateways() ) : ?>
-<a class="button"
+<a class="button btn btn-primary btn-rounded"
     href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method' ) ); ?>"><?php esc_html_e( 'Add payment method', 'woocommerce' ); ?></a>
 <?php endif; ?>

@@ -1,6 +1,10 @@
+.btn {
+    line-height: 1;
+}
+
 .btn-rounded {
     border-radius: 30px;
-    padding: 0.6rem 1.25rem 0.375rem;
+    padding: 0.6rem 1.25rem;
     font-weight: bold;
     color: $white;
 }
@@ -13,6 +17,16 @@
 
 .btn-secondary {
     color: $white;
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    color: $mmb-blue-primary;
+
+    &:hover {
+        background-color: #fff;
+        color: $mmb-blue-primary;
+    }
 }
 
 .single_add_to_cart_button.loading {

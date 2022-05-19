@@ -18,13 +18,12 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-$featured_product = get_field('featured_product', 'option');
 ?>
 
 <?php get_template_part( 'template-parts/add-to-cart' ); ?>
 
 <div class="container">
-    <h2 class="text-center">Individual boxes</h2>
+    <h2 class="text-center mb-5">Individual boxes</h2>
     <?php
 /**
  * Hook: woocommerce_before_main_content.

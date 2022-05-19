@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="col mb-4">
+<div class="col">
     <div class="card h-100 shadow border-0 post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <a href="<?php the_permalink(); ?>">
             <div class="rounded-top loop-card-image"

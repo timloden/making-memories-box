@@ -45,16 +45,17 @@ if ( ! is_ajax() ) {
                 value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
         </noscript>
 
-        <?php do_action( 'woocommerce_review_order_before_submit' ); ?>
-
-        <?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn btn-primary btn-lg btn-block btn-rounded mb-3" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
-
-        <?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
         <?php wc_get_template( 'checkout/terms.php' ); ?>
 
 
         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+
+        <?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+
+        <?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn btn-primary btn-lg d-block btn-rounded" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . 'Place Your Order <i class="bi bi-lock-fill"></i></button>' ); // @codingStandardsIgnoreLine ?>
+
+        <?php do_action( 'woocommerce_review_order_after_submit' ); ?>
     </div>
 </div>
 <?php

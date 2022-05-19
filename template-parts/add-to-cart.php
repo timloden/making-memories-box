@@ -6,51 +6,45 @@
  *
  * @package making-memories-box
  */
-
-$featured_product = get_field('featured_product', 'option');
-if ($featured_product) : 
-	$featured_product_id = $featured_product->ID;
-	$featured_product_image = get_the_post_thumbnail_url($featured_product_id,'full'); 
-	$product = wc_get_product( $featured_product_id );
 ?>
-<section class="subscription-hero mb-5 bg-mmb-gray">
-    <div class="container py-5">
-        <div class="row">
+<section class="subscription-hero mb-5 bg-light border-bottom">
+    <div class="container py-lg-5">
+        <div class="row py-5">
             <div class="col-12">
                 <div class="card shadow p-3 border-0">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-lg-4">
-                            <a href="<?php the_permalink($featured_product_id); ?>">
-                                <img class="img-fluid mb-3" src="<?php echo esc_url($featured_product_image); ?>">
-                            </a>
+
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-10">
+                            <h1 class="text-center">Fun and creative activities delivered to you each month</h1>
+                            <p class="text-center mb-3 mb-lg-4 text-muted">Save time and money with a NEW themed box at
+                                the start
+                                of each month.
+                                We take
+                                care of all the
+                                planning & prep work for you.</p>
                         </div>
-                        <div class="col-12 col-lg-8">
-                            <h2><a class="text-dark"
-                                    href="<?php echo esc_url(get_permalink($featured_product_id)); ?>"><?php echo esc_attr($featured_product->post_title); ?></a>
-                            </h2>
-                            <?php
-								echo apply_filters( 'the_content', $product->short_description )
-							?>
-                            <div class="text-center text-lg-left">
+                    </div>
 
-                                <div class="d-flex justify-content-center">
-                                    <div class="col-12 col-lg-10">
-                                        <?php echo do_shortcode('[add_to_cart_form id="' . $featured_product_id . '"]'); ?>
-                                    </div>
-                                </div>
-                                <script type="text/template" id="tmpl-variation-template">
-                                    <div class="d-flex align-items-center justify-content-center">
-									<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
-									<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
-									<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
-									</div>
-								
-								</script>
-                                <script type="text/template" id="tmpl-unavailable-variation-template">
-                                    <p>Sorry, this product is unavailable. Please choose a different combination.</p>
-								</script>
-                            </div>
+                    <?php echo do_shortcode('[products category="subscriptions" orderby="id" order="ASC"]'); ?>
 
+                    <div class="row justify-content-center g-4">
+                        <div class="col-auto pe-md-4">
+                            <p class="fw-bold mb-0 d-flex align-items-center product-page-value-prop"><i
+                                    class="bi bi-palette pe-2"></i> All
+                                Supplies Included</p>
+                        </div>
+                        <div class="col-auto pe-md-4">
+                            <p class="fw-bold mb-0 d-flex align-items-center product-page-value-prop"><i
+                                    class="bi bi-truck pe-2"></i> Free
+                                Shipping
+                            </p>
+                        </div>
+                        <div class="col-auto pe-md-4">
+                            <p class="fw-bold d-flex align-items-center product-page-value-prop"><i
+                                    class="bi bi-pause-circle pe-2"></i>
+                                Pause or
+                                Cancel Anytime
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -58,4 +52,3 @@ if ($featured_product) :
         </div>
     </div>
 </section>
-<?php endif; ?>

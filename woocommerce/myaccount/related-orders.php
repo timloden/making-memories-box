@@ -21,12 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     <thead>
         <tr>
             <th class="order-number woocommerce-orders-table__header woocommerce-orders-table__header-order-number">
-                <span class="nobr"><?php esc_html_e( 'Order', 'woocommerce-subscriptions' ); ?></span></th>
+                <span class="nobr"><?php esc_html_e( 'Order', 'woocommerce-subscriptions' ); ?></span>
+            </th>
             <th
                 class="order-date woocommerce-orders-table__header woocommerce-orders-table__header-order-date woocommerce-orders-table__header-order-date">
-                <span class="nobr"><?php esc_html_e( 'Date', 'woocommerce-subscriptions' ); ?></span></th>
+                <span class="nobr"><?php esc_html_e( 'Date', 'woocommerce-subscriptions' ); ?></span>
+            </th>
             <th class="order-status woocommerce-orders-table__header woocommerce-orders-table__header-order-status">
-                <span class="nobr"><?php esc_html_e( 'Status', 'woocommerce-subscriptions' ); ?></span></th>
+                <span class="nobr"><?php esc_html_e( 'Status', 'woocommerce-subscriptions' ); ?></span>
+            </th>
             <th class="order-total woocommerce-orders-table__header woocommerce-orders-table__header-order-total"><span
                     class="nobr"><?php echo esc_html_x( 'Total', 'table heading', 'woocommerce-subscriptions' ); ?></span>
             </th>
@@ -102,7 +105,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					if ( $actions ) {
 						foreach ( $actions as $key => $action ) {
-							echo wp_kses_post( '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>' );
+							echo wp_kses_post( '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button me-2 ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>' );
 						}
 					}
 					?>

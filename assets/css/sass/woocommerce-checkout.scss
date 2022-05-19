@@ -1,4 +1,12 @@
 .woocommerce-checkout {
+    background-color: rgb(248, 249, 250);
+    .woocommerce-checkout-review-order {
+        .cart-subtotal.recurring-total,
+        .tax-total.recurring-total {
+            display: none;
+        }
+    }
+
     .mailchimp-newsletter {
         align-items: center;
         margin-left: 0;
@@ -45,13 +53,20 @@
     }
 
     #payment {
-        ul.payment_methods {
+        ul {
+            list-style: none;
             li {
                 .stripe-credit-card-brand {
                     width: 20px;
                     margin-top: -15px;
                 }
             }
+        }
+
+        .wc-saved-payment-methods {
+            list-style: none;
+            padding-left: 0;
+            padding-bottom: 1rem;
         }
     }
 }
@@ -60,5 +75,13 @@
     .woocommerce-message {
         @extend .alert;
         @extend .alert-info;
+    }
+}
+
+.woocommerce-order-received  {
+    background-color: #fff;
+
+    h1 {
+        display: none;
     }
 }

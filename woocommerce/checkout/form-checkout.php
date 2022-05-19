@@ -29,7 +29,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 ?>
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout"
+<form name="checkout" method="post" class="checkout woocommerce-checkout mt-3 mt-lg-4"
     action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
     <div class="row">
@@ -40,7 +40,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
             <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-            <div id="customer_details">
+            <div id="customer_details" class="pe-lg-5 mb-5 mb-lg-0">
                 <div class="billing-details">
                     <?php do_action( 'woocommerce_checkout_billing' ); ?>
                 </div>
@@ -55,12 +55,12 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
             <?php endif; ?>
         </div>
 
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-5 mb-5 mb-lg-0">
             <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 
             <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-            <div id="order_review" class="woocommerce-checkout-review-order card p-3">
+            <div id="order_review" class="woocommerce-checkout-review-order card shadow border-0 p-3 p-md-4">
                 <?php do_action( 'woocommerce_checkout_order_review' ); ?>
             </div>
 

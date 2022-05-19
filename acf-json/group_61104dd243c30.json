@@ -68,6 +68,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-home.php"
             }
         ],
         [
@@ -86,5 +91,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628459562
+    "show_in_rest": 0,
+    "modified": 1651034907
 }

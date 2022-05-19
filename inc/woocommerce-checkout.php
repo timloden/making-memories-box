@@ -62,16 +62,14 @@ add_action( 'woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form
 
 add_filter( 'wc_add_to_cart_message_html', '__return_false' );
 
-// redirect empty cart to homepage
+add_filter( 'woocommerce_order_button_html', 'custom_order_button_html');
+function custom_order_button_html( $button ) {
 
-add_action('template_redirect', 'redirection_function');
+  // Button text
+  $order_button_text = __('Place Your Order', 'woocommerce');
 
-function redirection_function(){
-    global $woocommerce;
+  // Markup - add in classes, data attibutes
+  $button = '<button type="submit" class="btn btn-primary btn-lg d-block btn-rounded w-100 mt-3 mt-md-4" name="woocommerce_checkout_place_order" id="place_order">Place Your Order <i class="bi bi-lock-fill"></i></button>';
 
-    if( is_checkout() && 0 == sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count) && !isset($_GET['key']) ) {
-        wp_redirect( home_url() ); 
-        exit;
-    }
+  return $button;
 }
- 

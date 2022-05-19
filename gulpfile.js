@@ -8,7 +8,7 @@ const config = require('./gulp.config.js');
 const gulp = require('gulp'); // Gulp of-course.
 
 // CSS related plugins.
-const sass = require('gulp-sass'); // Gulp plugin for Sass compilation.
+const sass = require('gulp-sass')(require('sass')); // Gulp plugin for Sass compilation.
 const minifycss = require('gulp-uglifycss'); // Minifies CSS files.
 const autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
 const mmq = require('gulp-merge-media-queries'); // Combine matching media queries into one.
@@ -57,6 +57,7 @@ function styles() {
                 errLogToConsole: config.errLogToConsole,
                 outputStyle: config.outputStyle,
                 precision: config.precision,
+                quietDeps: true,
             })
         )
         .on('error', sass.logError)
@@ -110,9 +111,8 @@ function vendorJS() {
         .src(
             [
                 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-                'node_modules/tiny-slider/dist/tiny-slider.js',
+                'node_modules/tiny-slider/dist/min/tiny-slider.js',
                 'node_modules/aos/dist/aos.js',
-                'node_modules/sticky-sidebar/dist/sticky-sidebar.min.js',
                 config.jsVendorSRC,
             ],
             { since: gulp.lastRun('customJS') }

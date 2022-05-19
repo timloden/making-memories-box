@@ -19,4 +19,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>  row justify-content-center py-5">
+<div
+    class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?> row row-cols-2 row-cols-lg-4 justify-content-center">

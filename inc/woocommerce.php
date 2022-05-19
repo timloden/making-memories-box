@@ -1,17 +1,90 @@
 <?php
 // redirect to checkout after add to cart
-add_filter( 'woocommerce_add_to_cart_redirect', 'redirect_checkout_add_cart' );
+// add_filter( 'woocommerce_add_to_cart_redirect', 'redirect_checkout_add_cart' );
  
-function redirect_checkout_add_cart() {
-   return wc_get_checkout_url();
+// function redirect_checkout_add_cart() {
+// 	return wc_get_checkout_url();
+// }
+
+add_filter( 'woocommerce_add_to_cart_redirect', 'woo_redirect_checkout', 10, 2 );
+function woo_redirect_checkout( $url, $product ) {
+
+    //Define your categories here
+
+    if ( $product->get_type() == 'subscription' ) {
+		$url = wc_get_checkout_url();
+    } else {
+		$url = wc_get_cart_url();
+	}
+
+	return $url;
 }
 
 // add form control to checkout forms
 add_filter('woocommerce_form_field_args',  'wc_form_field_args',10,3);
 
 function wc_form_field_args($args, $key, $value) {
-  $args['input_class'] = array( 'form-control' );
-  return $args;
+	//$args['input_class'] = array( 'form-control' );
+	switch ( $args['type'] ) {
+
+		case "select" :  /* Targets all select input type elements, except the country and state select input types */
+			$args['class'][] = 'form-group'; // Add a class to the field's html element wrapper - woocommerce input types (fields) are often wrapped within a <p></p> tag  
+			$args['input_class'] = array('form-select'); // Add a class to the form input itself
+			//$args['custom_attributes']['data-plugin'] = 'select2';
+			$args['label_class'] = array('form-label');
+			//$args['custom_attributes'] = array( 'data-plugin' => 'select2', 'data-allow-clear' => 'true', 'aria-hidden' => 'true',  ); // Add custom data attributes to the form input itself
+		break;
+	
+		case 'country' : /* By default WooCommerce will populate a select with the country names - $args defined for this specific input type targets only the country select element */
+			$args['class'][] = 'form-group single-country';
+			$args['label_class'] = array('form-label');
+		break;
+	
+		case "state" : /* By default WooCommerce will populate a select with state names - $args defined for this specific input type targets only the country select element */
+			$args['class'][] = 'form-group'; // Add class to the field's html element wrapper 
+			$args['input_class'] = array('form-control'); // add class to the form input itself
+			//$args['custom_attributes']['data-plugin'] = 'select2';
+			$args['label_class'] = array('form-label');
+			//$args['custom_attributes'] = array( 'data-plugin' => 'select2', 'data-allow-clear' => 'true', 'aria-hidden' => 'true',  );
+		break;
+	
+	
+		case "password" :
+		case "text" :
+		case "email" :
+		case "tel" :
+		case "number" :
+			$args['class'][] = 'form-group';
+			//$args['input_class'][] = 'form-control input-lg'; // will return an array of classes, the same as bellow
+			$args['input_class'] = array('form-control');
+			$args['label_class'] = array('form-label');
+		break;
+	
+		case 'textarea' :
+			$args['input_class'] = array('form-control');
+			$args['label_class'] = array('form-label');
+		break;
+	
+		case 'checkbox' :  
+			$args['class'][] = 'form-check';
+			$args['input_class'] = array('form-check-input');
+			$args['label_class'] = array('form-check-label');
+		break;
+	
+		case 'radio' :
+			$args['class'][] = 'form-check';
+			$args['input_class'] = array('form-check-input');
+			$args['label_class'] = array('form-check-label');
+		break;
+	
+		default :
+			$args['class'][] = 'form-group';
+			$args['input_class'] = array('form-control');
+			$args['label_class'] = array('form-label');
+		break;
+		}
+	
+	return $args;
 } 
 
 
@@ -21,30 +94,29 @@ add_action('wp_logout','auto_redirect_after_logout');
 
 function auto_redirect_after_logout(){
 
-  wp_redirect( home_url() );
-  exit();
+	wp_redirect( home_url() );
+	exit();
 
 }
-
 
 // remove subscription category from shop page 
 
 function custom_pre_get_posts_query( $q ) {
 
-  $tax_query = (array) $q->get( 'tax_query' );
+	$tax_query = (array) $q->get( 'tax_query' );
 
-  $tax_query[] = array(
-         'taxonomy' => 'product_cat',
-         'field' => 'slug',
-         'terms' => array( 'subscriptions' ), // Don't display products in the clothing category on the shop page.
-         'operator' => 'NOT IN',
-         'orderby'    => 'date',
-         'order'    => 'ASC',
+	$tax_query[] = array(
+				 'taxonomy' => 'product_cat',
+				 'field' => 'slug',
+				 'terms' => array( 'subscriptions' ), // Don't display products in the clothing category on the shop page.
+				 'operator' => 'NOT IN',
+				 'orderby'    => 'date',
+				 'order'    => 'ASC',
 
-  );
+	);
 
 
-  $q->set( 'tax_query', $tax_query );
+	$q->set( 'tax_query', $tax_query );
 
 }
 add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );  
@@ -53,129 +125,60 @@ add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );
 // Remove breadcrumbs from shop & categories
 
 add_filter( 'woocommerce_before_main_content', 'remove_breadcrumbs');
+
 function remove_breadcrumbs() {
-    if(!is_product()) {
-        remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
-    }
+		if(!is_product()) {
+				remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+		}
 }
 
 // remove hawaii and alaska from shipping options
 
 add_filter( 'woocommerce_states', 'custom_us_states', 10, 1 );
-function custom_us_states( $states ) {
-    $non_allowed_us_states = array('AA', 'AE', 'AP'); 
 
-    // Loop through your non allowed us states and remove them
-    foreach( $non_allowed_us_states as $state_code ) {
-        if( isset($states['US'][$state_code]) )
-            unset( $states['US'][$state_code] );
-    }
-    return $states;
+function custom_us_states( $states ) {
+		$non_allowed_us_states = array('AA', 'AE', 'AP'); 
+
+		// Loop through your non allowed us states and remove them
+		foreach( $non_allowed_us_states as $state_code ) {
+				if( isset($states['US'][$state_code]) )
+						unset( $states['US'][$state_code] );
+		}
+		return $states;
 }
 
 add_filter( 'woocommerce_checkout_fields', 'md_custom_woocommerce_checkout_fields' );
 
 function md_custom_woocommerce_checkout_fields( $fields ) 
 {
-    $fields['order']['order_comments']['placeholder'] = '';
-    $fields['order']['order_comments']['label'] = 'Delivery Instructions';
+		$fields['order']['order_comments']['placeholder'] = '';
+		$fields['order']['order_comments']['label'] = 'Delivery Instructions';
 
-    return $fields;
+		return $fields;
 }
 
-// add to cart c=variation shortcode
+add_filter( 'woocommerce_add_to_cart_fragments', 'misha_add_to_cart_fragment' );
 
-function add_to_cart_form_shortcode( $atts ) {
-  if ( empty( $atts ) ) {
-      return '';
-  }
+function misha_add_to_cart_fragment( $fragments ) {
+	$cart_count = WC()->cart->get_cart_contents_count();
+	if ($cart_count == 0 ) {
+		$cart_display = 'd-none';
+	} else {
+		$cart_display = '';
+	}
 
-  if ( ! isset( $atts['id'] ) && ! isset( $atts['sku'] ) ) {
-      return '';
-  }
+	$fragments[ '#header-cart' ] = 
+	'<a id="header-cart" class="d-inline-block h4 mx-lg-3 mb-0 text-dark position-relative"
+	href="' . wc_get_cart_url() . '"><i class="bi bi-cart3"></i>
+	<span
+		class="' . $cart_display . ' position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+		style="font-size: 12px;">
+		' . $cart_count . '
+		<span class="visually-hidden">unread messages</span>
+	</span>
+	</a>';
+ 	
+	
+	return $fragments;
 
-  $args = array(
-      'posts_per_page'      => 1,
-      'post_type'           => 'product',
-      'post_status'         => 'publish',
-      'ignore_sticky_posts' => 1,
-      'no_found_rows'       => 1,
-  );
-
-  if ( isset( $atts['sku'] ) ) {
-      $args['meta_query'][] = array(
-          'key'     => '_sku',
-          'value'   => sanitize_text_field( $atts['sku'] ),
-          'compare' => '=',
-      );
-
-      $args['post_type'] = array( 'product', 'product_variation' );
-  }
-
-  if ( isset( $atts['id'] ) ) {
-      $args['p'] = absint( $atts['id'] );
-  }
-
-  $single_product = new WP_Query( $args );
-
-  $preselected_id = '0';
-
-
-  if ( isset( $atts['sku'] ) && $single_product->have_posts() && 'product_variation' === $single_product->post->post_type ) {
-
-      $variation = new WC_Product_Variation( $single_product->post->ID );
-      $attributes = $variation->get_attributes();
-
-
-      $preselected_id = $single_product->post->ID;
-
-
-      $args = array(
-          'posts_per_page'      => 1,
-          'post_type'           => 'product',
-          'post_status'         => 'publish',
-          'ignore_sticky_posts' => 1,
-          'no_found_rows'       => 1,
-          'p'                   => $single_product->post->post_parent,
-      );
-
-      $single_product = new WP_Query( $args );
-  ?>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-    var $variations_form = $('[data-product-page-preselected-id="<?php echo esc_attr( $preselected_id ); ?>"]')
-        .find('form.variations_form');
-    <?php foreach ( $attributes as $attr => $value ) { ?>
-    $variations_form.find('select[name="<?php echo esc_attr( $attr ); ?>"]').val(
-        '<?php echo esc_js( $value ); ?>');
-    <?php } ?>
-});
-</script>
-
-<?php
-  }
-
-  $single_product->is_single = true;
-  ob_start();
-  global $wp_query;
-
-  $previous_wp_query = $wp_query;
-
-  $wp_query          = $single_product;
-
-  wp_enqueue_script( 'wc-single-product' );
-  while ( $single_product->have_posts() ) {
-      $single_product->the_post()
-      ?>
-<div class="single-product" data-product-page-preselected-id="<?php echo esc_attr( $preselected_id ); ?>">
-    <?php woocommerce_template_single_add_to_cart(); ?>
-</div>
-<?php
-  }
-
-  $wp_query = $previous_wp_query;
-
-  wp_reset_postdata();
-  return '<div class="woocommerce">' . ob_get_clean() . '</div>';
-}
-add_shortcode( 'add_to_cart_form', 'add_to_cart_form_shortcode' );
+ }

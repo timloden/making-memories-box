@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-<section class="page-header py-5">
+<section class="page-header pt-5">
     <div class="container">
         <div class="row">
             <div class="col-12">

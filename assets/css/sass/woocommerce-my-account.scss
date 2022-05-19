@@ -16,10 +16,10 @@
         }
     }
 
-    button[type='submit'] {
-        @extend .btn;
-        @extend .btn-primary;
-    }
+    // button[type='submit'] {
+    //     @extend .btn;
+    //     @extend .btn-primary;
+    // }
 }
 
 #add_payment_method {
@@ -52,5 +52,11 @@
     #payment ul.payment_methods li .stripe-credit-card-brand {
         width: 20px !important;
         margin-top: -15px !important;
+    }
+}
+
+.woocommerce-form-register {
+    .mailchimp-newsletter {
+        display: none;
     }
 }

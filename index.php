@@ -11,7 +11,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package underscores
+ * @package making-memories-box
  */
 
 get_header();
@@ -20,7 +20,7 @@ get_header();
     <div class="row">
         <div class="col-12">
             <header class="page-header">
-                <h1 class="page-title text-center">Blog</h1>
+                <h1 class="page-title text-center">Resources</h1>
                 <p class="text-center mb-0">Discover all kinds of fun activities to do with your family!</p>
             </header><!-- .page-header -->
         </div>
@@ -33,7 +33,7 @@ get_header();
             <?php
 				if ( have_posts() ) :
 				
-				echo '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 pt-5 pb-3 justify-content-center">';
+				echo '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 py-5 g-3 g-md-5 justify-content-center">';
 				
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -61,7 +61,21 @@ get_header();
         </main><!-- #main -->
     </div><!-- #primary -->
 </div>
-
+<div class="bg-white py-5 border-top border-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>
+                    Start making your own memories
+                </h3>
+                <p class="mb-4">Each Making Memories Box comes packed and prepped with everything you need to celebrate
+                    all
+                    life&apos;s little moments. </p>
+                <a class="btn btn-primary btn-rounded btn-lg" href="<?php echo site_url(); ?>/shop">Sign up today</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php
 get_footer();
